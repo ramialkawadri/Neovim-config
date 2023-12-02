@@ -43,5 +43,5 @@ map('v', '<A-j>', 'xp`[V`]', {})
 map('v', '<A-k>', 'xkP`[V`]', {})
 
 -- Latex
-map('n', '<F5>', '<cmd>:call SVED_Sync()<CR>', {})
+map('n', '<C-A-j>', '<cmd>:call SVED_Sync()<CR>', {})
 
