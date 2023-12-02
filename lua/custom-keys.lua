@@ -42,3 +42,6 @@ map('i', '<A-k>', '<Esc><cmd>:m .-2<CR>==gi', {})
 map('v', '<A-j>', 'xp`[V`]', {})
 map('v', '<A-k>', 'xkP`[V`]', {})
 
+-- Latex
+map('n', '<F5>', '<cmd>:call SVED_Sync()<CR>', {})
+

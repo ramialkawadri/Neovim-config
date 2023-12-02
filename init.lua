@@ -1,4 +1,3 @@
-
 require('plugins')
 require('config')
 require('mason-config')
@@ -18,3 +17,4 @@ require('indent-blankline')
 require('trouble-config')
 require('toggleterm-config')
 require('comment-config')
+require('latex')
