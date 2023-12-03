@@ -8,7 +8,6 @@ map('n', '<F4>', [[:NvimTreeClose<CR>]], {})
 -- Changing the bufferline using shortcut
 map('n', '<C-j>', [[:bp<CR>]], {})
 map('n', '<C-k>', [[:bn<CR>]], {})
-map('n', '<C-d>', [[:Bwipeout<CR>]], {})
 
 -- Trouble
 map('n', 'gr', [[:TroubleToggle lsp_references<CR>]],
