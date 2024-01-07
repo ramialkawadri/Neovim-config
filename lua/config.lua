@@ -8,7 +8,7 @@ vim.wo.relativenumber = true
 vim.wo.cursorline = true
 
 -- Vertical line
-vim.cmd('set colorcolumn=80')
+vim.cmd('set colorcolumn=100')
 
 -- Swap files
 vim.opt.swapfile = false

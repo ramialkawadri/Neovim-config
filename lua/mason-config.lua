@@ -23,4 +23,3 @@ require('mason-lspconfig').setup {
     }
 }
 
--- TODO: install inters: https://github.com/mfussenegger/nvim-lint

@@ -10,6 +10,8 @@ vim.opt.shortmess = vim.opt.shortmess + { c = true}
 
 local cmp = require('cmp')
 
+local auto_completion_width = 35
+
 local lsp_symbols = {
     Text = '   (Text) ',
     Method = '   (Method)',
@@ -88,6 +90,10 @@ cmp.setup({
                 luasnip = '[Snippet]',
                 neorg = '[Neorg]',
             })[entry.source.name]
+            item.abbr = string.format("%-" .. tostring(auto_completion_width) .. "s", item.abbr)
+            if string.len(item.abbr) > auto_completion_width then
+                item.abbr = string.sub(item.abbr, 0, auto_completion_width - 3) .. "..."
+            end
 
             return item
         end,
