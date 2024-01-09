@@ -41,6 +41,12 @@ return require('packer').startup(function(use)
     use 'lervag/vimtex'
     -- Support Evince Through DBus
     use 'peterbjorgensen/sved'
+    -- Renamer
+    use {
+      'filipdutescu/renamer.nvim',
+      branch = 'master',
+      requires = { {'nvim-lua/plenary.nvim'} }
+    }
     -- File explorer tree
     use {
         'nvim-tree/nvim-tree.lua',

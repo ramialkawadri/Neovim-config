@@ -14,6 +14,10 @@ map('n', 'gr', [[:TroubleToggle lsp_references<CR>]],
   {silent = true, noremap = true}
 )
 
+map('n', 'gd', [[:TroubleToggle lsp_definitions<CR>]],
+  {silent = true, noremap = true}
+)
+
 map('n', '<C-P>', '<cmd>TroubleToggle workspace_diagnostics<CR>',
   {silent = true, noremap = true}
 )
@@ -43,4 +47,8 @@ map('v', '<A-k>', 'xkP`[V`]', {})
 
 -- Latex
 map('n', '<C-A-j>', '<cmd>:call SVED_Sync()<CR>', {})
+
+-- Renamer
+map('n', '<F2>', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
+map('i', '<F2>', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
 
