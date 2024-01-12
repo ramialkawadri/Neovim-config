@@ -21,6 +21,9 @@ lspconfig.tsserver.setup {}
 -- Java
 lspconfig.jdtls.setup {}
 
+-- Rust
+lspconfig.rust_analyzer.setup {}
+
 -- Json
 lspconfig.jsonls.setup {}
 

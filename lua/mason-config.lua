@@ -17,6 +17,7 @@ require('mason-lspconfig').setup {
         "cmake",                            -- CMake
         "bashls",                           -- Bash
         "jdtls",                            -- Java
+        "rust_analyzer",                    -- Rust
         "vimls",                            -- Vim
         "texlab",                           -- Latex
         "ltex",                             -- Latex
