@@ -52,3 +52,8 @@ map('n', '<C-A-j>', '<cmd>:call SVED_Sync()<CR>', {})
 map('n', '<F2>', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
 map('i', '<F2>', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
 
+-- Gitsigns
+map('n', 'gp', [[:Gitsigns preview_hunk<CR>]], {})
+map('n', 'gs', [[:Gitsigns stage_hunk<CR>]], {})
+map('n', 'gn', [[:Gitsigns next_hunk<CR>]], {})
+map('n', 'gN', [[:Gitsigns prev_hunk<CR>]], {})
