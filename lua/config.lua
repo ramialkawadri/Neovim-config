@@ -26,3 +26,6 @@ vim.cmd('set pumwidth=50')
 
 -- Ignorecases by default
 vim.cmd('set ic');
+
+-- Folding
+vim.cmd('set foldmethod=manual')
