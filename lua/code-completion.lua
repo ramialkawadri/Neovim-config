@@ -47,7 +47,7 @@ cmp.setup({
 		-- Tab to go to the next suggestion
 		['<Tab>'] = cmp.mapping.select_next_item(),
 		-- CTRL+SHIFT+f to scroll backwards in description
-		['<C-S-f>'] = cmp.mapping.scroll_docs(-4),
+		['<C-b>'] = cmp.mapping.scroll_docs(-4),
 		-- CTRL+F to scroll forwards in the description
 		['<C-f>'] = cmp.mapping.scroll_docs(4),
 		-- CTRL+SPACE to bring up completion at current Cursor location
