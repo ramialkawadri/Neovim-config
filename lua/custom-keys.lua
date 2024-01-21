@@ -25,6 +25,9 @@ map('n', '<C-x>', '<cmd>TroubleToggle document_diagnostics<CR>',
   {silent = true, noremap = true}
 )
 
+map('n', '<space>q', '<cmd>lua vim.diagnostic.open_float()<CR>',
+  {silent = true, noremap = true})
+
 -- File explorer
 map('n', '<C-h>', ':lua require(\'nvim-tree.api\').node.open.horizontal() <CR>',
   {noremap = true}

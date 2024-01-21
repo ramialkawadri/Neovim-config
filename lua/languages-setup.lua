@@ -9,7 +9,17 @@ lspconfig.clangd.setup {}
 lspconfig.cmake.setup {}
 
 -- Pythin
-lspconfig.pylsp.setup {}
+lspconfig.pylsp.setup {
+    settings = {
+        pylsp = {
+            plugins = {
+                pycodestyle = {
+                    enabled = false,
+                },
+            },
+        },
+    },
+}
 lspconfig.pyright.setup {}
 
 -- Web
