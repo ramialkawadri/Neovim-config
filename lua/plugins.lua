@@ -41,8 +41,8 @@ return require('packer').startup(function(use)
     use 'lervag/vimtex'
     -- Support Evince Through DBus
     use 'peterbjorgensen/sved'
-    -- Codeium
-    use 'Exafunction/codeium.vim'
+    -- Testing
+    use 'vim-test/vim-test'
     -- Renamer
     use {
       'filipdutescu/renamer.nvim',

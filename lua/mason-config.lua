@@ -16,6 +16,8 @@ require('mason-lspconfig').setup {
         "tsserver",                         -- Typescript
         "cmake",                            -- CMake
         "bashls",                           -- Bash
+        "csharp_ls",                        -- C#
+        "omnisharp",                        -- C#
         "jdtls",                            -- Java
         "rust_analyzer",                    -- Rust
         "vimls",                            -- Vim

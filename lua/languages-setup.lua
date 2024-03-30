@@ -28,6 +28,10 @@ lspconfig.html.setup {}
 lspconfig.emmet_ls.setup {}
 lspconfig.tsserver.setup {}
 
+-- C#
+lspconfig.omnisharp.setup {}
+lspconfig.csharp_ls.setup {}
+
 -- Java
 lspconfig.jdtls.setup {}
 
