@@ -60,3 +60,7 @@ map('n', 'gp', [[:Gitsigns preview_hunk<CR>]], {})
 map('n', 'gs', [[:Gitsigns stage_hunk<CR>]], {})
 map('n', 'gn', [[:Gitsigns next_hunk<CR>]], {})
 map('n', 'gN', [[:Gitsigns prev_hunk<CR>]], {})
+
+-- Testing
+map('n', '<C-a>', [[:TestSuite<CR>]], {})
+map('n', '<C-l>', [[:TestNearest<CR>]], {})
