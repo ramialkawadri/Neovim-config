@@ -69,3 +69,12 @@ map('n', 'ff', require("telescope.builtin").find_files, { noremap = true, silent
 map('n', 'fg', require("telescope.builtin").live_grep, { noremap = true, silent = true })
 -- Buffers
 map('n', 'fb', require("telescope.builtin").buffers, { noremap = true, silent = true })
+
+-- Auto complete
+
+map('n', '<C-h>', vim.lsp.buf.hover, { noremap = true, silent = true })
+
+-- LazyGit
+
+map('n', '<C-g>', [[:LazyGit<CR>]], { silent = true, noremap = true })
+

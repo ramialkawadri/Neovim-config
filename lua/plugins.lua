@@ -5,6 +5,7 @@ return require('packer').startup(function(use)
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
     use 'neovim/nvim-lspconfig'
+    -- Java
     use 'mfussenegger/nvim-jdtls'
     -- Hrsh7th Code Completion Suite
     use 'hrsh7th/nvim-cmp'
@@ -22,7 +23,7 @@ return require('packer').startup(function(use)
     use 'lewis6991/gitsigns.nvim'
     -- Nvim color highlight
     use 'brenoprata10/nvim-highlight-colors'
-    -- Inden blankline
+    -- Indent blankline
     use 'lukas-reineke/indent-blankline.nvim'
     -- TS-rainbow
     use 'p00f/nvim-ts-rainbow'
@@ -49,9 +50,9 @@ return require('packer').startup(function(use)
     use 'vim-test/vim-test'
     -- Renamer
     use {
-      'filipdutescu/renamer.nvim',
-      branch = 'master',
-      requires = { {'nvim-lua/plenary.nvim'} }
+        'filipdutescu/renamer.nvim',
+        branch = 'master',
+        requires = { { 'nvim-lua/plenary.nvim' } }
     }
     -- File explorer tree
     use {
@@ -69,7 +70,7 @@ return require('packer').startup(function(use)
     -- Telescope
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.4',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = { { 'nvim-lua/plenary.nvim' } }
     }
     -- Lualine information / Status bar
     use {
@@ -92,7 +93,7 @@ return require('packer').startup(function(use)
         'folke/trouble.nvim',
         requires = 'nvim-tree/nvim-web-devicons',
     }
-    --Toggleterm
+    -- Toggleterm
     use {
         'akinsho/toggleterm.nvim',
         tag = '*'
@@ -101,5 +102,13 @@ return require('packer').startup(function(use)
     use({
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
+    })
+    -- LazyGit
+    use({
+        "kdheepak/lazygit.nvim",
+        -- optional for floating window border decoration
+        requires = {
+            "nvim-lua/plenary.nvim",
+        },
     })
 end)

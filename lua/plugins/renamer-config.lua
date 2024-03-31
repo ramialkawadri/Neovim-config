@@ -2,4 +2,4 @@
 
 -- The next line must exist
 require('renamer.mappings.utils')
-require('renamer').setup {}
+require('renamer').setup()
