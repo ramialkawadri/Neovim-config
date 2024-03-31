@@ -1,5 +1,6 @@
 -- Documentation: https://github.com/neovim/nvim-lspconfig
 
+-- neodev must be imported first!
 require("neodev").setup {}
 local lspconfig = require('lspconfig')
 

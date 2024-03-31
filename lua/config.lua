@@ -32,3 +32,10 @@ vim.cmd('set foldmethod=manual')
 
 -- Alias
 vim.cmd('command Codeaction lua vim.lsp.buf.code_action()')
+
+-- Latex
+vim.g.vimtex_quickfix_open_on_warning = 0
+
+-- Styling
+vim.cmd('colorscheme hybrid')
+vim.cmd('hi MatchParen gui=underline guibg=None guifg=None guisp=white')
