@@ -10,7 +10,7 @@ local lspconfig = require('lspconfig')
 lspconfig.clangd.setup {}
 lspconfig.cmake.setup {}
 
--- Pythin
+-- Python
 lspconfig.pylsp.setup {
     settings = {
         pylsp = {

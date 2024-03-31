@@ -4,23 +4,23 @@ require('mason').setup()
 
 require('mason-lspconfig').setup {
     ensure_installed = {
+        "bashls",        -- Bash
         "clangd",        -- C/CPP
-        "html",          -- HTML
+        "cmake",         -- CMake
         "cssls",         -- CSS
         "emmet_ls",      -- Emmet
+        "html",          -- HTML
+        "jdtls",         -- Java
         "jsonls",        -- JSON
+        "ltex",          -- Latex
         "lua_ls",        -- Lua
+        "omnisharp",     -- C#
         "pylsp",         -- Python
         "pyright",       -- Pyright
-        "tsserver",      -- Typescript
-        "cmake",         -- CMake
-        "bashls",        -- Bash
-        "omnisharp",     -- C#
-        "jdtls",         -- Java
         "rust_analyzer", -- Rust
-        "vimls",         -- Vim
         "texlab",        -- Latex
-        "ltex",          -- Latex
+        "tsserver",      -- Typescript
+        "vimls",         -- Vim
     }
 }
 
