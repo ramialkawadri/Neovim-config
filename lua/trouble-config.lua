@@ -3,6 +3,6 @@
 require('trouble').setup {
     action_keys = {
         jump = { "<tab>", "<2-leftmouse>" },
-        jump_close = {"<cr>"}
+        jump_close = { "<cr>" }
     }
 }

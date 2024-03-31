@@ -14,6 +14,10 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/vim-vsnip'
+    -- C#
+    use 'Hoffs/omnisharp-extended-lsp.nvim'
+    -- Lua
+    use 'folke/neodev.nvim'
     -- Gitsigns
     use 'lewis6991/gitsigns.nvim'
     -- Nvim color highlight

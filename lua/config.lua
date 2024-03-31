@@ -29,3 +29,6 @@ vim.cmd('set ic');
 
 -- Folding
 vim.cmd('set foldmethod=manual')
+
+-- Alias
+vim.cmd('command Codeaction lua vim.lsp.buf.code_action()')

@@ -1,5 +1,6 @@
 -- Documentation: https://github.com/neovim/nvim-lspconfig
 
+require("neodev").setup {}
 local lspconfig = require('lspconfig')
 
 --------------------------LSP--------------------------
@@ -29,8 +30,17 @@ lspconfig.emmet_ls.setup {}
 lspconfig.tsserver.setup {}
 
 -- C#
-lspconfig.omnisharp.setup {}
-lspconfig.csharp_ls.setup {}
+local pid = vim.fn.getpid()
+lspconfig.omnisharp.setup {
+    cmd = { "omnisharp", "-lsp", "--hostPID", tostring(pid) },
+    handlers = {
+        ["textDocument/definition"] = require('omnisharp_extended').definition_handler,
+        ["textDocument/typeDefinition"] = require('omnisharp_extended').type_definition_handler,
+        ["textDocument/references"] = require('omnisharp_extended').references_handler,
+        ["textDocument/implementation"] = require('omnisharp_extended').implementation_handler,
+    },
+    enable_import_completion = true,
+}
 
 -- Java
 lspconfig.jdtls.setup {}
