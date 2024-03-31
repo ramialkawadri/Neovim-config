@@ -50,5 +50,7 @@ vim.g.vimtex_quickfix_open_on_warning = 0
 
 -- Styling
 
-vim.cmd('colorscheme hybrid')
+vim.g.gruvbox_number_column = "bg1";
+vim.g.gruvbox_invert_selection = false;
+vim.cmd('colorscheme gruvbox')
 vim.cmd('hi MatchParen gui=underline guibg=None guifg=None guisp=white')
