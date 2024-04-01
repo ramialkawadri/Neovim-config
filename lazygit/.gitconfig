@@ -7,5 +7,6 @@
     line-numbers = true
     side-by-side = true
     paging = never
+    dark = true
     syntax-theme= gruvbox-dark
 
