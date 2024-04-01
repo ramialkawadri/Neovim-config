@@ -1,102 +1,104 @@
 -- Documentation: https://github.com/wbthomason/packer.nvim
 
-return require('packer').startup(function(use)
-    use 'wbthomason/packer.nvim'
-    use 'williamboman/mason.nvim'
-    use 'williamboman/mason-lspconfig.nvim'
-    use 'neovim/nvim-lspconfig'
+return require("packer").startup(function(use)
+    use "wbthomason/packer.nvim"
+    use "williamboman/mason.nvim"
+    use "williamboman/mason-lspconfig.nvim"
+    use "neovim/nvim-lspconfig"
     -- Java
-    use 'mfussenegger/nvim-jdtls'
+    use "mfussenegger/nvim-jdtls"
     -- Hrsh7th Code Completion Suite
-    use 'hrsh7th/nvim-cmp'
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/cmp-nvim-lua'
-    use 'hrsh7th/cmp-nvim-lsp-signature-help'
-    use 'hrsh7th/cmp-path'
-    use 'hrsh7th/cmp-buffer'
-    use 'hrsh7th/vim-vsnip'
+    use "hrsh7th/nvim-cmp"
+    use "hrsh7th/cmp-nvim-lsp"
+    use "hrsh7th/cmp-nvim-lua"
+    use "hrsh7th/cmp-nvim-lsp-signature-help"
+    use "hrsh7th/cmp-path"
+    use "hrsh7th/cmp-buffer"
+    use "hrsh7th/vim-vsnip"
     -- C#
-    use 'Hoffs/omnisharp-extended-lsp.nvim'
+    use "Hoffs/omnisharp-extended-lsp.nvim"
     -- Lua
-    use 'folke/neodev.nvim'
+    use "folke/neodev.nvim"
+    -- Actions preview
+    use "aznhe21/actions-preview.nvim"
     -- Gitsigns
-    use 'lewis6991/gitsigns.nvim'
+    use "lewis6991/gitsigns.nvim"
     -- Nvim color highlight
-    use 'brenoprata10/nvim-highlight-colors'
+    use "brenoprata10/nvim-highlight-colors"
     -- Indent blankline
-    use 'lukas-reineke/indent-blankline.nvim'
+    use "lukas-reineke/indent-blankline.nvim"
     -- TS-rainbow
-    use 'p00f/nvim-ts-rainbow'
+    use "p00f/nvim-ts-rainbow"
     -- Autotag
-    use 'windwp/nvim-ts-autotag'
+    use "windwp/nvim-ts-autotag"
     -- Startify
-    use 'mhinz/vim-startify'
+    use "mhinz/vim-startify"
     -- Vim bbye
-    use 'moll/vim-bbye'
+    use "moll/vim-bbye"
     -- Vim surrond
-    use 'tpope/vim-surround'
+    use "tpope/vim-surround"
     -- Themes
-    use 'rafi/awesome-vim-colorschemes'
-    use 'projekt0n/github-nvim-theme'
+    use "rafi/awesome-vim-colorschemes"
+    use "projekt0n/github-nvim-theme"
     -- Autopairs
-    use 'windwp/nvim-autopairs'
+    use "windwp/nvim-autopairs"
     -- Comments
-    use 'numToStr/Comment.nvim'
+    use "numToStr/Comment.nvim"
     -- VimText
-    use 'lervag/vimtex'
+    use "lervag/vimtex"
     -- Support Evince Through DBus
-    use 'peterbjorgensen/sved'
+    use "peterbjorgensen/sved"
     -- Testing
-    use 'vim-test/vim-test'
+    use "vim-test/vim-test"
     -- Renamer
     use {
-        'filipdutescu/renamer.nvim',
-        branch = 'master',
-        requires = { { 'nvim-lua/plenary.nvim' } }
+        "filipdutescu/renamer.nvim",
+        branch = "master",
+        requires = { { "nvim-lua/plenary.nvim" } }
     }
     -- File explorer tree
     use {
-        'nvim-tree/nvim-tree.lua',
-        requires = { 'nvim-tree/nvim-web-devicons' },
+        "nvim-tree/nvim-tree.lua",
+        requires = { "nvim-tree/nvim-web-devicons" },
     }
     -- Treesitter
     use {
-        'nvim-treesitter/nvim-treesitter',
+        "nvim-treesitter/nvim-treesitter",
         run = function()
-            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
             ts_update()
         end,
     }
     -- Telescope
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.4',
-        requires = { { 'nvim-lua/plenary.nvim' } }
+        "nvim-telescope/telescope.nvim", tag = "0.1.4",
+        requires = { { "nvim-lua/plenary.nvim" } }
     }
     -- Lualine information / Status bar
     use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+        "nvim-lualine/lualine.nvim",
+        requires = { "kyazdani42/nvim-web-devicons", opt = true }
     }
     -- Todo comments
     use {
-        'folke/todo-comments.nvim',
-        require = 'nvim-lua/plenary.nvim'
+        "folke/todo-comments.nvim",
+        require = "nvim-lua/plenary.nvim"
     }
     -- Bufferline
     use {
-        'akinsho/bufferline.nvim',
-        tag = '*',
-        requires = 'nvim-tree/nvim-web-devicons'
+        "akinsho/bufferline.nvim",
+        tag = "*",
+        requires = "nvim-tree/nvim-web-devicons"
     }
     -- Trouble
     use {
-        'folke/trouble.nvim',
-        requires = 'nvim-tree/nvim-web-devicons',
+        "folke/trouble.nvim",
+        requires = "nvim-tree/nvim-web-devicons",
     }
     -- Toggleterm
     use {
-        'akinsho/toggleterm.nvim',
-        tag = '*'
+        "akinsho/toggleterm.nvim",
+        tag = "*"
     }
     -- Markdown preview
     use({

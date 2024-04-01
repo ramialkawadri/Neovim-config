@@ -78,3 +78,7 @@ map('n', '<C-h>', vim.lsp.buf.hover, { noremap = true, silent = true })
 
 map('n', '<C-g>', [[:LazyGit<CR>]], { silent = true, noremap = true })
 
+-- Actions Preview
+
+map({ "v", "n" }, "<C-c>", require("actions-preview").code_actions)
+

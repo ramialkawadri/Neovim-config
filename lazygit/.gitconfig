@@ -1,0 +1,11 @@
+[credential]
+	helper = store
+[user]
+	email = ramialkawadri@hotmail.com
+	name = Rami Alkawadri
+[delta]
+    line-numbers = true
+    side-by-side = true
+    paging = never
+    syntax-theme= gruvbox-dark
+
