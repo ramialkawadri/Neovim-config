@@ -1,0 +1,6 @@
+git:
+  paging:
+    colorArg: always
+    pager: delta --line-numbers --side-by-side --paging=never --dark --syntax-theme gruvbox-dark
+os:
+  editPreset: 'nvim'
