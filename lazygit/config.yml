@@ -1,6 +1,6 @@
 git:
   paging:
     colorArg: always
-    pager: delta
+    pager: delta --side-by-side
 os:
   editPreset: 'nvim'

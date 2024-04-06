@@ -64,3 +64,4 @@ lspconfig.vimls.setup {}
 -- Latex
 lspconfig.texlab.setup {}
 lspconfig.ltex.setup {}
+
