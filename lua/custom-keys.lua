@@ -15,8 +15,8 @@ map('n', '<C-k>', [[:bn<CR>]], {})
 
 map('n', 'gr', [[:TroubleToggle lsp_references<CR>]], { silent = true, noremap = true })
 map('n', 'gd', custom_functions.goToDefinition, { silent = true, noremap = true })
-map('n', '<C-P>', '<cmd>TroubleToggle workspace_diagnostics<CR>', { silent = true, noremap = true })
-map('n', '<C-x>', '<cmd>TroubleToggle document_diagnostics<CR>', { silent = true, noremap = true })
+map('n', '\\p', '<cmd>TroubleToggle workspace_diagnostics<CR>', { silent = true, noremap = true })
+map('n', '\\x', '<cmd>TroubleToggle document_diagnostics<CR>', { silent = true, noremap = true })
 
 -- Vim diagnostic
 
@@ -58,8 +58,8 @@ map('n', 'gN', [[:Gitsigns prev_hunk<CR>]], {})
 
 -- Testing
 
-map('n', '<C-a>', [[:TestSuite<CR>]], {})
-map('n', '<C-l>', [[:TestNearest<CR>]], {})
+map('n', '\\a', [[:TestSuite<CR>]], {})
+map('n', '\\a', [[:TestNearest<CR>]], {})
 
 -- Nvim-Tree
 
