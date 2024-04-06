@@ -8,4 +8,20 @@ function M.goToDefinition()
     end
 end
 
+function M.debugTest()
+    require("neotest").run.run({ strategy = "dap" })
+end
+
+function M.runAllTests()
+    require("neotest").run.run(vim.fn.getcwd())
+end
+
+function M.file_exists(name)
+    local f = io.open(name, "r")
+    if f ~= nil then
+        io.close(f)
+        return true
+    else return false end
+end
+
 return M

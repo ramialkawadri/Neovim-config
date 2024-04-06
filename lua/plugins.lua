@@ -49,7 +49,24 @@ return require("packer").startup(function(use)
     -- Support Evince Through DBus
     use "peterbjorgensen/sved"
     -- Testing
-    use "vim-test/vim-test"
+    use {
+        "nvim-neotest/neotest",
+        requires = {
+            "nvim-neotest/nvim-nio",
+            "nvim-lua/plenary.nvim",
+            "antoinemadec/FixCursorHold.nvim",
+            "nvim-treesitter/nvim-treesitter",
+            "Issafalcon/neotest-dotnet",
+            "nvim-neotest/neotest-python",
+            "nvim-neotest/neotest-jest",
+            "rcasia/neotest-java",
+        }
+    }
+    -- Debugging
+    use {
+        "rcarriga/nvim-dap-ui",
+        requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" }
+    }
     -- Renamer
     use {
         "filipdutescu/renamer.nvim",

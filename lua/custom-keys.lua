@@ -58,8 +58,8 @@ map('n', 'gN', [[:Gitsigns prev_hunk<CR>]], {})
 
 -- Testing
 
-map('n', '\\a', [[:TestSuite<CR>]], {})
-map('n', '\\a', [[:TestNearest<CR>]], {})
+map('n', '\\a', require("custom-functions").runAllTests, {})
+map('n', '\\l', require("custom-functions").debugTest, {})
 
 -- Nvim-Tree
 
@@ -81,4 +81,13 @@ map('n', '<C-g>', [[:LazyGit<CR>]], { silent = true, noremap = true })
 -- Actions Preview
 
 map({ "v", "n" }, "<C-c>", require("actions-preview").code_actions)
+
+-- Debugging
+
+map('n', '<F5>', require("dap").continue)
+map('n', '<F2>', require("dap").terminate)
+map('n', '<F9>', require("dap").toggle_breakpoint)
+map('n', '<F10>', require("dap").step_over)
+map('n', '<F11>', require("dap").step_into)
+map('n', '<F12>', require("dap").step_out)
 
