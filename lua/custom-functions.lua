@@ -2,7 +2,7 @@ local M = {}
 
 function M.goToDefinition()
     if vim.bo.filetype == 'cs' then
-        require('omnisharp_extended').telescope_lsp_definition()
+        require('csharpls_extended').lsp_definitions()
     else
         vim.cmd('TroubleToggle lsp_definitions')
     end

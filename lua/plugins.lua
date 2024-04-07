@@ -16,7 +16,7 @@ return require("packer").startup(function(use)
     use "hrsh7th/cmp-buffer"
     use "hrsh7th/vim-vsnip"
     -- C#
-    use "Hoffs/omnisharp-extended-lsp.nvim"
+    use "Decodetalkers/csharpls-extended-lsp.nvim"
     -- Lua
     use "folke/neodev.nvim"
     -- Actions preview

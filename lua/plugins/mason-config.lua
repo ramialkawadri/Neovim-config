@@ -14,7 +14,7 @@ require('mason-lspconfig').setup {
         "jsonls",        -- JSON
         "ltex",          -- Latex
         "lua_ls",        -- Lua
-        "omnisharp",     -- C#
+        "csharp_ls",     -- C#
         "pylsp",         -- Python
         "pyright",       -- Pyright
         "rust_analyzer", -- Rust
