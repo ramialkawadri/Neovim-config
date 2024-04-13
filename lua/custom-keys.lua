@@ -10,6 +10,7 @@ map('n', '<F4>', [[:NvimTreeClose<CR>]], {})
 
 map('n', '<C-j>', [[:bp<CR>]], {})
 map('n', '<C-k>', [[:bn<CR>]], {})
+map('n', '\\w', [[:Bdelete<CR>]], {})
 
 -- Trouble
 
