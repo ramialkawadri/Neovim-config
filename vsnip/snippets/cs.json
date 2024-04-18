@@ -1,0 +1,28 @@
+{
+  "Test": {
+    "prefix": ["test"],
+    "body": [
+      "\t[TestMethod]",
+      "\tpublic ${1:void} ()",
+      "\t{",
+      "\t\t// Arrange",
+      "\t\t",
+      "\t\t// Act",
+      "",
+      "\t\t// Assert",
+      "",
+      "\t}"
+    ],
+    "description": "Class definition template."
+  },
+  "Class": {
+    "prefix": ["class"],
+    "body": [
+        "namespace $1",
+        "public class $TM_FILENAME_BASE",
+        "{",
+        "}"
+    ],
+    "description": "Class definition template."
+  }
+}
