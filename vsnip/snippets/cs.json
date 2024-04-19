@@ -3,7 +3,7 @@
     "prefix": ["test"],
     "body": [
       "\t[TestMethod]",
-      "\tpublic ${1:void} ()",
+      "\tpublic ${1:void}()",
       "\t{",
       "\t\t// Arrange",
       "\t\t",
@@ -19,6 +19,7 @@
     "prefix": ["class"],
     "body": [
         "namespace $1",
+        "",
         "public class $TM_FILENAME_BASE",
         "{",
         "}"
