@@ -63,6 +63,10 @@ return require("packer").startup(function(use)
             "rcasia/neotest-java",
         }
     }
+    use {
+        "andythigpen/nvim-coverage",
+        requires = "nvim-lua/plenary.nvim",
+    }
     -- Debugging
     use {
         "rcarriga/nvim-dap-ui",
