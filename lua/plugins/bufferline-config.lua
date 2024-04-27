@@ -2,25 +2,33 @@
 
 local bufferline = require('bufferline')
 
+local background_color = "#343537"
+
 bufferline.setup {
     options = {
         diagnostics = 'nvim_lsp',
-        style_preset = {
-            bufferline.style_preset.no_italic,
-            bufferline.style_preset.no_bold
-        },
+        style_preset = bufferline.style_preset.no_italic,
         diagnostics_indicator = function(count, level)
             local icon = level:match('error') and ' ' or ' '
-            return ' ' .. icon .. count
+            return " " .. icon .. count
         end,
-        separator_style = 'thick',
+        separator_style = "thick",
         offsets = {
             {
                 filetype = "NvimTree",
                 text = "File Explorer",
                 highlight = "Directory",
-                separator = true -- use a "true" to enable the default, or set your own character
+                separator = true,
             }
+        },
+        indicator = {
+            style = "icon",
+            icon = "| "
+        }
+    },
+    highlights = {
+        fill = {
+            bg = background_color
         }
     }
 }
