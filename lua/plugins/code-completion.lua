@@ -56,12 +56,12 @@ cmp.setup({
         fields = { "kind", "abbr", "menu" },
         format = function(entry, vim_item)
             -- Formatting.
-            --
+            
             local kind = require("lspkind")
                 .cmp_format({ mode = "symbol_text", maxwidth = auto_completion_width })(entry, vim_item)
             local strings = vim.split(kind.kind, "%s", { trimempty = true })
             kind.kind = " " .. (strings[1] or "") .. " "
-            -- Removing everything from the right column
+            -- Removing everything from the right column.
             kind.menu = ""
 
             -- Maximising the width.
