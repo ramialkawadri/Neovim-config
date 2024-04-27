@@ -90,7 +90,7 @@ cmp.setup.cmdline(':', {
     })
 })
 
--- Coloring icons
+-- Coloring icons.
 
 vim.api.nvim_set_hl(0, 'CmpItemAbbrDeprecated', { bg = 'NONE', strikethrough = true, fg = '#808080' })
 vim.api.nvim_set_hl(0, 'CmpItemAbbrMatch', { bg = 'NONE', fg = '#569CD6' })
