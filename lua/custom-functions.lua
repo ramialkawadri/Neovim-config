@@ -1,10 +1,10 @@
 local M = {}
 
 function M.goToDefinition()
-    if vim.bo.filetype == 'cs' then
-        require('csharpls_extended').lsp_definitions()
+    if vim.bo.filetype == "cs" then
+        require("csharpls_extended").lsp_definitions()
     else
-        vim.cmd('TroubleToggle lsp_definitions')
+        vim.cmd("TroubleToggle lsp_definitions")
     end
 end
 
@@ -22,6 +22,16 @@ function M.file_exists(name)
         io.close(f)
         return true
     else return false end
+end
+
+function M.load_coverage()
+    vim.cmd("CoverageClear")
+    vim.cmd("Coverage")
+end
+
+function M.show_coverage_summary()
+    M.load_coverage()
+    vim.cmd("CoverageSummary")
 end
 
 return M

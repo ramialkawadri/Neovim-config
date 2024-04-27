@@ -10,35 +10,7 @@ vim.opt.shortmess = vim.opt.shortmess + { c = true }
 
 local cmp = require('cmp')
 
-local auto_completion_width = 35
-
-local lsp_symbols = {
-    Text = '   (Text) ',
-    Method = '   (Method)',
-    Function = '   (Function)',
-    Constructor = '   (Constructor)',
-    Field = ' ﴲ  (Field)',
-    Variable = '[] (Variable)',
-    Class = '   (Class)',
-    Interface = ' ﰮ  (Interface)',
-    Module = '   (Module)',
-    Property = ' 襁 (Property)',
-    Unit = '   (Unit)',
-    Value = '   (Value)',
-    Enum = ' 練 (Enum)',
-    Keyword = '   (Keyword)',
-    Snippet = '   (Snippet)',
-    Color = '   (Color)',
-    File = '   (File)',
-    Reference = '   (Reference)',
-    Folder = '   (Folder)',
-    EnumMember = '   (EnumMember)',
-    Constant = ' ﲀ  (Constant)',
-    Struct = ' ﳤ  (Struct)',
-    Event = '   (Event)',
-    Operator = '   (Operator)',
-    TypeParameter = '   (TypeParameter)',
-}
+local auto_completion_width = 42
 
 cmp.setup({
     mapping = {
@@ -80,22 +52,54 @@ cmp.setup({
             vim.fn['vsnip#anonymous'](args.body)
         end,
     },
-
     formatting = {
-        format = function(entry, item)
-            item.kind = lsp_symbols[item.kind]
-            item.menu = ({
-                buffer = '[Buffer]',
-                nvim_lsp = '[LSP]',
-                luasnip = '[Snippet]',
-                neorg = '[Neorg]',
-            })[entry.source.name]
-            item.abbr = string.format("%-" .. tostring(auto_completion_width) .. "s", item.abbr)
-            if string.len(item.abbr) > auto_completion_width then
-                item.abbr = string.sub(item.abbr, 0, auto_completion_width - 3) .. "..."
-            end
+        fields = { "kind", "abbr", "menu" },
+        format = function(entry, vim_item)
+            -- Formatting.
+            --
+            local kind = require("lspkind")
+                .cmp_format({ mode = "symbol_text", maxwidth = auto_completion_width })(entry, vim_item)
+            local strings = vim.split(kind.kind, "%s", { trimempty = true })
+            kind.kind = " " .. (strings[1] or "") .. " "
+            -- Removing everything from the right column
+            kind.menu = ""
 
-            return item
+            -- Maximising the width.
+
+            vim_item.abbr = string.format("%-" .. tostring(auto_completion_width) .. "s", vim_item.abbr)
+            if string.len(vim_item.abbr) > auto_completion_width then
+                vim_item.abbr = string.sub(vim_item.abbr, 0, auto_completion_width - 3) .. "..."
+            end
+            return kind
         end,
-    }
+    },
 })
+
+-- `:` cmdline setup.
+cmp.setup.cmdline(':', {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = cmp.config.sources({
+        { name = 'path' }
+    }, {
+        {
+            name = 'cmdline',
+            option = {
+                ignore_cmds = { 'Man', '!' }
+            }
+        }
+    })
+})
+
+-- Coloring icons
+
+vim.api.nvim_set_hl(0, 'CmpItemAbbrDeprecated', { bg = 'NONE', strikethrough = true, fg = '#808080' })
+vim.api.nvim_set_hl(0, 'CmpItemAbbrMatch', { bg = 'NONE', fg = '#569CD6' })
+vim.api.nvim_set_hl(0, 'CmpItemAbbrMatchFuzzy', { link = 'CmpIntemAbbrMatch' })
+vim.api.nvim_set_hl(0, 'CmpItemKindVariable', { bg = 'NONE', fg = '#9CDCFE' })
+vim.api.nvim_set_hl(0, 'CmpItemKindInterface', { link = 'CmpItemKindVariable' })
+vim.api.nvim_set_hl(0, 'CmpItemKindText', { link = 'CmpItemKindVariable' })
+vim.api.nvim_set_hl(0, 'CmpItemKindFunction', { bg = 'NONE', fg = '#C586C0' })
+vim.api.nvim_set_hl(0, 'CmpItemKindMethod', { link = 'CmpItemKindFunction' })
+vim.api.nvim_set_hl(0, 'CmpItemKindKeyword', { bg = 'NONE', fg = '#D4D4D4' })
+vim.api.nvim_set_hl(0, 'CmpItemKindProperty', { link = 'CmpItemKindKeyword' })
+vim.api.nvim_set_hl(0, 'CmpItemKindUnit', { link = 'CmpItemKindKeyword' })

@@ -92,3 +92,8 @@ map('n', '<F10>', require("dap").step_over)
 map('n', '<F11>', require("dap").step_into)
 map('n', '<F12>', require("dap").step_out)
 
+-- Coverage
+
+map('n', '\\c', custom_functions.load_coverage, { silent = true, noremap = true })
+map('n', '\\s', custom_functions.show_coverage_summary, { silent = true, noremap = true })
+
