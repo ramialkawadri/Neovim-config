@@ -24,11 +24,19 @@ lspconfig.pylsp.setup {
 }
 lspconfig.pyright.setup {}
 
+
+
 -- Web
-lspconfig.cssls.setup {}
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+lspconfig.cssls.setup {
+    capabilities = capabilities,
+}
 lspconfig.html.setup {}
 lspconfig.emmet_ls.setup {}
 lspconfig.tsserver.setup {}
+lspconfig.cssmodules_ls.setup {}
 
 -- C#
 lspconfig.csharp_ls.setup {

@@ -8,6 +8,7 @@ require('mason-lspconfig').setup {
         "clangd",        -- C/CPP
         "cmake",         -- CMake
         "cssls",         -- CSS
+        "cssmodules_ls", -- CSS modules
         "emmet_ls",      -- Emmet
         "html",          -- HTML
         "jdtls",         -- Java
