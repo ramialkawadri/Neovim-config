@@ -21,6 +21,7 @@ require('mason-lspconfig').setup {
         "rust_analyzer", -- Rust
         "texlab",        -- Latex
         "tsserver",      -- Typescript
+        "eslint",        -- ESLint
         "vimls",         -- Vim
     }
 }
