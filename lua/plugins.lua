@@ -50,8 +50,6 @@ return require("packer").startup(function(use)
     use "numToStr/Comment.nvim"
     -- VimText
     use "lervag/vimtex"
-    -- Support Evince Through DBus
-    use "peterbjorgensen/sved"
     -- Testing
     use {
         "nvim-neotest/neotest",

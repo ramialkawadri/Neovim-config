@@ -12,3 +12,6 @@
 ### Updating configurations
 1. Updating LazyGit `./lazygit/update_config.bash`
 1. Updating snippets `./vsnip/update_snippets.bash`
+
+## Okular
+`Settings` -> `Configure Okular` -> `Editor` -> `Custom Text Editor` -> `nvim --headless -c "VimtexInverseSearch %l '%f'"`
