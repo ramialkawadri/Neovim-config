@@ -43,6 +43,36 @@ dap.configurations.cs = {
     },
 }
 
+-- C/C++
+
+dap.adapters.gdb = {
+    type = "executable",
+    command = "gdb",
+    args = { "-i", "dap" }
+}
+
+dap.configurations.cpp = {
+    {
+        name = "Launch",
+        type = "gdb",
+        request = "launch",
+        program = require("custom-functions").debug_c_or_cpp,
+        cwd = "${workspaceFolder}",
+        stopAtBeginningOfMainSubprogram = false,
+    },
+}
+
+dap.configurations.c = {
+    {
+        name = "Launch",
+        type = "gdb",
+        request = "launch",
+        program = require("custom-functions").debug_c_or_cpp,
+        cwd = "${workspaceFolder}",
+        stopAtBeginningOfMainSubprogram = false,
+    },
+}
+
 vim.fn.sign_define("DapBreakpoint", { text = "🟥", texthl = "", linehl = "", numhl = "" })
 vim.fn.sign_define("DapStopped", { text = "▶️", texthl = "", linehl = "", numhl = "" })
 
