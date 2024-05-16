@@ -11,7 +11,7 @@ vim.wo.cursorline = true
 
 -- Vertical line
 
-vim.cmd('set colorcolumn=100')
+vim.cmd('set colorcolumn=80')
 
 -- Swap files
 
