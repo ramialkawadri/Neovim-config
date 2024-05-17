@@ -17,7 +17,6 @@ require('mason-lspconfig').setup {
         "lua_ls",        -- Lua
         "csharp_ls",     -- C#
         "pylsp",         -- Python
-        "pyright",       -- Pyright
         "rust_analyzer", -- Rust
         "texlab",        -- Latex
         "tsserver",      -- Typescript

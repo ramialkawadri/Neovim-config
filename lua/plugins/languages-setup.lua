@@ -22,9 +22,6 @@ lspconfig.pylsp.setup {
         },
     },
 }
-lspconfig.pyright.setup {}
-
-
 
 -- Web
 local capabilities = vim.lsp.protocol.make_client_capabilities()
