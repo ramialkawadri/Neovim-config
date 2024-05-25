@@ -1,8 +1,7 @@
 -- Documentation: https://github.com/akinsho/bufferline.nvim
 
 local bufferline = require('bufferline')
-
-local background_color = "#343537"
+local background_color = "#5d5d5f"
 
 bufferline.setup {
     options = {

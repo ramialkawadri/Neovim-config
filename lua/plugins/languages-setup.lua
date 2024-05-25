@@ -16,7 +16,7 @@ lspconfig.pylsp.setup {
         pylsp = {
             plugins = {
                 pycodestyle = {
-                    enabled = false,
+                    enabled = true,
                 },
             },
         },
