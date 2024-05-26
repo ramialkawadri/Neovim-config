@@ -34,7 +34,6 @@ lspconfig.html.setup {}
 lspconfig.emmet_ls.setup {}
 lspconfig.tsserver.setup {}
 lspconfig.cssmodules_ls.setup {}
-lspconfig.eslint.setup {}
 
 -- C#
 lspconfig.csharp_ls.setup {
