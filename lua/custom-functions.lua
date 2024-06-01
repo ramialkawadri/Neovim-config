@@ -4,7 +4,7 @@ function M.goToDefinition()
     if vim.bo.filetype == "cs" then
         require("csharpls_extended").lsp_definitions()
     else
-        vim.cmd("TroubleToggle lsp_definitions")
+        vim.cmd("Trouble lsp_definitions focus")
     end
 end
 
