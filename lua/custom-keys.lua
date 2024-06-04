@@ -19,9 +19,12 @@ map("n", "\\w", [[:Bdelete<CR>]], defaultMapOptions)
 -- Trouble
 
 map("n", "gr", [[:Trouble lsp_references focus<CR>]], defaultMapOptions)
-map("n", "gd", custom_functions.goToDefinition, defaultMapOptions)
 map("n", "\\p", "<cmd>Trouble diagnostics focus=true<CR>", defaultMapOptions)
 map("n", "\\x", "<cmd>Trouble diagnostics focus filter.buf=0<CR>", defaultMapOptions)
+
+-- Definition and declaration
+map("n", "gd", custom_functions.goToDefinition, defaultMapOptions)
+map("n", "gD", vim.lsp.buf.declaration, defaultMapOptions)
 
 -- Vim diagnostic
 
