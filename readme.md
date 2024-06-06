@@ -6,8 +6,7 @@
 1. `./lazygit/install_config.bash`
 1. `./vsnip/install_snippets.bash`
 1. `dotnet tool install --global csharp-ls`
-1. `npm install --global cssmodules-language-server`
-1. `npm install --global vscode-langservers-extracted`
+1. `npm install --global cssmodules-language-server tree-sitter-cli vscode-langservers-extracted`
 
 ### Updating configurations
 1. Updating LazyGit `./lazygit/update_config.bash`
