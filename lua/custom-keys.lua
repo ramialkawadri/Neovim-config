@@ -92,7 +92,7 @@ map({ "v", "n" }, "<C-c>", require("actions-preview").code_actions, defaultMapOp
 -- Debugging
 
 map("n", "<F5>", require("dap").continue, defaultMapOptions)
-map("n", "<F2>", require("dap").terminate, defaultMapOptions)
+map("n", "<F8>", require("dap").terminate, defaultMapOptions)
 map("n", "<F9>", require("dap").toggle_breakpoint, defaultMapOptions)
 map("n", "<F10>", require("dap").step_over, defaultMapOptions)
 map("n", "<F11>", require("dap").step_into, defaultMapOptions)
