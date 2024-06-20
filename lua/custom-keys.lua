@@ -14,7 +14,7 @@ map("n", "<F4>", [[:NvimTreeClose<CR>]], defaultMapOptions)
 
 map("n", "<C-j>", [[:bp<CR>]], defaultMapOptions)
 map("n", "<C-k>", [[:bn<CR>]], defaultMapOptions)
-map("n", "\\w", [[:Bdelete<CR>]], defaultMapOptions)
+map("n", "\\w", [[:bdelete<CR>]], defaultMapOptions)
 
 -- Trouble
 
