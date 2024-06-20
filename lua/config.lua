@@ -11,7 +11,7 @@ vim.wo.cursorline = true
 
 -- Vertical line
 
-vim.cmd('set colorcolumn=80')
+vim.cmd("set colorcolumn=80")
 
 -- Swap files
 
@@ -30,19 +30,19 @@ vim.opt.expandtab = true
 
 -- Autocomplete size
 
-vim.cmd('set pumwidth=50')
+vim.cmd("set pumwidth=50")
 
 -- Ignorecases by default
 
-vim.cmd('set ic');
+vim.cmd("set ic");
 
 -- Folding
 
-vim.cmd('set foldmethod=manual')
+vim.cmd("set foldmethod=manual")
 
 -- Alias
 
-vim.cmd('command Format lua vim.lsp.buf.format()')
+vim.cmd("command Format lua vim.lsp.buf.format()")
 
 -- Latex
 
@@ -50,10 +50,10 @@ vim.g.vimtex_quickfix_open_on_warning = 0
 
 -- Styling
 
-vim.cmd('colorscheme hybrid')
-vim.cmd('hi MatchParen gui=underline guibg=None guifg=None guisp=white')
+vim.cmd("colorscheme hybrid")
+vim.cmd("hi MatchParen gui=underline guibg=None guifg=None guisp=white")
 
 -- Vimtex
 
-vim.cmd("let g:vimtex_view_general_viewer = 'okular'")
-vim.cmd("let g:vimtex_view_general_options = '--unique file:@pdf\\#src:@line@tex'")
+vim.cmd("let g:vimtex_view_general_viewer = \"okular\"")
+vim.cmd("let g:vimtex_view_general_options = \"--unique file:@pdf\\#src:@line@tex\"")

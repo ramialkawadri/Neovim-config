@@ -1,6 +1,6 @@
 -- Documentation: https://github.com/nvim-telescope/telescope.nvim
 
-require('telescope').setup {
+require("telescope").setup {
     defaults = {
         mappings = {
             i = {

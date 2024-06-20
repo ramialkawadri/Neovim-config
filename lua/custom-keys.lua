@@ -5,7 +5,7 @@ local defaultMapOptions = {
     noremap = true
 }
 
--- Open / close tree
+-- Nvim-Tree
 
 map("n", "<F3>", [[:NvimTreeOpen<CR>]], defaultMapOptions)
 map("n", "<F4>", [[:NvimTreeClose<CR>]], defaultMapOptions)
@@ -23,6 +23,7 @@ map("n", "\\p", "<cmd>Trouble diagnostics focus=true<CR>", defaultMapOptions)
 map("n", "\\x", "<cmd>Trouble diagnostics focus filter.buf=0<CR>", defaultMapOptions)
 
 -- Definition and declaration
+
 map("n", "gd", custom_functions.goToDefinition, defaultMapOptions)
 map("n", "gD", vim.lsp.buf.declaration, defaultMapOptions)
 
@@ -68,7 +69,7 @@ map("n", "gN", [[:Gitsigns prev_hunk<CR>]], defaultMapOptions)
 map("n", "\\a", require("custom-functions").runAllTests, defaultMapOptions)
 map("n", "\\l", require("custom-functions").debugTest, defaultMapOptions)
 
--- Nvim-Tree
+-- Telescope
 
 -- Search files, even hidden ones
 map("n", "ff", require("telescope.builtin").find_files, defaultMapOptions)

@@ -2,7 +2,7 @@
 
 -- neodev must be imported first!
 require("neodev").setup {}
-local lspconfig = require('lspconfig')
+local lspconfig = require("lspconfig")
 
 --------------------------LSP--------------------------
 
@@ -38,8 +38,8 @@ lspconfig.cssmodules_ls.setup {}
 -- C#
 lspconfig.csharp_ls.setup {
     handlers = {
-        ["textDocument/definition"] = require('csharpls_extended').handler,
-        ["textDocument/typeDefinition"] = require('csharpls_extended').handler,
+        ["textDocument/definition"] = require("csharpls_extended").handler,
+        ["textDocument/typeDefinition"] = require("csharpls_extended").handler,
     },
 }
 

@@ -1,8 +1,8 @@
 -- Documentation: https://github.com/williamboman/mason.nvim
 
-require('mason').setup()
+require("mason").setup()
 
-require('mason-lspconfig').setup {
+require("mason-lspconfig").setup {
     ensure_installed = {
         "bashls",        -- Bash
         "clangd",        -- C/CPP

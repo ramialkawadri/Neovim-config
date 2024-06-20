@@ -1,14 +1,14 @@
 -- Documentation: https://github.com/akinsho/bufferline.nvim
 
-local bufferline = require('bufferline')
+local bufferline = require("bufferline")
 local background_color = "#5d5d5f"
 
 bufferline.setup {
     options = {
-        diagnostics = 'nvim_lsp',
+        diagnostics = "nvim_lsp",
         style_preset = bufferline.style_preset.no_italic,
         diagnostics_indicator = function(count, level)
-            local icon = level:match('error') and ' ' or ' '
+            local icon = level:match("error") and " " or " "
             return " " .. icon .. count
         end,
         separator_style = "thick",
