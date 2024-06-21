@@ -44,10 +44,6 @@ vim.cmd("set foldmethod=manual")
 
 vim.cmd("command Format lua vim.lsp.buf.format()")
 
--- Latex
-
-vim.g.vimtex_quickfix_open_on_warning = 0
-
 -- Styling
 
 vim.cmd("colorscheme hybrid")
@@ -55,5 +51,6 @@ vim.cmd("hi MatchParen gui=underline guibg=None guifg=None guisp=white")
 
 -- Vimtex
 
+vim.g.vimtex_quickfix_open_on_warning = 0
 vim.cmd("let g:vimtex_view_general_viewer = \"okular\"")
 vim.cmd("let g:vimtex_view_general_options = \"--unique file:@pdf\\#src:@line@tex\"")
