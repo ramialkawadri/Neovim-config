@@ -49,10 +49,6 @@ map("i", "<A-k>", "<Esc><cmd>:m .-2<CR>==gi", defaultMapOptions)
 map("v", "<A-j>", "xp`[V`]", defaultMapOptions)
 map("v", "<A-k>", "xkP`[V`]", defaultMapOptions)
 
--- Latex
-
-map("n", "<C-A-j>", "<cmd>:call SVED_Sync()<CR>", defaultMapOptions)
-
 -- Renamer
 
 map({ "i", "n" }, "<F2>", require("renamer").rename, defaultMapOptions)
