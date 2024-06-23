@@ -5,6 +5,8 @@ return require("packer").startup(function(use)
     use "williamboman/mason.nvim"
     use "williamboman/mason-lspconfig.nvim"
     use "neovim/nvim-lspconfig"
+    use "jay-babu/mason-null-ls.nvim"
+    use "nvimtools/none-ls.nvim"
     -- Java
     use "mfussenegger/nvim-jdtls"
     -- Hrsh7th Code Completion Suite

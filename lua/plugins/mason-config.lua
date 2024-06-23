@@ -24,6 +24,10 @@ require("mason-lspconfig").setup {
     }
 }
 
+require("mason-null-ls").setup({
+    ensure_installed = { "bibtex-tidy" }
+})
+
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     vim.lsp.diagnostic.on_publish_diagnostics, {
 
