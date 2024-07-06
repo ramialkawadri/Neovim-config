@@ -1,0 +1,12 @@
+
+{
+  "Component": {
+    "prefix": ["component"],
+    "body": [
+        "function $1() {",
+        "return ($2)",
+        "}"
+    ],
+    "description": "Class definition template."
+  }
+}

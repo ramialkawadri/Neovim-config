@@ -2,23 +2,23 @@
   "Test": {
     "prefix": ["test"],
     "body": [
-      "\t[TestMethod]",
-      "\tpublic ${1:void}()",
-      "\t{",
-      "\t\t// Arrange",
-      "\t\t",
-      "\t\t// Act",
+      "[TestMethod]",
+      "public ${1:void}()",
+      "{",
+      "\t// Arrange",
+      "\t",
+      "\t// Act",
       "",
-      "\t\t// Assert",
+      "\t// Assert",
       "",
-      "\t}"
+      "}"
     ],
     "description": "Class definition template."
   },
   "Class": {
     "prefix": ["class"],
     "body": [
-        "namespace $1",
+        "namespace ${1:$RELATIVE_FILEPATH};",
         "",
         "public class $TM_FILENAME_BASE",
         "{",
