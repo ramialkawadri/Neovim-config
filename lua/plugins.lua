@@ -29,6 +29,8 @@ return require("packer").startup(function(use)
     use "aznhe21/actions-preview.nvim"
     -- Gitsigns
     use "lewis6991/gitsigns.nvim"
+    -- Repeate
+    use "tpope/vim-repeat"
     -- Nvim color highlight
     use "brenoprata10/nvim-highlight-colors"
     -- Indent blankline
