@@ -64,6 +64,7 @@ map("n", "gN", [[:Gitsigns prev_hunk<CR>]], defaultMapOptions)
 
 map("n", "\\a", require("custom-functions").runAllTests, defaultMapOptions)
 map("n", "\\l", require("custom-functions").debugTest, defaultMapOptions)
+map("n", "\\o", [[:Neotest output<CR>]], defaultMapOptions)
 
 -- Telescope
 
