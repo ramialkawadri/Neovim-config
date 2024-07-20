@@ -4,10 +4,10 @@
 
 require("neotest").setup({
     adapters = {
-        require("neotest-dotnet"),
-        require("neotest-java"),
+        -- require("neotest-java"),
         require("neotest-jest"),
-        require("neotest-python")
+        require("neotest-python"),
+        require("neotest-dotnet"),
     }
 })
 
