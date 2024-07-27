@@ -2,6 +2,8 @@
 
 -- neodev must be imported first!
 require("neodev").setup {}
+require("null-ls").setup {}
+require("eslint").setup {}
 local lspconfig = require("lspconfig")
 
 --------------------------LSP--------------------------

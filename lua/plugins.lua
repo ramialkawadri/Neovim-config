@@ -37,6 +37,8 @@ return require("packer").startup(function(use)
     use "lukas-reineke/indent-blankline.nvim"
     -- TS-rainbow
     use "p00f/nvim-ts-rainbow"
+    -- eslint
+    use "MunifTanjim/eslint.nvim"
     -- Autotag
     use "windwp/nvim-ts-autotag"
     -- Startify
