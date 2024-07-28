@@ -36,5 +36,10 @@ return {
                 }
             }
         }
-    end
+    end,
+    keys = {
+        { "<C-j>", [[:bp<CR>]], desc = "Previous Buffer" },
+        { "<C-k>", [[:bn<CR>]], desc = "Next Buffer" },
+        { "\\w", [[:Bdelete<CR>]], desc = "Close Current Buffer" },
+    },
 }

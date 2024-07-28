@@ -1,5 +1,7 @@
 -- Documentation: https://github.com/neovim/nvim-lspconfig
 
+local custom_functions = require("custom-functions")
+
 return {
     {
         -- neodev must be imported first!
@@ -74,5 +76,11 @@ return {
             lspconfig.texlab.setup {}
             lspconfig.ltex.setup {}
         end
-    }
+    },
+    keys = {
+        { "gd", custom_functions.goToDefinition, desc = "Go To Definition" },
+        { "gD", vim.lsp.buf.declaration, desc = "Go To Declaration" },
+        { "gD", vim.lsp.buf.declaration, desc = "Go To Declaration" },
+        { "<C-h>", vim.lsp.buf.hover, desc = "Mouse Hover" },
+    },
 }
