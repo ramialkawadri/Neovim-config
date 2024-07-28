@@ -35,8 +35,8 @@ return require("packer").startup(function(use)
     use "brenoprata10/nvim-highlight-colors"
     -- Indent blankline
     use "lukas-reineke/indent-blankline.nvim"
-    -- TS-rainbow
-    use "p00f/nvim-ts-rainbow"
+    -- Rainbow-delimiters
+    use "HiPhish/rainbow-delimiters.nvim"
     -- eslint
     use "MunifTanjim/eslint.nvim"
     -- Autotag
