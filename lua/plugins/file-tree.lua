@@ -7,6 +7,7 @@ vim.g.loaded_netrwPlugin = 1
 return {
     "nvim-tree/nvim-tree.lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
+    lazy = false,
     opts = {
         renderer = {
             indent_markers = {
