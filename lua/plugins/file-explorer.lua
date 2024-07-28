@@ -13,5 +13,10 @@ return {
                 enable = true
             }
         }
-    }
+    },
+    keys = {
+        { "ff", require("telescope.builtin").find_files, desc = "Search Files" },
+        { "fg", require("telescope.builtin").live_grep, desc = "RipGrep" },
+        { "fb", require("telescope.builtin").buffers, desc = "Search Buffers" },
+    },
 }

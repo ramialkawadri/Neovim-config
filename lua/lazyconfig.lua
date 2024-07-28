@@ -26,8 +26,6 @@ require("lazy").setup({
     { "onsails/lspkind.nvim" },
     -- C#
     { "Decodetalkers/csharpls-extended-lsp.nvim" },
-    -- Gitsigns
-    { "lewis6991/gitsigns.nvim", opts = {} },
     -- Repeate
     { "tpope/vim-repeat" },
     -- Nvim color highlight

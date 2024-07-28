@@ -89,5 +89,13 @@ return {
         dap.listeners.before.event_exited["dapui_config"] = function()
             dapui.close()
         end
-    end
+    end,
+    keys = {
+        { "<F5>", function() require("dap").continue() end, desc = "Continue Testing" },
+        { "<F8>", function() require("dap").terminate() end, desc = "Terminate" },
+        { "<F9>", function() require("dap").toggle_breakpoint() end, desc = "Toggle Breakpoint" },
+        { "<F10>", function() require("dap").step_over() end, desc = "Step Over" },
+        { "<F11>", function() require("dap").step_into() end, desc = "Step Into" },
+        { "<F12>", function() require("dap").step_out() end, desc = "Step Out" },
+    },
 }

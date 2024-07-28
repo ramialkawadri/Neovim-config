@@ -13,5 +13,9 @@ return {
                 }
             }
         }
-    }
+    },
+    keys = {
+        { "<F3>", [[:NvimTreeOpen<CR>]], desc = "Open File Tree" },
+        { "<F4>", [[:NvimTreeClose<CR>]], desc = "Close File Tree" },
+    },
 }

@@ -19,5 +19,15 @@ return {
                 },
             },
         }
-    end
+    end,
+    keys = {
+        {
+            "<C-c>",
+            mode = { "n", "v" },
+            function()
+                require("actions-preview").code_actions()
+            end,
+            desc = "Code Actions"
+        },
+    },
 }

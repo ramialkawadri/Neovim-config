@@ -2,6 +2,8 @@
 -- Documentation neotest-dotnet: https://github.com/Issafalcon/neotest-dotnet
 -- Documentation nvim-coverage: https://github.com/andythigpen/nvim-coverage
 
+local custom_functions = require("custom-functions")
+
 return {
     {
         "nvim-neotest/neotest",
@@ -23,11 +25,20 @@ return {
                     require("neotest-dotnet"),
                 }
             })
-        end
+        end,
+        keys = {
+            { "\\a", custom_functions.runAllTests, desc = "Run All Tests" },
+            { "\\l", custom_functions.debugTest, desc = "Debug Test" },
+            { "\\o", [[:Neotest output<CR>]], desc = "Show Test Output" },
+        },
     },
     {
         "andythigpen/nvim-coverage",
         dependencies = "nvim-lua/plenary.nvim",
-        opts = {}
-    }
+        opts = {},
+        keys = {
+            { "\\c", custom_functions.load_coverage, desc = "Load Coverage" },
+            { "\\s", custom_functions.show_coverage_summary, desc = "Show Coverage Summary" },
+        },
+    },
 }
