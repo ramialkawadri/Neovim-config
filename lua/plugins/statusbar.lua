@@ -7,6 +7,9 @@ return {
         disabled_filetypes = {
             statusline = { "packer", "NvimTree" },
             winbar = { "packer", "NvimTree" },
+        },
+        options = {
+            section_separators = { left = '', right = '' },
         }
     }
 }
