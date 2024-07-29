@@ -5,8 +5,8 @@ return {
     dependencies = { "kyazdani42/nvim-web-devicons", opt = true },
     opts = {
         disabled_filetypes = {
-            statusline = { "packer", "NvimTree" },
-            winbar = { "packer", "NvimTree" },
+            statusline = { "NVimTree" },
+            winbar = { "NVimTree" },
         },
         options = {
             section_separators = { left = '', right = '' },
