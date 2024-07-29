@@ -15,6 +15,7 @@ return {
                 "bashls",        -- Bash
                 "clangd",        -- C/CPP
                 "cmake",         -- CMake
+                "csharp_ls",     -- C#
                 "cssls",         -- CSS
                 "cssmodules_ls", -- CSS modules
                 "emmet_ls",      -- Emmet
@@ -23,12 +24,12 @@ return {
                 "jsonls",        -- JSON
                 "ltex",          -- Latex
                 "lua_ls",        -- Lua
-                "csharp_ls",     -- C#
                 "pylsp",         -- Python
                 "rust_analyzer", -- Rust
                 "texlab",        -- Latex
                 "tsserver",      -- Typescript
                 "vimls",         -- Vim
+                "zls",           -- Zig
             },
         },
         config = function(_, opts)

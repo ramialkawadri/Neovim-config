@@ -1,5 +1,6 @@
 -- Documentation: https://github.com/akinsho/bufferline.nvim
 local background_color = "#5d5d5f"
+local selected_buffer_bg = "#2e3031"
 
 return {
     "akinsho/bufferline.nvim",
@@ -39,34 +40,34 @@ return {
                     bg = background_color
                 },
                 buffer_selected = {
-                    bg = "#333536",
+                    bg = selected_buffer_bg,
                 },
                 diagnostic_selected = {
-                    bg = "#333536",
+                    bg = selected_buffer_bg,
                 },
                 hint_selected = {
-                    bg = "#333536",
+                    bg = selected_buffer_bg,
                 },
                 hint_diagnostic_selected = {
-                    bg = "#333536",
+                    bg = selected_buffer_bg,
                 },
                 info_selected = {
-                    bg = "#333536",
+                    bg = selected_buffer_bg,
                 },
                 info_diagnostic_selected = {
-                    bg = "#333536",
+                    bg = selected_buffer_bg,
                 },
                 warning_selected = {
-                    bg = "#333536",
+                    bg = selected_buffer_bg,
                 },
                 warning_diagnostic_selected = {
-                    bg = "#333536",
+                    bg = selected_buffer_bg,
                 },
                 error_selected = {
-                    bg = "#333536",
+                    bg = selected_buffer_bg,
                 },
                 error_diagnostic_selected = {
-                    bg = "#333536",
+                    bg = selected_buffer_bg,
                 },
                 indicator_selected = {
                     fg = "#2776b9",

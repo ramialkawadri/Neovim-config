@@ -75,6 +75,9 @@ return {
             -- Latex
             lspconfig.texlab.setup {}
             lspconfig.ltex.setup {}
+
+            -- Zig
+            lspconfig.zls.setup {}
         end
     },
     keys = {
