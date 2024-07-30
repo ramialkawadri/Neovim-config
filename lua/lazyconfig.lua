@@ -33,7 +33,13 @@ require("lazy").setup({
         -- Indent blankline
         { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
         -- Rainbow-delimiters
-        { "HiPhish/rainbow-delimiters.nvim" },
+        { "HiPhish/rainbow-delimiters.nvim",
+            config = function()
+                require('rainbow-delimiters.setup').setup {
+                    blacklist = { "zig" }
+                }
+            end
+        },
         -- Autotag
         { "windwp/nvim-ts-autotag" },
         -- Startify

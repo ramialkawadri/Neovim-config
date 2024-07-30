@@ -50,3 +50,7 @@ vim.cmd("colorscheme hybrid")
 vim.cmd("hi MatchParen gui=underline guibg=None guifg=None guisp=white")
 -- Required for the LuaLine: https://github.com/neovim/neovim/pull/17266
 vim.opt.laststatus = 3
+
+-- Stratify
+
+vim.cmd("let g:startify_change_to_dir = 0")
