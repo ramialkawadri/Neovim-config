@@ -4,11 +4,6 @@ local custom_functions = require("custom-functions")
 
 return {
     {
-        -- neodev must be imported first!
-        "folke/neodev.nvim",
-        opts = {},
-    },
-    {
         "MunifTanjim/eslint.nvim",
         opts = {},
     },
@@ -75,9 +70,6 @@ return {
             -- Latex
             lspconfig.texlab.setup {}
             lspconfig.ltex.setup {}
-
-            -- Zig
-            lspconfig.zls.setup {}
         end
     },
     keys = {

@@ -11,7 +11,7 @@ vim.wo.cursorline = true
 
 -- Vertical line
 
-vim.cmd("set colorcolumn=80")
+vim.cmd.set("colorcolumn=80")
 
 -- Swap files
 
@@ -30,11 +30,11 @@ vim.opt.expandtab = true
 
 -- Autocomplete size
 
-vim.cmd("set pumwidth=50")
+vim.cmd.set("pumwidth=50")
 
 -- Ignorecases by default
 
-vim.cmd("set ic");
+vim.cmd.set("ic");
 
 -- Folding
 
@@ -42,15 +42,11 @@ vim.cmd("set foldmethod=manual")
 
 -- Alias
 
-vim.cmd("command Format lua vim.lsp.buf.format()")
+vim.cmd.command("Format lua vim.lsp.buf.format()")
 
 -- Styling
 
-vim.cmd("colorscheme hybrid")
-vim.cmd("hi MatchParen gui=underline guibg=None guifg=None guisp=white")
+vim.cmd.colorscheme("hybrid")
+vim.cmd.hi("MatchParen gui=underline guibg=None guifg=None guisp=white")
 -- Required for the LuaLine: https://github.com/neovim/neovim/pull/17266
 vim.opt.laststatus = 3
-
--- Stratify
-
-vim.cmd("let g:startify_change_to_dir = 0")

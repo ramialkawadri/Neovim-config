@@ -33,17 +33,16 @@ require("lazy").setup({
         -- Indent blankline
         { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
         -- Rainbow-delimiters
-        { "HiPhish/rainbow-delimiters.nvim",
-            config = function()
-                require('rainbow-delimiters.setup').setup {
-                    blacklist = { "zig" }
-                }
-            end
-        },
+        { "HiPhish/rainbow-delimiters.nvim" },
         -- Autotag
         { "windwp/nvim-ts-autotag" },
         -- Startify
-        { "mhinz/vim-startify" },
+        {
+            "mhinz/vim-startify",
+            config = function()
+                vim.g.startify_change_to_dir = 0
+            end
+        },
         -- Vim bbye
         { "moll/vim-bbye" },
         -- Vim surrond
@@ -56,7 +55,7 @@ require("lazy").setup({
         -- VimText
         {
             "lervag/vimtex",
-            init = function()
+            config = function()
                 vim.g.vimtex_quickfix_open_on_warning = 0
                 vim.g.vimtex_view_general_viewer = "okular"
                 vim.g.vimtex_view_general_options = "--unique file:@pdf\\#src:@line@tex"
@@ -74,6 +73,9 @@ require("lazy").setup({
             cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
             ft = { "markdown" },
             build = function() vim.fn["mkdp#util#install"]() end,
+            config = function()
+                vim.g.mkdp_auto_close = 0
+            end
         },
         -- LazyGit
         {
@@ -81,6 +83,16 @@ require("lazy").setup({
             -- optional for floating window border decoration
             dependencies = {
                 "nvim-lua/plenary.nvim",
+            },
+        },
+        -- Lazydev
+        {
+            "folke/lazydev.nvim",
+            ft = "lua",
+            opts = {
+                library = {
+                    { path = "luvit-meta/library", words = { "vim%.uv" } },
+                },
             },
         },
         -- import your plugins
