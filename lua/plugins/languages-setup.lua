@@ -1,7 +1,5 @@
 -- Documentation: https://github.com/neovim/nvim-lspconfig
 
-local custom_functions = require("custom-functions")
-
 return {
     {
         "MunifTanjim/eslint.nvim",
@@ -70,12 +68,12 @@ return {
             -- Latex
             lspconfig.texlab.setup {}
             lspconfig.ltex.setup {}
-        end
-    },
-    keys = {
-        { "gd", custom_functions.goToDefinition, desc = "Go To Definition" },
-        { "gD", vim.lsp.buf.declaration, desc = "Go To Declaration" },
-        { "gD", vim.lsp.buf.declaration, desc = "Go To Declaration" },
-        { "<C-h>", vim.lsp.buf.hover, desc = "Mouse Hover" },
+        end,
+        keys = {
+            { "gd", require("custom-functions").goToDefinition, desc = "Go To Definition" },
+            { "gD", vim.lsp.buf.declaration, desc = "Go To Declaration" },
+            { "gD", vim.lsp.buf.declaration, desc = "Go To Declaration" },
+            { "<C-h>", vim.lsp.buf.hover, desc = "Mouse Hover" },
+        }
     },
 }

@@ -16,8 +16,7 @@ return {
         }
     },
     keys = {
-        { "ff", require("telescope.builtin").find_files, desc = "Search Files" },
-        { "fg", require("telescope.builtin").live_grep, desc = "RipGrep" },
-        { "fb", require("telescope.builtin").buffers, desc = "Search Buffers" },
+        { "<F3>", [[:NvimTreeOpen<CR>]], desc = "Open File Tree" },
+        { "<F4>", [[:NvimTreeClose<CR>]], desc = "Close File Tree" },
     },
 }
