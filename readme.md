@@ -12,3 +12,6 @@
 
 ## Okular
 `Settings` -> `Configure Okular` -> `Editor` -> `Custom Text Editor` -> `nvim --headless -c "VimtexInverseSearch %l '%f'"`
+
+## Firefox debugging:
+Do the steps mentioned [here](https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation#javascript-firefox)

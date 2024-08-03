@@ -13,7 +13,7 @@
   "cmp-vsnip": { "branch": "main", "commit": "989a8a73c44e926199bfd05fa7a516d51f2d2752" },
   "csharpls-extended-lsp.nvim": { "branch": "master", "commit": "5a474b06743bb20a90191994457f5e62f444976b" },
   "eslint.nvim": { "branch": "main", "commit": "05d7e86ea01dc03e6fcc7d5b39530d34ebdef477" },
-  "github-nvim-theme": { "branch": "main", "commit": "2936d3b9cdcd29f70076187f526ee142ce96280c" },
+  "github-nvim-theme": { "branch": "main", "commit": "80b7f448d7f7fa36070ffbe2a43458e57058bb72" },
   "gitsigns.nvim": { "branch": "main", "commit": "0ed466953fe5885166e0d60799172a8b1f752d16" },
   "indent-blankline.nvim": { "branch": "master", "commit": "65e20ab94a26d0e14acac5049b8641336819dfc7" },
   "lazy.nvim": { "branch": "main", "commit": "077102c5bfc578693f12377846d427f49bc50076" },
