@@ -68,6 +68,7 @@ return {
             -- Latex
             lspconfig.texlab.setup {}
             lspconfig.ltex.setup {}
+
         end,
         keys = {
             { "gd", require("custom-functions").goToDefinition, desc = "Go To Definition" },

@@ -6,6 +6,7 @@ return {
     dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
     config = function()
         local dap, dapui = require("dap"), require("dapui")
+        local mason_registery = require("mason-registry")
         dapui.setup()
         require("dap.ext.vscode").load_launchjs(nil, {})
 
@@ -48,9 +49,12 @@ return {
         }
 
         dap.adapters.firefox = {
-            type = 'executable',
-            command = 'node',
-            args = { vim.fn.stdpath("config") .. '/debugging/repos/vscode-firefox-debug/dist/adapter.bundle.js' }
+            type = "executable",
+            command = "node",
+            args = {
+                mason_registery.get_package("firefox-debug-adapter")
+                :get_install_path() .. "/dist/adapter.bundle.js"
+            }
         }
 
         -- C/C++

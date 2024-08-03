@@ -29,7 +29,6 @@ return {
                 "texlab",        -- Latex
                 "tsserver",      -- Typescript
                 "vimls",         -- Vim
-                "zls",           -- Zig
             },
         },
         config = function(_, opts)
@@ -57,7 +56,11 @@ return {
             "nvimtools/none-ls.nvim",
         },
         opts = {
-            ensure_installed = { "bibtex-tidy" }
+            ensure_installed = {
+                "bibtex-tidy",
+                "firefox-debug-adapter",
+                "tree-sitter-cli",
+            }
         }
-    }       
+    }
 }
