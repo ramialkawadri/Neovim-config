@@ -2,24 +2,19 @@
 
 return {
     "nvim-lualine/lualine.nvim",
-    dependencies = { "kyazdani42/nvim-web-devicons", opt = true },
+    dependencies = { "kyazdani42/nvim-web-devicons" },
     opts = {
         disabled_filetypes = {
             statusline = { "NVimTree" },
             winbar = { "NVimTree" },
         },
-        options = {
-            section_separators = { left = '', right = '' },
-        },
         sections = {
-            lualine_a = { { 'mode', separator = { left = '' }, padding = 1 } },
+            lualine_a = { { 'mode', padding = 1 } },
             lualine_b = { 'filename', 'branch' },
             lualine_c = { '%=', },
             lualine_x = {},
             lualine_y = { 'filetype', },
-            lualine_z = {
-                { 'location', separator = { right = '' }, padding = 1 },
-            },
+            lualine_z = { { 'location', padding = 1 } },
         },
         inactive_sections = {
             lualine_a = { 'filename' },
