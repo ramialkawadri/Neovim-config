@@ -48,6 +48,8 @@ return {
             },
         }
 
+        -- Firefox
+
         dap.adapters.firefox = {
             type = "executable",
             command = "node",
