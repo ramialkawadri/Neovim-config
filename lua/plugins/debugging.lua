@@ -50,7 +50,7 @@ return {
         dap.adapters.firefox = {
             type = 'executable',
             command = 'node',
-            args = { os.getenv('HOME') .. '/vscode-firefox-debug/dist/adapter.bundle.js' },
+            args = { vim.fn.stdpath("config") .. '/debugging/repos/vscode-firefox-debug/dist/adapter.bundle.js' }
         }
 
         -- C/C++

@@ -3,6 +3,7 @@
 1. [Ripgrep](https://github.com/BurntSushi/ripgrep#installation)
 1. `./lazygit/install_config.bash`
 1. `./vsnip/install_snippets.bash`
+1. `./debugging/setup_debugging.bash`
 1. `dotnet tool install --global csharp-ls`
 1. `npm install --global cssmodules-language-server tree-sitter-cli vscode-langservers-extracted`
 
@@ -12,6 +13,3 @@
 
 ## Okular
 `Settings` -> `Configure Okular` -> `Editor` -> `Custom Text Editor` -> `nvim --headless -c "VimtexInverseSearch %l '%f'"`
-
-## Firefox debugging:
-Do the steps mentioned [here](https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation#javascript-firefox)
