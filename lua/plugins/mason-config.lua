@@ -22,10 +22,8 @@ return {
                 "html",          -- HTML
                 "jdtls",         -- Java
                 "jsonls",        -- JSON
-                "ltex",          -- Latex
                 "lua_ls",        -- Lua
                 "pylsp",         -- Python
-                "rust_analyzer", -- Rust
                 "texlab",        -- Latex
                 "tsserver",      -- Typescript
                 "vimls",         -- Vim

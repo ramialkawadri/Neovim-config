@@ -50,9 +50,6 @@ return {
             -- Java
             lspconfig.jdtls.setup {}
 
-            -- Rust
-            lspconfig.rust_analyzer.setup {}
-
             -- Json
             lspconfig.jsonls.setup {}
 
@@ -67,8 +64,6 @@ return {
 
             -- Latex
             lspconfig.texlab.setup {}
-            lspconfig.ltex.setup {}
-
         end,
         keys = {
             { "gd", require("custom-functions").goToDefinition, desc = "Go To Definition" },
