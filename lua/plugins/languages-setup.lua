@@ -67,7 +67,6 @@ return {
         keys = {
             { "gd", require("custom-functions").goToDefinition, desc = "Go To Definition" },
             { "gD", vim.lsp.buf.declaration, desc = "Go To Declaration" },
-            { "gD", vim.lsp.buf.declaration, desc = "Go To Declaration" },
             { "<C-h>", vim.lsp.buf.hover, desc = "Mouse Hover" },
         }
     },
