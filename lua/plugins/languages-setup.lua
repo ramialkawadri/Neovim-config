@@ -12,7 +12,6 @@ return {
 
             -- C & CPP
             lspconfig.clangd.setup {}
-            lspconfig.cmake.setup {}
 
             -- Python
             lspconfig.pylsp.setup {
@@ -37,7 +36,6 @@ return {
             lspconfig.html.setup {}
             lspconfig.emmet_ls.setup {}
             lspconfig.tsserver.setup {}
-            lspconfig.cssmodules_ls.setup {}
 
             -- C#
             lspconfig.csharp_ls.setup {
@@ -64,6 +62,7 @@ return {
 
             -- Latex
             lspconfig.texlab.setup {}
+            lspconfig.ltex.setup {}
         end,
         keys = {
             { "gd", require("custom-functions").goToDefinition, desc = "Go To Definition" },

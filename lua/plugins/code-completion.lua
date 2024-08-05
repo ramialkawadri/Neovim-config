@@ -36,9 +36,9 @@ return {
     },
     config = function()
         local cmp = require("cmp")
-        
+
         local auto_completion_width = 42
-        
+
         cmp.setup({
             mapping = {
                 -- Shift+TAB to go to the Previous Suggested item
@@ -60,7 +60,7 @@ return {
                     select = true,
                 })
             },
-        
+
             -- sources are the installed sources that can be used for code suggestions
             sources = {
                 { name = "path" },
@@ -83,16 +83,16 @@ return {
                 fields = { "kind", "abbr", "menu" },
                 format = function(entry, vim_item)
                     -- Formatting.
-                    
+
                     local kind = require("lspkind")
                         .cmp_format({ mode = "symbol_text", maxwidth = auto_completion_width })(entry, vim_item)
                     local strings = vim.split(kind.kind, "%s", { trimempty = true })
                     kind.kind = " " .. (strings[1] or "") .. " "
                     -- Removing everything from the right column.
                     kind.menu = ""
-        
+
                     -- Maximising the width.
-        
+
                     vim_item.abbr = string.format("%-" .. tostring(auto_completion_width) .. "s", vim_item.abbr)
                     if string.len(vim_item.abbr) > auto_completion_width then
                         vim_item.abbr = string.sub(vim_item.abbr, 0, auto_completion_width - 3) .. "..."
@@ -101,7 +101,7 @@ return {
                 end,
             },
         })
-        
+
         -- `:` cmdline setup.
         cmp.setup.cmdline(":", {
             mapping = cmp.mapping.preset.cmdline(),

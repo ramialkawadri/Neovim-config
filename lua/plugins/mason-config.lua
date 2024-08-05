@@ -14,19 +14,18 @@ return {
             ensure_installed = {
                 "bashls",        -- Bash
                 "clangd",        -- C/CPP
-                "cmake",         -- CMake
                 "csharp_ls",     -- C#
                 "cssls",         -- CSS
-                "cssmodules_ls", -- CSS modules
                 "emmet_ls",      -- Emmet
                 "html",          -- HTML
                 "jdtls",         -- Java
                 "jsonls",        -- JSON
                 "lua_ls",        -- Lua
                 "pylsp",         -- Python
-                "texlab",        -- Latex
                 "tsserver",      -- Typescript
                 "vimls",         -- Vim
+                "texlab",        -- Latex
+                "ltex",          -- Spell Checking
             },
         },
         config = function(_, opts)
