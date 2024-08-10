@@ -102,6 +102,7 @@ return {
             dapui.close()
         end
     end,
+    lazy = false,
     keys = {
         { "<F5>", function() require("dap").continue() end, desc = "Continue Testing" },
         { "<F8>", function() require("dap").terminate() end, desc = "Terminate" },
