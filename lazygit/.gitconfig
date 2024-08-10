@@ -7,5 +7,4 @@
     line-numbers = true
     paging = never
     dark = true
-    syntax-theme = Vibrant Sunburst
-
+    syntax-theme = Visual Studio Dark+
