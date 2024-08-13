@@ -63,6 +63,9 @@ return {
             -- Latex
             lspconfig.texlab.setup {}
             lspconfig.ltex.setup {}
+
+            -- Rust
+            lspconfig.rust_analyzer.setup {}
         end,
         keys = {
             { "gd", require("custom-functions").goToDefinition, desc = "Go To Definition" },

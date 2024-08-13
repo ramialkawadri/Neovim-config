@@ -26,6 +26,7 @@ return {
                 "vimls",         -- Vim
                 "texlab",        -- Latex
                 "ltex",          -- Spell Checking
+                "rust_analyzer"  -- Rust
             },
         },
         config = function(_, opts)
