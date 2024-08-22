@@ -58,6 +58,7 @@ return {
                 "bibtex-tidy",
                 "firefox-debug-adapter",
                 "tree-sitter-cli",
+                "codelldb",
             }
         }
     }

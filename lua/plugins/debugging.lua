@@ -89,6 +89,21 @@ return {
             },
         }
 
+        -- Rust
+
+        dap.adapters.codelldb = {
+            type = "server",
+            port = "13000",
+            executable = {
+                command = mason_registery.get_package("codelldb")
+                :get_install_path() .. "/codelldb",
+                args = {"--port", "13000"},
+
+                -- On windows you may have to uncomment this:
+                -- detached = false,
+            }
+        }
+
         vim.fn.sign_define("DapBreakpoint", { text = "🟥", texthl = "", linehl = "", numhl = "" })
         vim.fn.sign_define("DapStopped", { text = "▶️", texthl = "", linehl = "", numhl = "" })
 
