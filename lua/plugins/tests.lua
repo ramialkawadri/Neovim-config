@@ -15,14 +15,15 @@ return {
             "nvim-neotest/neotest-python",
             "nvim-neotest/neotest-jest",
             "rcasia/neotest-java",
+            "rouge8/neotest-rust"
         },
         config = function()
             require("neotest").setup({
                 adapters = {
-                    -- require("neotest-java"),
                     require("neotest-jest"),
                     require("neotest-python"),
                     require("neotest-dotnet"),
+                    require("neotest-rust"),
                 }
             })
         end,
