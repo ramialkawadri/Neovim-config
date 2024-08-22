@@ -36,8 +36,8 @@ function M.show_coverage_summary()
     vim.cmd("CoverageSummary")
 end
 
-local function return_if_exists_else_ask(path)
-    if require("custom-functions").file_exists(path) then
+function M.return_if_exists_else_ask(path)
+    if M.file_exists(path) then
         return path
     else
         return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
@@ -50,12 +50,12 @@ end
 
 function M.debug_c_or_cpp()
     vim.cmd [[!g++ main.cpp -o main -g]]
-    return return_if_exists_else_ask(vim.fn.getcwd() .. "/" .. "main")
+    return M.return_if_exists_else_ask(vim.fn.getcwd() .. "/" .. "main")
 end
 
 function M.debug_rust()
     vim.cmd [[!cargo build]]
-    return return_if_exists_else_ask(
+    return M.return_if_exists_else_ask(
         vim.fn.getcwd()
         .. "/target/debug/"
         .. M.get_folder_name(vim.fn.getcwd()))

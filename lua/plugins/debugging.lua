@@ -40,11 +40,7 @@ return {
                         dll_path = cwd .. "/" .. project_name .. "/bin/Debug/net8.0/" .. project_name .. ".dll"
                     end
 
-                    if custom_function.file_exists(dll_path) then
-                        return dll_path
-                    else
-                        return vim.fn.input("Path to dll: ", dll_path, "file")
-                    end
+                    return custom_function.return_if_exists_else_ask(dll_path)
                 end,
             },
         }
