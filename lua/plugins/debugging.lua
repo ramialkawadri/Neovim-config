@@ -7,6 +7,7 @@ return {
     config = function()
         local dap, dapui = require("dap"), require("dapui")
         local mason_registery = require("mason-registry")
+        local custom_function = require("custom-functions")
         dapui.setup()
         require("dap.ext.vscode").load_launchjs(nil, {})
 
@@ -39,7 +40,7 @@ return {
                         dll_path = cwd .. "/" .. project_name .. "/bin/Debug/net8.0/" .. project_name .. ".dll"
                     end
 
-                    if require("custom-functions").file_exists(dll_path) then
+                    if custom_function.file_exists(dll_path) then
                         return dll_path
                     else
                         return vim.fn.input("Path to dll: ", dll_path, "file")
@@ -72,22 +73,12 @@ return {
                 name = "Launch",
                 type = "gdb",
                 request = "launch",
-                program = require("custom-functions").debug_c_or_cpp,
+                program = custom_function.debug_c_or_cpp,
                 cwd = "${workspaceFolder}",
                 stopAtBeginningOfMainSubprogram = false,
             },
         }
-
-        dap.configurations.c = {
-            {
-                name = "Launch",
-                type = "gdb",
-                request = "launch",
-                program = require("custom-functions").debug_c_or_cpp,
-                cwd = "${workspaceFolder}",
-                stopAtBeginningOfMainSubprogram = false,
-            },
-        }
+        dap.configurations.c = dap.configurations.cpp 
 
         -- Rust
 
@@ -102,6 +93,17 @@ return {
                 -- On windows you may have to uncomment this:
                 -- detached = false,
             }
+        }
+
+        dap.configurations.rust = {
+            {
+                name = "Launch file",
+                type = "codelldb",
+                request = "launch",
+                program = custom_function.debug_rust,
+                cwd = '${workspaceFolder}',
+                stopOnEntry = false,
+            },
         }
 
         vim.fn.sign_define("DapBreakpoint", { text = "🟥", texthl = "", linehl = "", numhl = "" })
