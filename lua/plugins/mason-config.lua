@@ -59,6 +59,7 @@ return {
                 "firefox-debug-adapter",
                 "tree-sitter-cli",
                 "codelldb",
+                "netcoredbg",
             }
         }
     }

@@ -63,7 +63,6 @@ return {
             command = "gdb",
             args = { "-i", "dap" }
         }
-
         dap.configurations.cpp = {
             {
                 name = "Launch",
@@ -74,7 +73,7 @@ return {
                 stopAtBeginningOfMainSubprogram = false,
             },
         }
-        dap.configurations.c = dap.configurations.cpp 
+        dap.configurations.c = dap.configurations.cpp
 
         -- Rust
 
@@ -82,15 +81,13 @@ return {
             type = "server",
             port = "13000",
             executable = {
-                command = mason_registery.get_package("codelldb")
-                :get_install_path() .. "/codelldb",
+                command = "codelldb",
                 args = {"--port", "13000"},
 
                 -- On windows you may have to uncomment this:
                 -- detached = false,
             }
         }
-
         dap.configurations.rust = {
             {
                 name = "Launch file",
