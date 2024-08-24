@@ -28,6 +28,14 @@ vim.opt.tabstop = TAB_WIDTH
 vim.opt.shiftwidth = TAB_WIDTH
 vim.opt.expandtab = true
 
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "ui",
+	callback = function()
+		vim.opt_local.shiftwidth = 2
+		vim.opt_local.tabstop = 2
+	end
+})
+
 -- Autocomplete size
 
 vim.cmd.set("pumwidth=50")
