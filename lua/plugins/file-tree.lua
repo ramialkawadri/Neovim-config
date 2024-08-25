@@ -13,7 +13,15 @@ return {
             indent_markers = {
                 enable = true
             }
-        }
+        },
+        filters = {
+            dotfiles = false,
+            git_ignored = false,
+        },
+        live_filter = {
+            always_show_folders = false,
+        },
+
     },
     keys = {
         { "<F3>", [[:NvimTreeOpen<CR>]], desc = "Open File Tree" },
