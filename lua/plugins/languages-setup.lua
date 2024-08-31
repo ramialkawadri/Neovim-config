@@ -2,10 +2,6 @@
 
 return {
     {
-        "MunifTanjim/eslint.nvim",
-        opts = {},
-    },
-    {
         "neovim/nvim-lspconfig",
         config = function()
             local lspconfig = require("lspconfig")
@@ -36,6 +32,7 @@ return {
             lspconfig.html.setup {}
             lspconfig.emmet_ls.setup {}
             lspconfig.tsserver.setup {}
+            lspconfig.eslint.setup {}
 
             -- C#
             lspconfig.csharp_ls.setup {

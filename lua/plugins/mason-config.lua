@@ -17,6 +17,7 @@ return {
                 "csharp_ls",     -- C#
                 "cssls",         -- CSS
                 "emmet_ls",      -- Emmet
+                "eslint",        -- Eslint
                 "html",          -- HTML
                 "jdtls",         -- Java
                 "jsonls",        -- JSON
