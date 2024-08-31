@@ -21,13 +21,13 @@ return {
                 "html",          -- HTML
                 "jdtls",         -- Java
                 "jsonls",        -- JSON
+                "ltex",          -- Spell Checking
                 "lua_ls",        -- Lua
                 "pylsp",         -- Python
+                "rust_analyzer", -- Rust
+                "texlab",        -- Latex
                 "tsserver",      -- Typescript
                 "vimls",         -- Vim
-                "texlab",        -- Latex
-                "ltex",          -- Spell Checking
-                "rust_analyzer"  -- Rust
             },
         },
         config = function(_, opts)
@@ -57,10 +57,11 @@ return {
         opts = {
             ensure_installed = {
                 "bibtex-tidy",
-                "firefox-debug-adapter",
-                "tree-sitter-cli",
                 "codelldb",
+                "debugpy",
+                "firefox-debug-adapter",
                 "netcoredbg",
+                "tree-sitter-cli",
             }
         }
     }

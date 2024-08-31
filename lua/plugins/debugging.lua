@@ -3,7 +3,7 @@
 
 return {
     "rcarriga/nvim-dap-ui",
-    dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
+    dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio", "mfussenegger/nvim-dap-python" },
     config = function()
         local dap, dapui = require("dap"), require("dapui")
         local mason_registery = require("mason-registry")
@@ -98,6 +98,14 @@ return {
                 stopOnEntry = false,
             },
         }
+
+        -- Python
+
+
+        local debugpy = mason_registery.get_package("debugpy")
+            :get_install_path() .. "/venv/bin/python"
+        require("dap-python").setup(debugpy)
+
 
         vim.fn.sign_define("DapBreakpoint", { text = "🟥", texthl = "", linehl = "", numhl = "" })
         vim.fn.sign_define("DapStopped", { text = "▶️", texthl = "", linehl = "", numhl = "" })
