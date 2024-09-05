@@ -31,7 +31,7 @@ return {
             }
             lspconfig.html.setup {}
             lspconfig.emmet_ls.setup {}
-            lspconfig.tsserver.setup {}
+            lspconfig.ts_ls.setup {}
             lspconfig.eslint.setup {}
 
             -- C#

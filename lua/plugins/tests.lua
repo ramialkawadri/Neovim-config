@@ -15,7 +15,8 @@ return {
             "nvim-neotest/neotest-python",
             "nvim-neotest/neotest-jest",
             "rcasia/neotest-java",
-            "rouge8/neotest-rust"
+            "rouge8/neotest-rust",
+            "marilari88/neotest-vitest",
         },
         config = function()
             require("neotest").setup({
@@ -24,6 +25,7 @@ return {
                     require("neotest-python"),
                     require("neotest-dotnet"),
                     require("neotest-rust"),
+                    require("neotest-vitest"),
                 }
             })
         end,

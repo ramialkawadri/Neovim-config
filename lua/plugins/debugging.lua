@@ -55,6 +55,19 @@ return {
                 :get_install_path() .. "/dist/adapter.bundle.js"
             }
         }
+        dap.adapters["pwa-node"] = {
+            type = "server",
+            host = "localhost",
+            port = "10001",
+            executable = {
+                command = "node",
+                args = {
+                    mason_registery.get_package("js-debug-adapter")
+                    :get_install_path() .. "/js-debug/src/dapDebugServer.js",
+                    "10001"
+                },
+            }
+        }
 
         -- C/C++
 

@@ -60,6 +60,7 @@ return {
                 "codelldb",
                 "debugpy",
                 "firefox-debug-adapter",
+                "js-debug-adapter",
                 "netcoredbg",
                 "tree-sitter-cli",
             }
