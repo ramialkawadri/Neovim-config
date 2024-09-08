@@ -26,7 +26,7 @@ return {
                 "pylsp",         -- Python
                 "rust_analyzer", -- Rust
                 "texlab",        -- Latex
-                "tsserver",      -- Typescript
+                "ts_ls",         -- Typescript
                 "vimls",         -- Vim
             },
         },
