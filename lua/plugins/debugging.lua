@@ -6,7 +6,7 @@ return {
     dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio", "mfussenegger/nvim-dap-python" },
     config = function()
         local dap, dapui = require("dap"), require("dapui")
-        local mason_registery = require("mason-registry")
+        local mason_registry = require("mason-registry")
         local custom_function = require("custom-functions")
         dapui.setup()
         require("dap.ext.vscode").load_launchjs(nil, {})
@@ -51,7 +51,7 @@ return {
             type = "executable",
             command = "node",
             args = {
-                mason_registery.get_package("firefox-debug-adapter")
+                mason_registry.get_package("firefox-debug-adapter")
                 :get_install_path() .. "/dist/adapter.bundle.js"
             }
         }
@@ -62,7 +62,7 @@ return {
             executable = {
                 command = "node",
                 args = {
-                    mason_registery.get_package("js-debug-adapter")
+                    mason_registry.get_package("js-debug-adapter")
                     :get_install_path() .. "/js-debug/src/dapDebugServer.js",
                     "13000"
                 },
@@ -115,7 +115,7 @@ return {
         -- Python
 
 
-        local debugpy = mason_registery.get_package("debugpy")
+        local debugpy = mason_registry.get_package("debugpy")
             :get_install_path() .. "/venv/bin/python"
         require("dap-python").setup(debugpy)
 
