@@ -58,14 +58,12 @@ return {
         dap.adapters["pwa-node"] = {
             type = "server",
             host = "localhost",
-            port = "13000",
+            port = "8000",
             executable = {
-                command = "node",
-                args = {
+                command = 
                     mason_registry.get_package("js-debug-adapter")
-                    :get_install_path() .. "/js-debug/src/dapDebugServer.js",
-                    "13000"
-                },
+                    :get_install_path() .. "/js-debug-adapter",
+                args= { "8000" }
             }
         }
 
