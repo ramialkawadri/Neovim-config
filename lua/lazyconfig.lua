@@ -30,8 +30,6 @@ require("lazy").setup({
         { "tpope/vim-repeat" },
         -- Nvim color highlight
         { "brenoprata10/nvim-highlight-colors", opts = {} },
-        -- Indent blankline
-        { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
         -- Rainbow-delimiters
         { "HiPhish/rainbow-delimiters.nvim" },
         -- Autotag
