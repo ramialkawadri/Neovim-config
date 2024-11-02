@@ -9,20 +9,20 @@ return {
             winbar = { "NVimTree" },
         },
         sections = {
-            lualine_a = { { 'mode', padding = 1 } },
-            lualine_b = { 'filename', 'branch' },
-            lualine_c = { '%=', },
+            lualine_a = { { "mode", padding = 1 } },
+            lualine_b = { require("custom-functions").get_buffer_relative_path, "branch" },
+            lualine_c = { "%=", },
             lualine_x = {},
-            lualine_y = { 'filetype', },
-            lualine_z = { { 'location', padding = 1 } },
+            lualine_y = { "filetype", },
+            lualine_z = { { "location", padding = 1 } },
         },
         inactive_sections = {
-            lualine_a = { 'filename' },
+            lualine_a = { "filename" },
             lualine_b = {},
             lualine_c = {},
             lualine_x = {},
             lualine_y = {},
-            lualine_z = { 'location' },
+            lualine_z = { "location" },
         },
     }
 }

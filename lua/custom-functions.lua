@@ -61,4 +61,9 @@ function M.debug_rust()
         .. M.get_folder_name(vim.fn.getcwd()))
 end
 
+function M.get_buffer_relative_path()
+    local file_path = vim.api.nvim_buf_get_name(0)
+    return string.sub(file_path, string.len(vim.fn.getcwd()) + 2)
+end
+
 return M
