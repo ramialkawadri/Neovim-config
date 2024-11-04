@@ -53,6 +53,7 @@ return {
                 ["<C-Space>"] = cmp.mapping.complete(),
                 -- CTRL+e to exit suggestion and close it
                 ["<C-e>"] = cmp.mapping.close(),
+                ["<C-c>"] = cmp.mapping.abort(),
                 -- CR (enter or return) to CONFIRM the currently selection suggestion
                 -- We set the ConfirmBehavior to insert the Selected suggestion
                 ["<CR>"] = cmp.mapping.confirm({
@@ -80,6 +81,7 @@ return {
                 end,
             },
             formatting = {
+                expandable_indicator = true,
                 fields = { "kind", "abbr", "menu" },
                 format = function(entry, vim_item)
                     -- Formatting.

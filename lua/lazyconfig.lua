@@ -92,7 +92,7 @@ require("lazy").setup({
                 },
             },
         },
-        -- import your plugins
+        -- Import other plugins
         { import = "plugins" },
     },
     install = { colorscheme = { "hybrid" } },

@@ -10,10 +10,18 @@ return {
         },
         sections = {
             lualine_a = { { "mode", padding = 1 } },
-            lualine_b = { require("custom-functions").get_buffer_relative_path, "branch" },
-            lualine_c = { "%=", },
+            lualine_b = {
+                require("custom-functions").get_buffer_relative_path,
+                "branch",
+            },
+            lualine_c = {"%=" },
             lualine_x = {},
-            lualine_y = { "filetype", },
+            lualine_y = {
+                function()
+                    return require('lsp-progress').progress()
+                end,
+                "filetype",
+            },
             lualine_z = { { "location", padding = 1 } },
         },
         inactive_sections = {
@@ -26,3 +34,4 @@ return {
         },
     }
 }
+
