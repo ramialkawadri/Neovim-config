@@ -92,6 +92,11 @@ require("lazy").setup({
                 },
             },
         },
+        -- LSP-File operations
+        {
+            "antosha417/nvim-lsp-file-operations",
+            opts = {},
+        },
         -- Import other plugins
         { import = "plugins" },
     },
