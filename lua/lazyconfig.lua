@@ -81,6 +81,7 @@ require("lazy").setup({
         },
         { import = "plugins", },
     },
-    install = { colorscheme = { "hybrid" } },
+    install = { colorscheme = { "hybrid" }, },
     checker = { enabled = false, },
+    change_detection = { notify = false, },
 })
