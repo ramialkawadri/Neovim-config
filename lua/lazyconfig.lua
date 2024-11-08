@@ -20,37 +20,24 @@ vim.g.maplocalleader = "\\"
 
 require("lazy").setup({
     spec = {
-        -- Java
         { "mfussenegger/nvim-jdtls", lazy = true, },
-        -- LspKind
         { "onsails/lspkind.nvim", lazy = true, },
-        -- C#
         { "Decodetalkers/csharpls-extended-lsp.nvim", lazy = true, },
-        -- Repeat
         { "tpope/vim-repeat" },
-        -- Nvim color highlight
         { "brenoprata10/nvim-highlight-colors", opts = {} },
-        -- Rainbow-delimiters
         { "HiPhish/rainbow-delimiters.nvim" },
-        -- Autotag
         { "windwp/nvim-ts-autotag" },
-        -- Startify
         {
             "mhinz/vim-startify",
             config = function()
                 vim.g.startify_change_to_dir = 0
             end
         },
-        -- Vim bbye
         { "moll/vim-bbye" },
-        -- Vim surrond
         { "tpope/vim-surround" },
-        -- Themes
         { "rafi/awesome-vim-colorschemes", lazy = true, },
         { "projekt0n/github-nvim-theme", lazy = true, },
-        -- Comments
         { "numToStr/Comment.nvim", opts = {} },
-        -- VimText
         {
             "lervag/vimtex",
             config = function()
@@ -59,13 +46,11 @@ require("lazy").setup({
                 vim.g.vimtex_view_general_options = "--unique file:@pdf\\#src:@line@tex"
             end
         },
-        -- Todo comments
         {
             "folke/todo-comments.nvim",
             dependencies = "nvim-lua/plenary.nvim",
             opts = {},
         },
-        -- Markdown preview
         {
             "iamcco/markdown-preview.nvim",
             cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
@@ -75,14 +60,12 @@ require("lazy").setup({
                 vim.g.mkdp_auto_close = 0
             end
         },
-        -- LazyGit
         {
             "kdheepak/lazygit.nvim",
             dependencies = {
                 "nvim-lua/plenary.nvim",
             },
         },
-        -- Lazydev
         {
             "folke/lazydev.nvim",
             ft = "lua",
@@ -92,14 +75,12 @@ require("lazy").setup({
                 },
             },
         },
-        -- LSP-File operations
         {
             "antosha417/nvim-lsp-file-operations",
             opts = {},
         },
-        -- Import other plugins
-        { import = "plugins" },
+        { import = "plugins", },
     },
     install = { colorscheme = { "hybrid" } },
-    checker = { enabled = true },
+    checker = { enabled = false, },
 })
