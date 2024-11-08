@@ -1,7 +1,7 @@
 return {
     "linrongbin16/lsp-progress.nvim",
     opts = {
-        max_size = 40,
+        max_size = 25,
 
         format = function(client_messages)
             -- icon: nf-fa-gear \uf013
