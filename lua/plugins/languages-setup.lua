@@ -89,6 +89,9 @@ return {
             lspconfig.rust_analyzer.setup {
 				capabilities = capabilities,
 			}
+
+            -- Docker
+            lspconfig.dockerls.setup {}
         end,
         keys = {
             { "gd", require("custom-functions").goToDefinition, desc = "Go To Definition" },

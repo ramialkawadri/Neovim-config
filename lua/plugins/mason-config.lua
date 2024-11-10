@@ -16,6 +16,7 @@ return {
                 "clangd",        -- C/CPP
                 "csharp_ls",     -- C#
                 "cssls",         -- CSS
+                "dockerls",      -- Docker
                 "emmet_ls",      -- Emmet
                 "eslint",        -- Eslint
                 "html",          -- HTML
