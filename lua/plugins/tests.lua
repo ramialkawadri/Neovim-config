@@ -33,6 +33,8 @@ return {
             { "\\a", custom_functions.runAllTests, desc = "Run All Tests" },
             { "\\l", custom_functions.debugTest, desc = "Debug Test" },
             { "\\o", [[:Neotest output<CR>]], desc = "Show Test Output" },
+            { "\\t", custom_functions.toggle_test_summary, desc = "Toggle test summary" },
+            { "\\r", custom_functions.run_marked_tests, desc = "Toggle test summary" },
         },
     },
     {

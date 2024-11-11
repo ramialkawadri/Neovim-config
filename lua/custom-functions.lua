@@ -36,6 +36,14 @@ function M.show_coverage_summary()
     vim.cmd("CoverageSummary")
 end
 
+function M.toggle_test_summary()
+    vim.cmd("Neotest summary")
+end
+
+function M.run_marked_tests()
+    require("neotest").summary.run_marked()
+end
+
 function M.return_if_exists_else_ask(path)
     if M.file_exists(path) then
         return path
