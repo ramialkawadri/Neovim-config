@@ -1,7 +1,3 @@
--- Documentation neotest: https://github.com/nvim-neotest/neotest
--- Documentation neotest-dotnet: https://github.com/Issafalcon/neotest-dotnet
--- Documentation nvim-coverage: https://github.com/andythigpen/nvim-coverage
-
 local custom_functions = require("custom-functions")
 
 return {

@@ -1,4 +1,3 @@
--- Documentation: https://github.com/folke/trouble.nvim_lsp
 return {
     "folke/trouble.nvim",
     dependencies = "nvim-tree/nvim-web-devicons",

@@ -1,5 +1,3 @@
--- Documentation: https://github.com/hrsh7th/nvim-cmp
-
 -- completeopt is used to manage code suggestions
 -- menuone: show popup even when there is only one suggestion
 -- noinsert: Only insert text when selection is confirmed

@@ -1,4 +1,3 @@
--- Documentation: https://github.com/akinsho/bufferline.nvim
 local background_color = "#5d5d5f"
 local selected_buffer_bg = "#2e3031"
 

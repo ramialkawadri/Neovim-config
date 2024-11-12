@@ -1,5 +1,3 @@
--- Documentation: https://github.com/filipdutescu/renamer.nvim
-
 return {
     "filipdutescu/renamer.nvim",
     branch = "master",

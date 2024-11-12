@@ -1,6 +1,3 @@
--- Documentation Dap: https://github.com/mfussenegger/nvim-dap
--- Documentation Dap-UI: https://github.com/rcarriga/nvim-dap-ui
-
 return {
     "rcarriga/nvim-dap-ui",
     dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio", "mfussenegger/nvim-dap-python" },
