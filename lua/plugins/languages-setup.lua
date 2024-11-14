@@ -6,21 +6,22 @@ return {
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
             local lsps = {
+                "bashls",
                 "clangd",
                 "cssls",
-                "html",
+                "docker_compose_language_service",
+                "dockerls",
                 "emmet_ls",
-                "ts_ls",
                 "eslint",
+                "html",
                 "jdtls",
                 "jsonls",
-                "lua_ls",
-                "bashls",
-                "vimls",
-                "texlab",
                 "ltex",
+                "lua_ls",
                 "rust_analyzer",
-                "dockerls"
+                "texlab",
+                "ts_ls",
+                "vimls",
             };
 
             for _, lsp in ipairs(lsps) do

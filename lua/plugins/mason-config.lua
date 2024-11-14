@@ -10,23 +10,24 @@ return {
         },
         opts = {
             ensure_installed = {
-                "bashls",        -- Bash
-                "clangd",        -- C/CPP
-                "csharp_ls",     -- C#
-                "cssls",         -- CSS
-                "dockerls",      -- Docker
-                "emmet_ls",      -- Emmet
-                "eslint",        -- Eslint
-                "html",          -- HTML
-                "jdtls",         -- Java
-                "jsonls",        -- JSON
-                "ltex",          -- Spell Checking
-                "lua_ls",        -- Lua
-                "pylsp",         -- Python
-                "rust_analyzer", -- Rust
-                "texlab",        -- Latex
-                "ts_ls",         -- Typescript
-                "vimls",         -- Vim
+                "bashls",                           -- Bash
+                "clangd",                           -- C/CPP
+                "csharp_ls",                        -- C#
+                "cssls",                            -- CSS
+                "dockerls",                         -- Docker
+                "emmet_ls",                         -- Emmet
+                "eslint",                           -- Eslint
+                "html",                             -- HTML
+                "jdtls",                            -- Java
+                "jsonls",                           -- JSON
+                "ltex",                             -- Spell Checking
+                "lua_ls",                           -- Lua
+                "pylsp",                            -- Python
+                "rust_analyzer",                    -- Rust
+                "texlab",                           -- Latex
+                "ts_ls",                            -- Typescript
+                "vimls",                            -- Vim
+                "docker_compose_language_service",  -- Docker compose
             },
         },
         config = function(_, opts)
