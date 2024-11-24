@@ -8,3 +8,4 @@
     paging = never
     dark = true
     syntax-theme = Visual Studio Dark+
+    side-by-side = true
