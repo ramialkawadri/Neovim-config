@@ -15,10 +15,10 @@ return {
         }
     },
     keys = {
-        { "ff", require("telescope.builtin").find_files, desc = "Search Files" },
-        { "fg", require("telescope.builtin").live_grep, desc = "RipGrep" },
-        { "fb", require("telescope.builtin").buffers, desc = "Search Buffers" },
-        { "fh", require("telescope.builtin").help_tags, desc = "Help Tags" },
-        { "gr", require("telescope.builtin").lsp_references, desc = "Open Buffer Diagnostics" },
+        { "ff", function() require("telescope.builtin").find_files() end, desc = "Search Files" },
+        { "fg", function() require("telescope.builtin").live_grep() end, desc = "RipGrep" },
+        { "fb", function() require("telescope.builtin").buffers() end, desc = "Search Buffers" },
+        { "fh", function() require("telescope.builtin").help_tags() end, desc = "Help Tags" },
+        { "gr", function() require("telescope.builtin").lsp_references() end, desc = "Open Buffer Diagnostics" },
     },
 }

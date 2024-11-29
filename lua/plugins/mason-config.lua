@@ -62,7 +62,6 @@ return {
                 "firefox-debug-adapter",
                 "js-debug-adapter",
                 "netcoredbg",
-                "tree-sitter-cli",
             }
         }
     }
