@@ -18,6 +18,7 @@ return {
                 "jsonls",
                 "ltex",
                 "lua_ls",
+                "nil_ls",
                 "rust_analyzer",
                 "texlab",
                 "ts_ls",

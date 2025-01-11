@@ -14,6 +14,7 @@ return {
                 "clangd",                           -- C/CPP
                 "csharp_ls",                        -- C#
                 "cssls",                            -- CSS
+                "docker_compose_language_service",  -- Docker compose
                 "dockerls",                         -- Docker
                 "emmet_ls",                         -- Emmet
                 "eslint",                           -- Eslint
@@ -22,12 +23,12 @@ return {
                 "jsonls",                           -- JSON
                 "ltex",                             -- Spell Checking
                 "lua_ls",                           -- Lua
+                "nil_ls",                           -- NixOs
                 "pylsp",                            -- Python
                 "rust_analyzer",                    -- Rust
                 "texlab",                           -- Latex
                 "ts_ls",                            -- Typescript
                 "vimls",                            -- Vim
-                "docker_compose_language_service",  -- Docker compose
             },
         },
         config = function(_, opts)
@@ -59,7 +60,7 @@ return {
                 "bibtex-tidy",
                 "codelldb",
                 "debugpy",
-                "firefox-debug-adapter",
+                -- "firefox-debug-adapter",
                 "js-debug-adapter",
                 "netcoredbg",
             }
