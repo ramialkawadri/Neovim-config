@@ -44,14 +44,14 @@ return {
 
         -- Firefox
 
-        dap.adapters.firefox = {
-            type = "executable",
-            command = "node",
-            args = {
-                mason_registry.get_package("firefox-debug-adapter")
-                :get_install_path() .. "/dist/adapter.bundle.js"
-            }
-        }
+        -- dap.adapters.firefox = {
+        --     type = "executable",
+        --     command = "node",
+        --     args = {
+        --         mason_registry.get_package("firefox-debug-adapter")
+        --         :get_install_path() .. "/dist/adapter.bundle.js"
+        --     }
+        -- }
         dap.adapters["pwa-node"] = {
             type = "server",
             host = "localhost",
