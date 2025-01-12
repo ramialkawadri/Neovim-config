@@ -78,4 +78,10 @@ function M.get_buffer_relative_path()
     end
 end
 
+function M.is_nixos()
+    local handle = io.popen('uname -a')
+    local os_name = string.lower(handle:read("*a"))
+    return string.find(os_name, "nixos") ~= nil
+end
+
 return M

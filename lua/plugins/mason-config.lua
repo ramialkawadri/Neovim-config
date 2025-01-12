@@ -8,8 +8,9 @@ return {
         dependencies = {
             "williamboman/mason.nvim",
         },
-        opts = {
-            ensure_installed = {
+        config = function(_, opts)
+            local custom_function = require("custom-functions")
+            local packages = {
                 "bashls",                           -- Bash
                 "clangd",                           -- C/CPP
                 "csharp_ls",                        -- C#
@@ -29,10 +30,13 @@ return {
                 "texlab",                           -- Latex
                 "ts_ls",                            -- Typescript
                 "vimls",                            -- Vim
-            },
-        },
-        config = function(_, opts)
-            require("mason-lspconfig").setup(opts)
+            }
+            if custom_function.is_nixos() then
+                packages = {}
+            end
+            require("mason-lspconfig").setup({
+                ensure_installed = packages
+            })
 
             vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
                 vim.lsp.diagnostic.on_publish_diagnostics, {
