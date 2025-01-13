@@ -18,12 +18,16 @@ return {
                 "jsonls",
                 "ltex",
                 "lua_ls",
-                "nil_ls",
                 "rust_analyzer",
                 "texlab",
                 "ts_ls",
                 "vimls",
             };
+
+            local custom_function = require("custom-functions")
+            if custom_function.is_nixos() then
+                table.insert(lsps, "nil_ls");
+            end
 
             for _, lsp in ipairs(lsps) do
                 lspconfig[lsp].setup {

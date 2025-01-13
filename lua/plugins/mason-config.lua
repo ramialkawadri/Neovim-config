@@ -24,7 +24,6 @@ return {
                 "jsonls",                           -- JSON
                 "ltex",                             -- Spell Checking
                 "lua_ls",                           -- Lua
-                "nil_ls",                           -- NixOs
                 "pylsp",                            -- Python
                 "rust_analyzer",                    -- Rust
                 "texlab",                           -- Latex
