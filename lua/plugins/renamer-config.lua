@@ -12,7 +12,7 @@ return {
             "<F2>",
             mode = { "i", "n" },
             function()
-                require("renamer").rename()
+                require("renamer").rename({})
             end,
             desc = "Rename"
         },

@@ -6,7 +6,6 @@ return {
         local mason_registry = require("mason-registry")
         local custom_function = require("custom-functions")
         dapui.setup()
-        require("dap.ext.vscode").load_launchjs(nil, {})
 
         -- C#
         dap.adapters.netcoredbg = {
@@ -57,7 +56,7 @@ return {
             host = "localhost",
             port = "8000",
             executable = {
-                command = 
+                command =
                     mason_registry.get_package("js-debug-adapter")
                     :get_install_path() .. "/js-debug-adapter",
                 args= { "8000" }
@@ -106,7 +105,6 @@ return {
         local debugpy = mason_registry.get_package("debugpy")
             :get_install_path() .. "/venv/bin/python"
         require("dap-python").setup(debugpy)
-
 
         vim.fn.sign_define("DapBreakpoint", { text = "🟥", texthl = "", linehl = "", numhl = "" })
         vim.fn.sign_define("DapStopped", { text = "▶️", texthl = "", linehl = "", numhl = "" })

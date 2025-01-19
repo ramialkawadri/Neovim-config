@@ -8,7 +8,7 @@ return {
         dependencies = {
             "williamboman/mason.nvim",
         },
-        config = function(_, opts)
+        config = function()
             local custom_function = require("custom-functions")
             local packages = {
                 "bashls",                           -- Bash
