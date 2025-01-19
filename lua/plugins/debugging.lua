@@ -85,10 +85,15 @@ return {
 
         -- Rust
 
+        dap.adapters["rust-gdb"] = {
+            type = "executable",
+            command = "rust-gdb",
+            args = { "--interpreter=dap", "--eval-command", "set print pretty on" }
+        }
         dap.configurations.rust = {
             {
                 name = "Launch",
-                type = "gdb",
+                type = "rust-gdb",
                 request = "launch",
                 program = custom_function.debug_rust,
                 cwd = "${workspaceFolder}",
