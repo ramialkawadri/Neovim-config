@@ -18,11 +18,11 @@ vim.g.maplocalleader = "\\"
 
 require("lazy").setup({
     spec = {
-        { "mfussenegger/nvim-jdtls", lazy = true, },
-        { "onsails/lspkind.nvim", lazy = true, },
+        { "mfussenegger/nvim-jdtls",                  lazy = true, },
+        { "onsails/lspkind.nvim",                     lazy = true, },
         { "Decodetalkers/csharpls-extended-lsp.nvim", lazy = true, },
         { "tpope/vim-repeat" },
-        { "brenoprata10/nvim-highlight-colors", opts = {} },
+        { "brenoprata10/nvim-highlight-colors",       opts = {} },
         { "HiPhish/rainbow-delimiters.nvim" },
         { "windwp/nvim-ts-autotag" },
         {
@@ -34,16 +34,20 @@ require("lazy").setup({
         { "moll/vim-bbye" },
         { "tpope/vim-surround" },
         { "rafi/awesome-vim-colorschemes", lazy = true, },
-        { "projekt0n/github-nvim-theme", lazy = true, },
-        { "numToStr/Comment.nvim", opts = {} },
+        { "projekt0n/github-nvim-theme",   lazy = true, },
+        { "numToStr/Comment.nvim",         opts = {} },
         {
             "lervag/vimtex",
             config = function()
                 vim.g.vimtex_quickfix_open_on_warning = 0
-                vim.g.vimtex_view_general_viewer = "SumatraPDF"
-                vim.g.vimtex_view_general_options = "-reuse-instance -forward-search @tex @line @pdf"
-                -- vim.g.vimtex_view_general_viewer = "okular"
-                -- vim.g.vimtex_view_general_options = "--unique file:@pdf\\#src:@line@tex"
+                local custom_function = require("custom-functions")
+                if custom_function.is_nixos() then
+                    vim.g.vimtex_view_general_viewer = "okular"
+                    vim.g.vimtex_view_general_options = "--unique file:@pdf\\#src:@line@tex"
+                else
+                    vim.g.vimtex_view_general_viewer = "SumatraPDF"
+                    vim.g.vimtex_view_general_options = "-reuse-instance -forward-search @tex @line @pdf"
+                end
             end
         },
         {

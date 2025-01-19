@@ -61,9 +61,8 @@ return {
         opts = {
             ensure_installed = {
                 "bibtex-tidy",
-                "codelldb",
                 "debugpy",
-                -- "firefox-debug-adapter",
+                "firefox-debug-adapter",
                 "js-debug-adapter",
                 "netcoredbg",
             }

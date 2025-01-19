@@ -44,14 +44,14 @@ return {
 
         -- Firefox
 
-        -- dap.adapters.firefox = {
-        --     type = "executable",
-        --     command = "node",
-        --     args = {
-        --         mason_registry.get_package("firefox-debug-adapter")
-        --         :get_install_path() .. "/dist/adapter.bundle.js"
-        --     }
-        -- }
+        dap.adapters.firefox = {
+            type = "executable",
+            command = "node",
+            args = {
+                mason_registry.get_package("firefox-debug-adapter")
+                :get_install_path() .. "/dist/adapter.bundle.js"
+            }
+        }
         dap.adapters["pwa-node"] = {
             type = "server",
             host = "localhost",
@@ -69,7 +69,7 @@ return {
         dap.adapters.gdb = {
             type = "executable",
             command = "gdb",
-            args = { "-i", "dap" }
+            args = { "--interpreter=dap", "--eval-command", "set print pretty on" }
         }
         dap.configurations.cpp = {
             {
@@ -85,30 +85,18 @@ return {
 
         -- Rust
 
-        dap.adapters.codelldb = {
-            type = "server",
-            port = "13000",
-            executable = {
-                command = "codelldb",
-                args = {"--port", "13000"},
-
-                -- On windows you may have to uncomment this:
-                -- detached = false,
-            }
-        }
         dap.configurations.rust = {
             {
-                name = "Launch file",
-                type = "codelldb",
+                name = "Launch",
+                type = "gdb",
                 request = "launch",
                 program = custom_function.debug_rust,
-                cwd = '${workspaceFolder}',
-                stopOnEntry = false,
+                cwd = "${workspaceFolder}",
+                stopAtBeginningOfMainSubprogram = false,
             },
         }
 
         -- Python
-
 
         local debugpy = mason_registry.get_package("debugpy")
             :get_install_path() .. "/venv/bin/python"
