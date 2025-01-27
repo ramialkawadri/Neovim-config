@@ -9,7 +9,6 @@ return {
             "williamboman/mason.nvim",
         },
         config = function()
-            local custom_function = require("custom-functions")
             local packages = {
                 "bashls",                           -- Bash
                 "clangd",                           -- C/CPP
@@ -30,7 +29,7 @@ return {
                 "ts_ls",                            -- Typescript
                 "vimls",                            -- Vim
             }
-            if custom_function.is_nixos() then
+            if require("custom-functions").is_nixos() then
                 packages = {}
             end
             require("mason-lspconfig").setup({
@@ -58,14 +57,21 @@ return {
             "williamboman/mason.nvim",
             "nvimtools/none-ls.nvim",
         },
-        opts = {
-            ensure_installed = {
+        config = function()
+            local packages = {
                 "bibtex-tidy",
                 "debugpy",
                 "firefox-debug-adapter",
                 "js-debug-adapter",
                 "netcoredbg",
             }
-        }
+            if require("custom-functions").is_nixos() then
+                packages = {}
+            end
+            require("mason-null-ls").setup({
+                ensure_installed = packages,
+                automatic_installation = true,
+            })
+        end,
     }
 }
