@@ -9,7 +9,10 @@ function M.goToDefinition()
 end
 
 function M.debugTest()
-    require("neotest").run.run({ strategy = "dap" })
+    require("neotest").run.run({
+        strategy = "dap",
+        suite = false,
+    })
 end
 
 function M.runAllTests()
@@ -80,8 +83,19 @@ end
 
 function M.is_nixos()
     local handle = io.popen('uname -a')
+    if handle == nil then
+        return false
+    end
     local os_name = string.lower(handle:read("*a"))
     return string.find(os_name, "nixos") ~= nil
+end
+
+function M.delete_buffer_telescope(prompt_bufnr)
+    local action_state = require('telescope.actions.state')
+    local actions = require('telescope.actions')
+    local selection = action_state.get_selected_entry()
+    actions.close(prompt_bufnr)
+    vim.cmd(string.format(":Bdelete %d", selection.bufnr))
 end
 
 return M

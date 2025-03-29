@@ -33,7 +33,8 @@ return {
                 packages = {}
             end
             require("mason-lspconfig").setup({
-                ensure_installed = packages
+                ensure_installed = packages,
+                automatic_installation = false,
             })
 
             vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(

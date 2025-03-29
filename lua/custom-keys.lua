@@ -21,3 +21,7 @@ map("v", "<A-k>", "xkP`[V`]", defaultMapOptions)
 -- LazyGit
 
 map("n", "<C-g>", [[:LazyGit<CR>]], defaultMapOptions)
+
+-- Buffers
+
+map("n", "\\w", [[:Bdelete<CR>]], defaultMapOptions)

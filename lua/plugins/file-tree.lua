@@ -22,7 +22,7 @@ return {
 
     },
     keys = {
-        { "<F3>", [[:NvimTreeOpen<CR>]], desc = "Open File Tree" },
-        { "<F4>", [[:NvimTreeClose<CR>]], desc = "Close File Tree" },
+        { "<F3>", function() require("nvim-tree.api").tree.open() end,  desc = "Open File Tree" },
+        { "<F4>", function() require("nvim-tree.api").tree.close() end, desc = "Close File Tree" },
     },
 }
