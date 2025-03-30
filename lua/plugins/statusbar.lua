@@ -1,3 +1,5 @@
+local standard_seperator = { left = '', right = ''}
+
 return {
     "nvim-lualine/lualine.nvim",
     dependencies = { "kyazdani42/nvim-web-devicons" },
@@ -7,20 +9,49 @@ return {
             winbar = { "NVimTree" },
         },
         sections = {
-            lualine_a = { { "mode", padding = 1 } },
-            lualine_b = {
-                require("custom-functions").get_buffer_relative_path,
-                "branch",
+            lualine_a = {
+                {
+                    "mode",
+                    padding = 1,
+                    separator = { right = '' },
+                }
             },
-            lualine_c = {"%=" },
+            lualine_b = {
+                {
+                    require("custom-functions").get_buffer_relative_path,
+                    color = { bg = "#5d5d5f" },
+                    separator = standard_seperator,
+                },
+                {
+                    "branch",
+                    color = { bg = "#2e3031" },
+                    separator = standard_seperator,
+                }
+
+            },
+            lualine_c = { "%=" },
             lualine_x = {},
             lualine_y = {
-                function()
-                    return require('lsp-progress').progress()
-                end,
-                "filetype",
+                {
+                    function()
+                        return require('lsp-progress').progress()
+                    end,
+                    color = { bg = "#2e3031" },
+                    separator = standard_seperator,
+                },
+                {
+                    "filetype",
+                    color = { bg = "#5d5d5f" },
+                    separator = standard_seperator,
+                },
             },
-            lualine_z = { { "location", padding = 1 } },
+            lualine_z = {
+                {
+                    "location",
+                    padding = 1,
+                    separator = { left = '' },
+                }
+            },
         },
         inactive_sections = {
             lualine_a = { "filename" },
