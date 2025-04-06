@@ -67,7 +67,10 @@ return {
                 "netcoredbg",
             }
             if require("custom-functions").is_nixos() then
-                packages = {}
+                packages = {
+                    "firefox-debug-adapter",
+                    "js-debug-adapter",
+                }
             end
             require("mason-null-ls").setup({
                 ensure_installed = packages,

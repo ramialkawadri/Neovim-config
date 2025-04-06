@@ -63,6 +63,16 @@ return {
             }
         }
 
+        -- Python
+
+        if not require("custom-functions").is_nixos() then
+            local debugpy = mason_registry.get_package("debugpy")
+                :get_install_path() .. "/venv/bin/python"
+            require("dap-python").setup(debugpy)
+        else
+            require("dap-python").setup()
+        end
+
         -- C/C++
 
         dap.adapters.gdb = {
@@ -99,12 +109,6 @@ return {
                 stopAtBeginningOfMainSubprogram = false,
             },
         }
-
-        -- Python
-
-        local debugpy = mason_registry.get_package("debugpy")
-            :get_install_path() .. "/venv/bin/python"
-        require("dap-python").setup(debugpy)
 
         vim.fn.sign_define("DapBreakpoint", { text = "🟥", texthl = "", linehl = "", numhl = "" })
         vim.fn.sign_define("DapStopped", { text = "▶️", texthl = "", linehl = "", numhl = "" })
