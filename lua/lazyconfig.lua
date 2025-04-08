@@ -83,6 +83,12 @@ require("lazy").setup({
             "antosha417/nvim-lsp-file-operations",
             opts = {},
         },
+        {
+            "HoNamDuong/hybrid.nvim",
+            lazy = false,
+            priority = 1000,
+            opts = {},
+        },
         { import = "plugins", },
     },
     install = { colorscheme = { "hybrid" }, },

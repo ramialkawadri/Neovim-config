@@ -1,4 +1,4 @@
-local standard_seperator = { left = '', right = ''}
+local standard_seperator = { right = '', left = ''}
 
 return {
     "nvim-lualine/lualine.nvim",
@@ -8,49 +8,27 @@ return {
             statusline = { "NVimTree" },
             winbar = { "NVimTree" },
         },
+        options = {
+            section_separators = standard_seperator,
+        },
         sections = {
             lualine_a = {
-                {
-                    "mode",
-                    padding = 1,
-                    separator = { right = '' },
-                }
+                "mode",
             },
             lualine_b = {
-                {
-                    require("custom-functions").get_buffer_relative_path,
-                    color = { bg = "#5d5d5f" },
-                    separator = standard_seperator,
-                },
-                {
-                    "branch",
-                    color = { bg = "#2e3031" },
-                    separator = standard_seperator,
-                }
-
+                "branch",
+                require("custom-functions").get_buffer_relative_path,
             },
-            lualine_c = { "%=" },
+            lualine_c = {},
             lualine_x = {},
             lualine_y = {
-                {
-                    function()
-                        return require('lsp-progress').progress()
-                    end,
-                    color = { bg = "#2e3031" },
-                    separator = standard_seperator,
-                },
-                {
-                    "filetype",
-                    color = { bg = "#5d5d5f" },
-                    separator = standard_seperator,
-                },
+                function()
+                    return require('lsp-progress').progress()
+                end,
+                "filetype",
             },
             lualine_z = {
-                {
-                    "location",
-                    padding = 1,
-                    separator = { left = '' },
-                }
+                "location",
             },
         },
         inactive_sections = {
