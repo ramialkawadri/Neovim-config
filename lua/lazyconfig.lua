@@ -33,8 +33,6 @@ require("lazy").setup({
         },
         { "moll/vim-bbye" },
         { "tpope/vim-surround" },
-        { "rafi/awesome-vim-colorschemes", lazy = true, },
-        { "projekt0n/github-nvim-theme",   lazy = true, },
         { "numToStr/Comment.nvim",         opts = {} },
         {
             "lervag/vimtex",
