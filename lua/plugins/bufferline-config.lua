@@ -30,7 +30,6 @@ return {
                     style = "icon",
                     icon = "❚"
                 },
-                color_icons = false,
             },
             highlights = {
                 fill = {
