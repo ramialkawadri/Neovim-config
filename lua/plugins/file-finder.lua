@@ -12,10 +12,12 @@ return {
             path_display = { "smart" },
             mappings = {
                 i = {
-                    ["<C-w>"] = require("custom-functions").delete_buffer_telescope
+                    ["<C-s>"] = "select_horizontal",
+                    ["<C-w>"] = "select_vertical",
                 },
                 n = {
-                    ["<C-w>"] = require("custom-functions").delete_buffer_telescope
+                    ["<C-s>"] = "select_horizontal",
+                    ["<C-w>"] = "select_vertical",
                 }
             }
         }

@@ -43,12 +43,12 @@ return {
                 ["<S-Tab>"] = cmp.mapping.select_prev_item(),
                 -- Tab to go to the next suggestion
                 ["<Tab>"] = cmp.mapping.select_next_item(),
-                -- CTRL+SHIFT+f to scroll backwards in description
+                -- CTRL+b to scroll backwards in description
                 ["<C-b>"] = cmp.mapping.scroll_docs(-4),
-                -- CTRL+F to scroll forwards in the description
+                -- CTRL+f to scroll forwards in the description
                 ["<C-f>"] = cmp.mapping.scroll_docs(4),
-                -- CTRL+SPACE to bring up completion at current Cursor location
-                ["<C-Space>"] = cmp.mapping.complete(),
+                -- CTRL+n to bring up completion at current Cursor location
+                ["<C-n>"] = cmp.mapping.complete(),
                 -- CTRL+e to exit suggestion and close it
                 ["<C-e>"] = cmp.mapping.close(),
                 ["<C-c>"] = cmp.mapping.abort(),

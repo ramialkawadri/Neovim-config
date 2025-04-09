@@ -90,12 +90,4 @@ function M.is_nixos()
     return string.find(os_name, "nixos") ~= nil
 end
 
-function M.delete_buffer_telescope(prompt_bufnr)
-    local action_state = require('telescope.actions.state')
-    local actions = require('telescope.actions')
-    local selection = action_state.get_selected_entry()
-    actions.close(prompt_bufnr)
-    vim.cmd(string.format(":Bdelete %d", selection.bufnr))
-end
-
 return M

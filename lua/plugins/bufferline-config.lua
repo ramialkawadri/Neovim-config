@@ -17,18 +17,17 @@ return {
                     local icon = level:match("error") and " " or " "
                     return " " .. icon .. count
                 end,
-                separator_style = { "", "" },
                 offsets = {
                     {
                         filetype = "NvimTree",
                         text = "File Explorer",
                         highlight = "Directory",
                         separator = true,
-                    }
+                    },
                 },
                 indicator = {
                     style = "icon",
-                    icon = "❚"
+                    icon = "┃",
                 },
             },
             highlights = {
