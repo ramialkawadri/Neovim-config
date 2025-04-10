@@ -18,7 +18,3 @@ map("i", "<A-k>", "<Esc><cmd>:m .-2<CR>==gi", defaultMapOptions)
 map("v", "<A-j>", "xp`[V`]", defaultMapOptions)
 map("v", "<A-k>", "xkP`[V`]", defaultMapOptions)
 
--- LazyGit
-
-map("n", "<C-g>", [[:LazyGit<CR>]], defaultMapOptions)
-

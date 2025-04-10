@@ -24,7 +24,10 @@ require("lazy").setup({
         { "tpope/vim-repeat" },
         { "brenoprata10/nvim-highlight-colors",       opts = {} },
         { "HiPhish/rainbow-delimiters.nvim" },
-        { "windwp/nvim-ts-autotag" },
+        {
+            "windwp/nvim-ts-autotag",
+            opts = {},
+        },
         {
             "mhinz/vim-startify",
             config = function()
@@ -69,6 +72,9 @@ require("lazy").setup({
             dependencies = {
                 "nvim-lua/plenary.nvim",
             },
+            keys = {
+                { "<C-g>", "<cmd>LazyGit<cr>", desc = "LazyGit" }
+            }
         },
         {
             "folke/lazydev.nvim",
