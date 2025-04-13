@@ -1,15 +1,12 @@
-local standard_seperator = { right = '', left = ''}
-
 return {
     "nvim-lualine/lualine.nvim",
     dependencies = { "kyazdani42/nvim-web-devicons" },
     opts = {
-        disabled_filetypes = {
-            statusline = { "NVimTree" },
-            winbar = { "NVimTree" },
-        },
         options = {
-            section_separators = standard_seperator,
+            disabled_filetypes = {
+                "NvimTree",
+            },
+            section_separators = { right = '', left = ''},
         },
         sections = {
             lualine_a = {
