@@ -59,7 +59,7 @@ return {
                 command =
                     mason_registry.get_package("js-debug-adapter")
                     :get_install_path() .. "/js-debug-adapter",
-                args= { "8000" }
+                args = { "8000" }
             }
         }
 
@@ -108,28 +108,58 @@ return {
                 cwd = "${workspaceFolder}",
                 stopAtBeginningOfMainSubprogram = false,
             },
+            {
+                name = "Launch with arguments",
+                type = "rust-gdb",
+                request = "launch",
+                program = custom_function.debug_rust,
+                args = function()
+                    local args_str = vim.fn.input({
+                        prompt = "Arguments: ",
+                    })
+                    return args_str
+                end,
+            },
+            {
+                name = "Launch with input file",
+                type = "rust-gdb",
+                request = "launch",
+                program = custom_function.debug_rust,
+                args = function()
+                    local args_str = vim.fn.input({
+                        prompt = "File name (input.txt): ",
+                    })
+                    if string.len(args_str) == 0 then
+                        args_str = "input.txt"
+                    end
+                    return "<" .. args_str
+                end,
+            },
         }
 
         vim.fn.sign_define("DapBreakpoint", { text = "🟥", texthl = "", linehl = "", numhl = "" })
         vim.fn.sign_define("DapStopped", { text = "▶️", texthl = "", linehl = "", numhl = "" })
 
-        dap.listeners.after.event_initialized["dapui_config"] = function()
+        dap.listeners.before.attach.dapui_config = function()
             dapui.open()
         end
-        dap.listeners.before.event_terminated["dapui_config"] = function()
+        dap.listeners.before.launch.dapui_config = function()
+            dapui.open()
+        end
+        dap.listeners.before.event_terminated.dapui_config = function()
             dapui.close()
         end
-        dap.listeners.before.event_exited["dapui_config"] = function()
+        dap.listeners.before.event_exited.dapui_config = function()
             dapui.close()
         end
     end,
     lazy = false,
     keys = {
-        { "<F5>", function() require("dap").continue() end, desc = "Continue Testing" },
-        { "<F8>", function() require("dap").terminate() end, desc = "Terminate" },
-        { "<F9>", function() require("dap").toggle_breakpoint() end, desc = "Toggle Breakpoint" },
-        { "<F10>", function() require("dap").step_over() end, desc = "Step Over" },
-        { "<F11>", function() require("dap").step_into() end, desc = "Step Into" },
-        { "<F12>", function() require("dap").step_out() end, desc = "Step Out" },
+        { "<F5>",  function() require("dap").continue() end,          desc = "Continue Testing" },
+        { "<F8>",  function() require("dap").terminate() end,         desc = "Terminate" },
+        { "<F9>",  function() require("dap").toggle_breakpoint() end, desc = "Toggle Breakpoint" },
+        { "<F10>", function() require("dap").step_over() end,         desc = "Step Over" },
+        { "<F11>", function() require("dap").step_into() end,         desc = "Step Into" },
+        { "<F12>", function() require("dap").step_out() end,          desc = "Step Out" },
     },
 }
