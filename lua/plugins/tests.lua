@@ -20,7 +20,9 @@ return {
                 adapters = {
                     require("neotest-jest"),
                     require("neotest-python"),
-                    require("neotest-dotnet"),
+                    require("neotest-dotnet")({
+                        discovery_root = "solution",
+                    }),
                     require("neotest-rust"),
                     require("neotest-vitest"),
                 }
