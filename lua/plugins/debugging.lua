@@ -10,7 +10,8 @@ return {
         -- C#
         dap.adapters.netcoredbg = {
             type = "executable",
-            command = "netcoredbg",
+            command = custom_function.is_nixos() and "netcoredbg" or
+                mason_registry.get_package("netcoredbg"):get_install_path() .. "\\netcoredbg\\netcoredbg.exe",
             args = { "--interpreter=vscode" }
         }
 
