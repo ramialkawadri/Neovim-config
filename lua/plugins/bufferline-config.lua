@@ -17,6 +17,14 @@ return {
                     local icon = level:match("error") and " " or " "
                     return " " .. icon .. count
                 end,
+                name_formatter = function(buf)  -- buf contains:
+                    if string.len(buf.name) > 22 then
+                        return string.sub(buf.name, 0, 10) .. ".." .. string.sub(buf.name, -10)
+                    else 
+                        return buf.name
+                    end
+                end,
+                max_name_length = 22,
                 offsets = {
                     {
                         filetype = "NvimTree",
