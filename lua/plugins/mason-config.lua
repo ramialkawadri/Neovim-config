@@ -25,6 +25,7 @@ return {
                 "lua_ls",                           -- Lua
                 "pylsp",                            -- Python
                 "rust_analyzer",                    -- Rust
+                "sqlls",                            -- SQL
                 "texlab",                           -- Latex
                 "ts_ls",                            -- Typescript
                 "vimls",                            -- Vim

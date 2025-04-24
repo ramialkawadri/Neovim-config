@@ -1,3 +1,5 @@
+local max_name_length = 34
+
 return {
     "akinsho/bufferline.nvim",
     version = "*",
@@ -15,16 +17,19 @@ return {
                 show_buffer_close_icons = false,
                 diagnostics_indicator = function(count, level)
                     local icon = level:match("error") and " " or " "
-                    return " " .. icon .. count
+                    return icon .. count
                 end,
-                name_formatter = function(buf)  -- buf contains:
-                    if string.len(buf.name) > 22 then
-                        return string.sub(buf.name, 0, 10) .. ".." .. string.sub(buf.name, -10)
-                    else 
+                name_formatter = function(buf)
+                    if string.len(buf.name) > max_name_length then
+                        local each_direction_length = (max_name_length - 2) / 2
+                        return string.sub(buf.name, 0, each_direction_length)
+                            .. ".."
+                            .. string.sub(buf.name, -each_direction_length)
+                    else
                         return buf.name
                     end
                 end,
-                max_name_length = 22,
+                max_name_length = max_name_length,
                 offsets = {
                     {
                         filetype = "NvimTree",
@@ -46,8 +51,8 @@ return {
         }
     end,
     keys = {
-        { "<C-j>", [[:bp<CR>]], desc = "Previous Buffer" },
-        { "<C-k>", [[:bn<CR>]], desc = "Next Buffer" },
-        { "\\w", [[:Bdelete<CR>]], desc = "Close Current Buffer" },
+        { "<C-j>", [[:bp<CR>]],      desc = "Previous Buffer" },
+        { "<C-k>", [[:bn<CR>]],      desc = "Next Buffer" },
+        { "\\w",   [[:Bdelete<CR>]], desc = "Close Current Buffer" },
     },
 }
