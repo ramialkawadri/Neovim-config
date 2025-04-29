@@ -27,6 +27,7 @@ return {
             local custom_function = require("custom-functions")
             if custom_function.is_nixos() then
                 table.insert(lsps, "nil_ls");
+                table.insert(lsps, "hyprls");
             end
 
             for _, lsp in ipairs(lsps) do
