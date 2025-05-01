@@ -43,8 +43,7 @@ require("lazy").setup({
                 vim.g.vimtex_quickfix_open_on_warning = 0
                 local custom_function = require("custom-functions")
                 if custom_function.is_nixos() then
-                    vim.g.vimtex_view_general_viewer = "okular"
-                    vim.g.vimtex_view_general_options = "--unique file:@pdf\\#src:@line@tex"
+                    vim.g.vimtex_view_general_viewer = "papers"
                 else
                     vim.g.vimtex_view_general_viewer = "SumatraPDF"
                     vim.g.vimtex_view_general_options = "-reuse-instance -forward-search @tex @line @pdf"
