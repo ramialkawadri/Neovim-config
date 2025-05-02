@@ -48,6 +48,12 @@ vim.cmd.set("ic");
 
 vim.cmd("set foldmethod=manual")
 
+-- Enable title
+
+vim.opt.title = true
+vim.opt.titlelen = 0 -- do not shorten title
+vim.opt.titlestring = 'nvim %{expand("%:p")}'
+
 -- Alias
 
 vim.cmd.command("Format lua vim.lsp.buf.format()")
