@@ -10,9 +10,8 @@ return {
         -- C#
         dap.adapters.netcoredbg = {
             type = "executable",
-            command = custom_function.is_nixos() and "netcoredbg" or
-                mason_registry.get_package("netcoredbg"):get_install_path() .. "\\netcoredbg\\netcoredbg.exe",
-            args = { "--interpreter=vscode" }
+            command = "netcoredbg",
+            args = { "--interpreter=vscode" },
         }
 
         dap.configurations.cs = {
@@ -47,19 +46,14 @@ return {
         dap.adapters.firefox = {
             type = "executable",
             command = "node",
-            args = {
-                mason_registry.get_package("firefox-debug-adapter")
-                :get_install_path() .. "/dist/adapter.bundle.js"
-            }
+            args = { vim.fn.exepath("firefox-debug-adapter") }
         }
         dap.adapters["pwa-node"] = {
             type = "server",
             host = "localhost",
             port = "8000",
             executable = {
-                command =
-                    mason_registry.get_package("js-debug-adapter")
-                    :get_install_path() .. "/js-debug-adapter",
+                command = "js-debug-adapter",
                 args = { "8000" }
             }
         }
@@ -67,8 +61,7 @@ return {
         -- Python
 
         if not require("custom-functions").is_nixos() then
-            local debugpy = mason_registry.get_package("debugpy")
-                :get_install_path() .. "/venv/bin/python"
+            local debugpy = vim.fn.exepath("debugpy")
             require("dap-python").setup(debugpy)
         else
             require("dap-python").setup()
