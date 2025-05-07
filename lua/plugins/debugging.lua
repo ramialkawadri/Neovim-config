@@ -46,25 +46,28 @@ return {
         dap.adapters.firefox = {
             type = "executable",
             command = "node",
-            args = { vim.fn.exepath("firefox-debug-adapter") }
+            args = { vim.fn.expand("$MASON/packages/firefox-debug-adapter/dist/adapter.bundle.js") }
         }
         dap.adapters["pwa-node"] = {
             type = "server",
             host = "localhost",
             port = "8000",
             executable = {
-                command = "js-debug-adapter",
-                args = { "8000" }
+                command = "node",
+                args = {
+                    vim.fn.expand("$MASON/packages/js-debug-adapter/js-debug/src/dapDebugServer.js"),
+                    "8000",
+                }
             }
         }
 
         -- Python
 
-        if not require("custom-functions").is_nixos() then
-            local debugpy = vim.fn.exepath("debugpy")
-            require("dap-python").setup(debugpy)
-        else
+        if require("custom-functions").is_nixos() then
             require("dap-python").setup()
+        else
+            local debugpy = vim.fn.expand("$MASON/packages/debugpy/venv/Scripts/python.exe")
+            require("dap-python").setup(debugpy)
         end
 
         -- C/C++
