@@ -4,9 +4,9 @@ return {
         opts = {}
     },
     {
-        "williamboman/mason-lspconfig.nvim",
+        "mason-org/mason-lspconfig.nvim",
         dependencies = {
-            "williamboman/mason.nvim",
+            "mason-org/mason.nvim",
         },
         config = function()
             local packages = {
@@ -56,7 +56,7 @@ return {
     {
         "jay-babu/mason-null-ls.nvim",
         dependencies = {
-            "williamboman/mason.nvim",
+            "mason-org/mason.nvim",
             "nvimtools/none-ls.nvim",
         },
         config = function()
