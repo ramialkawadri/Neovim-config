@@ -1,11 +1,7 @@
 local M = {}
 
 function M.goToDefinition()
-    if vim.bo.filetype == "cs" then
-        require("csharpls_extended").lsp_definitions()
-    else
-        vim.lsp.buf.definition()
-    end
+    vim.lsp.buf.definition()
 end
 
 function M.debugTest()
