@@ -27,6 +27,8 @@ return {
         { "fg", function() require("telescope.builtin").live_grep() end,      desc = "RipGrep" },
         { "fb", function() require("telescope.builtin").buffers() end,        desc = "Search Buffers" },
         { "fh", function() require("telescope.builtin").help_tags() end,      desc = "Help Tags" },
+        { "fr", function() require("telescope.builtin").registers() end, desc = "Open Buffer Diagnostics" },
+        { "fm", function() require("telescope.builtin").marks() end, desc = "Open Buffer Diagnostics" },
         { "gr", function() require("telescope.builtin").lsp_references() end, desc = "Open Buffer Diagnostics" },
     },
 }
