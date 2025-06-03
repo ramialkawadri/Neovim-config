@@ -58,13 +58,13 @@ require("lazy").setup({
             },
         },
         {
-            "iamcco/markdown-preview.nvim",
-            cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-            build = "cd app && npm install",
-            ft = { "markdown" },
-            config = function()
-                vim.g.mkdp_auto_close = 0
-            end
+            'MeanderingProgrammer/render-markdown.nvim',
+            dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
+            ---@module 'render-markdown'
+            ---@type render.md.UserConfig
+            opts = {
+                completions = { lsp = { enabled = true } },
+            },
         },
         {
             "kdheepak/lazygit.nvim",
