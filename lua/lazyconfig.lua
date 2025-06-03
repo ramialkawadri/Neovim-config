@@ -13,7 +13,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     end
 end
 vim.opt.rtp:prepend(lazypath)
-vim.g.mapleader = " "
+vim.g.mapleader = "\\"
 vim.g.maplocalleader = "\\"
 
 require("lazy").setup({
@@ -58,9 +58,9 @@ require("lazy").setup({
             },
         },
         {
-            'MeanderingProgrammer/render-markdown.nvim',
-            dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
-            ---@module 'render-markdown'
+            "MeanderingProgrammer/render-markdown.nvim",
+            dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
+            ---@module "render-markdown"
             ---@type render.md.UserConfig
             opts = {
                 completions = { lsp = { enabled = true } },

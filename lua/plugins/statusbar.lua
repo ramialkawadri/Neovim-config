@@ -6,7 +6,7 @@ return {
             disabled_filetypes = {
                 "NvimTree",
             },
-            section_separators = { right = '', left = ''},
+            section_separators = { right = "", left = ""},
         },
         sections = {
             lualine_a = {
@@ -20,7 +20,7 @@ return {
             lualine_x = {},
             lualine_y = {
                 function()
-                    return require('lsp-progress').progress()
+                    return require("lsp-progress").progress()
                 end,
                 "filetype",
             },

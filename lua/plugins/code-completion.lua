@@ -68,7 +68,7 @@ return {
                 { name = "nvim_lua",               keyword_length = 2 },
                 { name = "buffer",                 keyword_length = 2 },
                 { name = "vsnip",                  keyword_length = 2 },
-                { name = 'render-markdown'                            },
+                { name = "render-markdown"                            },
             },
             window = {
                 completion = cmp.config.window.bordered(),

@@ -39,7 +39,7 @@ return {
 
             lspconfig["sqlls"].setup {
                 capabilities = capabilities,
-                filetypes = { 'sql' },
+                filetypes = { "sql" },
                 root_dir = function(_)
                     return vim.loop.cwd()
                 end,
@@ -67,7 +67,7 @@ return {
                 },
             }
 
-            for _, method in ipairs({ 'textDocument/diagnostic', 'workspace/diagnostic' }) do
+            for _, method in ipairs({ "textDocument/diagnostic", "workspace/diagnostic" }) do
                 local default_diagnostic_handler = vim.lsp.handlers[method]
                 vim.lsp.handlers[method] = function(err, result, context, config)
                     if err ~= nil and err.code == -32802 then

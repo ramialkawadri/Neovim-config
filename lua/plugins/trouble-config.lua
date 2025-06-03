@@ -8,7 +8,7 @@ return {
         }
     },
     keys = {
-        { "\\p", [[:Trouble diagnostics focus=true<CR>]], desc = "Open Project Diagnostics" },
-        { "\\x", [[:Trouble diagnostics focus filter.buf=0<CR>]], desc = "Open Buffer Diagnostics" },
+        { "<leader>p", [[:Trouble diagnostics focus=true<CR>]], desc = "Open Project Diagnostics" },
+        { "<leader>x", [[:Trouble diagnostics focus filter.buf=0<CR>]], desc = "Open Buffer Diagnostics" },
     },
 }

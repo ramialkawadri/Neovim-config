@@ -29,11 +29,11 @@ return {
             })
         end,
         keys = {
-            { "\\a", custom_functions.runAllTests, desc = "Run All Tests" },
-            { "\\l", custom_functions.debugTest, desc = "Debug Test" },
-            { "\\o", [[:Neotest output<CR>]], desc = "Show Test Output" },
-            { "\\t", custom_functions.toggle_test_summary, desc = "Toggle test summary" },
-            { "\\r", custom_functions.run_marked_tests, desc = "Toggle test summary" },
+            { "<leader>a", custom_functions.runAllTests, desc = "Run All Tests" },
+            { "<leader>l", custom_functions.debugTest, desc = "Debug Test" },
+            { "<leader>o", [[:Neotest output<CR>]], desc = "Show Test Output" },
+            { "<leader>t", custom_functions.toggle_test_summary, desc = "Toggle test summary" },
+            { "<leader>r", custom_functions.run_marked_tests, desc = "Toggle test summary" },
         },
     },
     {
@@ -41,8 +41,8 @@ return {
         dependencies = "nvim-lua/plenary.nvim",
         opts = {},
         keys = {
-            { "\\c", custom_functions.load_coverage, desc = "Load Coverage" },
-            { "\\s", custom_functions.show_coverage_summary, desc = "Show Coverage Summary" },
+            { "<leader>c", custom_functions.load_coverage, desc = "Load Coverage" },
+            { "<leader>s", custom_functions.show_coverage_summary, desc = "Show Coverage Summary" },
         },
     },
 }

@@ -78,7 +78,7 @@ function M.get_buffer_relative_path()
 end
 
 function M.is_nixos()
-    local handle = io.popen('uname -a')
+    local handle = io.popen("uname -a")
     if handle == nil then
         return false
     end
