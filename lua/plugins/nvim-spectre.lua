@@ -2,7 +2,6 @@ return {
     "nvim-pack/nvim-spectre",
     dependencies = "nvim-lua/plenary.nvim",
     config = {
-        is_insert_mode = true,
         use_trouble_qf = true,
     },
     keys = {
