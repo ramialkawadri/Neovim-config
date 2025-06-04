@@ -10,7 +10,9 @@ return {
         -- C#
         dap.adapters.netcoredbg = {
             type = "executable",
-            command = "netcoredbg",
+            command = require("custom-functions").is_nixos() and
+                "netcoredbg" or
+                vim.fn.expand("$MASON/packages/netcoredbg/netcoredbg/netcoredbg.exe"),
             args = { "--interpreter=vscode" },
         }
 
