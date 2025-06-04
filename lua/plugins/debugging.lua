@@ -3,7 +3,6 @@ return {
     dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio", "mfussenegger/nvim-dap-python" },
     config = function()
         local dap, dapui = require("dap"), require("dapui")
-        local mason_registry = require("mason-registry")
         local custom_function = require("custom-functions")
         dapui.setup()
 

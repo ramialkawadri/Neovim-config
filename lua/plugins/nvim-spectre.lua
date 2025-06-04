@@ -5,6 +5,6 @@ return {
         use_trouble_qf = true,
     },
     keys = {
-        { "<leader>f", function () require("spectre").toggle() end, desc = "Open search" }
+        { "<leader>f", function () require("spectre").open() end, desc = "Open search" }
     }
 }
