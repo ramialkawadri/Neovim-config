@@ -1,6 +1,11 @@
 return {
     "rcarriga/nvim-dap-ui",
-    dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio", "mfussenegger/nvim-dap-python" },
+    dependencies = {
+        "mfussenegger/nvim-dap",
+        "nvim-neotest/nvim-nio",
+        "mfussenegger/nvim-dap-python",
+        "mason-org/mason.nvim",
+    },
     config = function()
         local dap, dapui = require("dap"), require("dapui")
         local custom_function = require("custom-functions")
