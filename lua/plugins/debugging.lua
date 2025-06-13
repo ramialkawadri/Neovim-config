@@ -92,11 +92,26 @@ return {
                 cwd = "${workspaceFolder}",
                 stopAtBeginningOfMainSubprogram = false,
             },
+            {
+                name = "Launch with input file",
+                type = "gdb",
+                request = "launch",
+                program = custom_function.debug_c_or_cpp,
+                args = function()
+                    local args_str = vim.fn.input({
+                        prompt = "File name (input.txt): ",
+                    })
+                    if string.len(args_str) == 0 then
+                        args_str = "input.txt"
+                    end
+                    return "<" .. args_str
+                end,
+            },
         }
         dap.configurations.c = dap.configurations.cpp
 
-        -- Rust
 
+        -- Rust
         dap.adapters["rust-gdb"] = {
             type = "executable",
             command = "rust-gdb",
