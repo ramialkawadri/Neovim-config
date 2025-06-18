@@ -1,3 +1,4 @@
+local max_path_length = 25
 local M = {}
 
 function M.goToDefinition()
@@ -73,7 +74,12 @@ function M.get_buffer_relative_path()
     if string.find(file_path, "NvimTree") then
         return "File Tree"
     else
-        return string.sub(file_path, string.len(vim.fn.getcwd()) + 2)
+        local path = string.sub(file_path, string.len(vim.fn.getcwd()) + 2)
+        if string.len(path) > max_path_length then
+            return ".." .. string.sub(path, string.len(path) - max_path_length, string.len(path))
+        else
+            return path
+        end
     end
 end
 
