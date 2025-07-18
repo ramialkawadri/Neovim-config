@@ -19,6 +19,15 @@ return {
         live_filter = {
             always_show_folders = false,
         },
+        actions = {
+            open_file = {
+                resize_window = false,
+            },
+        },
+        view = {
+            -- Automatically resize.
+            width = {},
+        },
 
     },
     keys = {
