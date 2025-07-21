@@ -1,4 +1,4 @@
-local max_path_length = 25
+local max_path_length = 45
 local M = {}
 
 function M.goToDefinition()
