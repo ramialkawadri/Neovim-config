@@ -36,7 +36,8 @@ require("lazy").setup({
         },
         { "moll/vim-bbye" },
         { "tpope/vim-surround" },
-        { "numToStr/Comment.nvim",         opts = {} },
+        { "numToStr/Comment.nvim",  opts = {} },
+        { "stevearc/overseer.nvim", opts = {} },
         {
             "lervag/vimtex",
             config = function()
