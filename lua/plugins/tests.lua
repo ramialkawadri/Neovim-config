@@ -21,7 +21,9 @@ return {
                     require("neotest-jest"),
                     require("neotest-python"),
                     require("neotest-vstest"),
-                    require("neotest-rust"),
+                    require("neotest-rust") {
+                        dap_adapter = "rust-gdb",
+                    },
                     require("neotest-vitest"),
                 }
             })
