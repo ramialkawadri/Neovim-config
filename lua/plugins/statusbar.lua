@@ -19,6 +19,7 @@ return {
             lualine_c = {},
             lualine_x = {},
             lualine_y = {
+                "overseer",
                 function()
                     return require("lsp-progress").progress()
                 end,
