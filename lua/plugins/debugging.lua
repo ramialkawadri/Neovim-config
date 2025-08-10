@@ -57,12 +57,12 @@ return {
         dap.adapters["pwa-node"] = {
             type = "server",
             host = "localhost",
-            port = "8000",
+            port = "${port}",
             executable = {
                 command = "node",
                 args = {
                     vim.fn.expand("$MASON/packages/js-debug-adapter/js-debug/src/dapDebugServer.js"),
-                    "8000",
+                    "${port}",
                 }
             }
         }
