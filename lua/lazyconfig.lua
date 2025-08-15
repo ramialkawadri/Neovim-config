@@ -20,12 +20,17 @@ require("lazy").setup({
     spec = {
         { "mfussenegger/nvim-jdtls",                  lazy = true, },
         { "onsails/lspkind.nvim",                     lazy = true, },
-        { "Decodetalkers/csharpls-extended-lsp.nvim", lazy = true, },
         { "tpope/vim-repeat" },
         { "brenoprata10/nvim-highlight-colors",       opts = {} },
         { "HiPhish/rainbow-delimiters.nvim" },
         {
             "windwp/nvim-ts-autotag",
+            opts = {},
+        },
+        {
+            "seblyng/roslyn.nvim",
+            ---@module 'roslyn.config'
+            ---@type RoslynNvimConfig
             opts = {},
         },
         {

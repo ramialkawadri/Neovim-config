@@ -45,15 +45,6 @@ return {
                 end,
             }
 
-            lspconfig.csharp_ls.setup {
-				capabilities = capabilities,
-                handlers = {
-                    ["textDocument/definition"] = require("csharpls_extended").handler,
-                    ["textDocument/typeDefinition"] = require("csharpls_extended").handler,
-                },
-            }
-            require("csharpls_extended").buf_read_cmd_bind()
-
             lspconfig.pylsp.setup {
 				capabilities = capabilities,
                 settings = {

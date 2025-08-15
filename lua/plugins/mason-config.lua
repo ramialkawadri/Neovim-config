@@ -1,7 +1,12 @@
 return {
     {
         "mason-org/mason.nvim",
-        opts = {}
+        opts = {
+            registries = {
+                "github:mason-org/mason-registry",
+                "github:Crashdummyy/mason-registry",
+            },
+        }
     },
     {
         "mason-org/mason-lspconfig.nvim",
@@ -12,7 +17,6 @@ return {
             local packages = {
                 "bashls",                           -- Bash
                 "clangd",                           -- C/CPP
-                "csharp_ls",                        -- C#
                 "cssls",                            -- CSS
                 "docker_compose_language_service",  -- Docker compose
                 "dockerls",                         -- Docker
@@ -24,6 +28,7 @@ return {
                 "ltex",                             -- Spell Checking
                 "lua_ls",                           -- Lua
                 "pylsp",                            -- Python
+                "roslyn",                           -- C#
                 "rust_analyzer",                    -- Rust
                 "sqlls",                            -- SQL
                 "texlab",                           -- Latex
