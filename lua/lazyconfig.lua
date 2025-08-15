@@ -34,6 +34,10 @@ require("lazy").setup({
             opts = {},
         },
         {
+            "DestopLine/boilersharp.nvim",
+            opts = {},
+        },
+        {
             "mhinz/vim-startify",
             config = function()
                 vim.g.startify_change_to_dir = 0
