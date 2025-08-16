@@ -45,6 +45,7 @@ require("lazy").setup({
         },
         {
             "tzachar/local-highlight.nvim", opts = {
+                hlgroup = "PmenuThumb",
                 animate = {
                     enabled = false,
                 },
