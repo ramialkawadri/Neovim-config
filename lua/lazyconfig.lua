@@ -43,6 +43,13 @@ require("lazy").setup({
                 vim.g.startify_change_to_dir = 0
             end
         },
+        {
+            "tzachar/local-highlight.nvim", opts = {
+                animate = {
+                    enabled = false,
+                },
+            },
+        },
         { "moll/vim-bbye" },
         { "tpope/vim-surround" },
         { "numToStr/Comment.nvim",  opts = {} },
@@ -75,15 +82,6 @@ require("lazy").setup({
             opts = {
                 completions = { lsp = { enabled = true } },
             },
-        },
-        {
-            "kdheepak/lazygit.nvim",
-            dependencies = {
-                "nvim-lua/plenary.nvim",
-            },
-            keys = {
-                { "<C-g>", "<cmd>LazyGit<cr>", desc = "LazyGit" }
-            }
         },
         {
             "folke/lazydev.nvim",

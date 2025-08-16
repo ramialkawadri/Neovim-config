@@ -5,6 +5,7 @@ return {
         options = {
             disabled_filetypes = {
                 "NvimTree",
+                "startify",
             },
             section_separators = { right = "", left = ""},
         },
