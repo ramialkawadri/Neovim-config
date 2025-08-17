@@ -14,7 +14,6 @@ return {
                 "mode",
             },
             lualine_b = {
-                "branch",
                 require("custom-functions").get_buffer_relative_path,
             },
             lualine_c = {},
