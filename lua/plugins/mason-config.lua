@@ -28,7 +28,6 @@ return {
                 "ltex",                             -- Spell Checking
                 "lua_ls",                           -- Lua
                 "pylsp",                            -- Python
-                "roslyn",                           -- C#
                 "rust_analyzer",                    -- Rust
                 "sqlls",                            -- SQL
                 "texlab",                           -- Latex
