@@ -72,7 +72,7 @@ return {
             { "gd", require("custom-functions").goToDefinition, desc = "Go To Definition" },
             { "gi", vim.lsp.buf.implementation, desc = "Go To Implementation" },
             { "gD", vim.lsp.buf.declaration, desc = "Go To Declaration" },
-            { "<C-h>", vim.lsp.buf.hover, desc = "Mouse Hover" },
+            { "<C-h>", require("custom-functions").hover, desc = "Mouse Hover" },
         }
     },
 }
