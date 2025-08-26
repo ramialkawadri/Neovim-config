@@ -10,7 +10,7 @@ return {
         local custom_function = require("custom-functions")
 
         -- C#
-        dap.adapters.netcoredbg = {
+        dap.adapters.coreclr = {
             type = "executable",
             command = require("custom-functions").is_nixos() and
                 "netcoredbg" or
@@ -20,7 +20,7 @@ return {
 
         dap.configurations.cs = {
             {
-                type = "netcoredbg",
+                type = "coreclr",
                 name = "launch - netcoredbg",
                 request = "launch",
                 program = function()
@@ -43,6 +43,12 @@ return {
                     return custom_function.return_if_exists_else_ask(dll_path)
                 end,
             },
+            {
+                type = "coreclr",
+                name = "Attach to process",
+                request = "attach",
+                processId = "${command:pickProcess}"
+            }
         }
 
         -- Firefox

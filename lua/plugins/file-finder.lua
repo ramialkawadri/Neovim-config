@@ -1,27 +1,38 @@
 return {
     "nvim-telescope/telescope.nvim",
     version = "*",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {
-        pickers = {
-            find_files = {
-                find_command = { "rg", "--files", "--iglob", "!.git", "--hidden" },
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+        "nvim-telescope/telescope-ui-select.nvim"
+    },
+    config = function()
+        require("telescope").setup {
+            extensions = {
+                ["ui-select"] = {},
             },
-        },
-        defaults = {
-            path_display = { "smart" },
-            mappings = {
-                i = {
-                    ["<C-s>"] = "select_horizontal",
-                    ["<C-w>"] = "select_vertical",
+            pickers = {
+                find_files = {
+                    find_command = { "rg", "--files", "--iglob", "!.git", "--hidden" },
                 },
-                n = {
-                    ["<C-s>"] = "select_horizontal",
-                    ["<C-w>"] = "select_vertical",
+            },
+            defaults = {
+                path_display = { "smart" },
+                mappings = {
+                    i = {
+                        ["<C-s>"] = "select_horizontal",
+                        ["<C-w>"] = "select_vertical",
+                    },
+                    n = {
+                        ["<C-s>"] = "select_horizontal",
+                        ["<C-w>"] = "select_vertical",
+                    }
                 }
             }
         }
-    },
+
+        require("telescope").load_extension("ui-select")
+    end,
+    lazy = false,
     keys = {
         { "ff", function() require("telescope.builtin").find_files() end,     desc = "Search Files" },
         { "fg", function() require("telescope.builtin").live_grep() end,      desc = "RipGrep" },
