@@ -1,6 +1,9 @@
 return {
     {
         "neovim/nvim-lspconfig",
+        dependencies = {
+            "b0o/schemastore.nvim",
+        },
         lazy = false,
         config = function()
             local lspconfig = require("lspconfig")
@@ -16,7 +19,6 @@ return {
                 "eslint",
                 "html",
                 "jdtls",
-                "jsonls",
                 "ltex",
                 "lua_ls",
                 "rust_analyzer",
@@ -54,6 +56,15 @@ return {
                                 enabled = true,
                             },
                         },
+                    },
+                },
+            }
+
+            lspconfig.jsonls.setup {
+                settings = {
+                    json = {
+                        schemas = require("schemastore").json.schemas(),
+                        validate = { enable = true },
                     },
                 },
             }
