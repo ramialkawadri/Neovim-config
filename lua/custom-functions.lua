@@ -103,7 +103,7 @@ end
 function M.condtitional_breakpoint()
     vim.ui.input({ prompt = "Condition" }, function(condition)
         if condition ~= nil and string.len(condition) > 0 then
-            require("dap").toggle_breakpoint(condition)
+            require("dap").set_breakpoint(condition)
         end
     end)
 end
