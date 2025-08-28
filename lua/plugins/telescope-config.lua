@@ -36,7 +36,11 @@ return {
         require("telescope").load_extension("ui-select")
 
         -- Load this after other extensions.
-        vim.g.sqlite_clib_path = vim.env.sqlite_clib_path
+        if require("custom-functions").is_nixos() then
+            vim.g.sqlite_clib_path = vim.env.sqlite_clib_path
+        else
+            vim.g.sqlite_clib_path = vim.fn.stdpath('config') .. "\\executables\\sqlite3.dll"
+        end
         require("telescope-all-recent").setup({
             vim_ui_select = {
                 kinds = {

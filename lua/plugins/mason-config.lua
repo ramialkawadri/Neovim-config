@@ -33,9 +33,16 @@ return {
                 "texlab",                           -- Latex
                 "ts_ls",                            -- Typescript
                 "vimls",                            -- Vim
+                "vimls",                            -- Vim
             }
             if require("custom-functions").is_nixos() then
                 packages = {}
+            else
+                local mason_registry = require("mason-registry")
+                if not mason_registry.is_installed("roslyn") then
+                    local package = mason_registry.get_package("roslyn")
+                    package:install()
+                end
             end
             require("mason-lspconfig").setup({
                 ensure_installed = packages,
