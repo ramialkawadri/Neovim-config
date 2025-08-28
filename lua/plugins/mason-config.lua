@@ -29,7 +29,6 @@ return {
                 "lua_ls",                           -- Lua
                 "pylsp",                            -- Python
                 "rust_analyzer",                    -- Rust
-                "sqlls",                            -- SQL
                 "texlab",                           -- Latex
                 "ts_ls",                            -- Typescript
                 "vimls",                            -- Vim
@@ -40,10 +39,13 @@ return {
             else
                 local mason_registry = require("mason-registry")
                 if not mason_registry.is_installed("roslyn") then
-                    local package = mason_registry.get_package("roslyn")
-                    package:install()
+                    mason_registry.get_package("roslyn"):install()
                 end
             end
+
+            -- Common packages
+            table.insert(packages, "sqlls")  -- SQL
+
             require("mason-lspconfig").setup({
                 ensure_installed = packages,
                 automatic_installation = false,
