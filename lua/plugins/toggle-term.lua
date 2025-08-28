@@ -3,6 +3,6 @@ return {
     version = "*",
     opts = {},
     keys = {
-        { "<C-t>", mode = { "n", "t" }, "<cmd>ToggleTerm<CR>", desc = "Toggle Terminal" },
+        { "<C-t>", mode = { "n", "t" }, function() require("toggleterm").toggle() end, desc = "Toggle Terminal" },
     },
 }
