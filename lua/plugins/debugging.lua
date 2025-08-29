@@ -17,6 +17,7 @@ return {
                 vim.fn.expand("$MASON/packages/netcoredbg/netcoredbg/netcoredbg.exe"),
             args = { "--interpreter=vscode" },
         }
+        dap.adapters.netcoredbg = dap.adapters.coreclr
 
         dap.configurations.cs = {
             {
