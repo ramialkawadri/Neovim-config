@@ -6,7 +6,10 @@ return {
     opts = {
         bigfile = { enabled = true },
         input = { enabled = true },
-        notifier = { enabled = true },
+        notifier = {
+            enabled = true,
+            timeout = 4000,
+        },
         image = { enabled = true },
         lazygit = { enabled = true },
     },
