@@ -38,6 +38,11 @@ require("lazy").setup({
             opts = {},
         },
         {
+            "ray-x/lsp_signature.nvim",
+            event = "InsertEnter",
+            opts = { hint_enable = false, },
+        },
+        {
             "mhinz/vim-startify",
             config = function()
                 vim.g.startify_change_to_dir = 0
