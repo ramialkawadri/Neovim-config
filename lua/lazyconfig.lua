@@ -108,6 +108,19 @@ require("lazy").setup({
             priority = 1000,
             opts = {},
         },
+        {
+            "hedyhli/outline.nvim",
+            lazy = true,
+            cmd = { "Outline", "OutlineOpen" },
+            keys = {
+                { "<leader>u", "<cmd>Outline<CR>", desc = "Toggle outline" },
+            },
+            opts = {
+                outline_window = {
+                    show_cursorline = true,
+                },
+            },
+        },
         { import = "plugins", },
     },
     install = { colorscheme = { "hybrid" }, },
