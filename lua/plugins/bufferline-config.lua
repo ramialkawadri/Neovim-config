@@ -45,7 +45,7 @@ return {
             },
             highlights = {
                 fill = {
-                    bg = "#818181",
+                    bg = string.format("#%06x", vim.api.nvim_get_hl_by_name("Folded", true).foreground),
                 },
             }
         }
