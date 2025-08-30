@@ -3,11 +3,28 @@ return {
         "neovim/nvim-lspconfig",
         dependencies = {
             "b0o/schemastore.nvim",
+
+            -- nvim-ufo
+            "kevinhwang91/nvim-ufo",
+            "kevinhwang91/promise-async",
         },
         lazy = false,
         config = function()
             local lspconfig = require("lspconfig")
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+            -- Folding
+
+            capabilities.textDocument.foldingRange = {
+                dynamicRegistration = false,
+                lineFoldingOnly = true
+            }
+            vim.opt.foldcolumn = "0"
+            vim.opt.foldlevel = 99
+            vim.opt.foldlevelstart = 99
+            vim.opt.foldenable = true
+
+            -- LSP
 
             local lsps = {
                 "bashls",
@@ -61,6 +78,7 @@ return {
             }
 
             lspconfig.jsonls.setup {
+                capabilities = capabilities,
                 settings = {
                     json = {
                         schemas = require("schemastore").json.schemas(),
@@ -78,12 +96,21 @@ return {
                     return default_diagnostic_handler(err, result, context, config)
                 end
             end
+
+            require("ufo").setup()
         end,
         keys = {
+            -- LSP keys
+
             { "gd", require("custom-functions").goToDefinition, desc = "Go To Definition" },
             { "gi", vim.lsp.buf.implementation, desc = "Go To Implementation" },
             { "gD", vim.lsp.buf.declaration, desc = "Go To Declaration" },
             { "<C-h>", require("custom-functions").hover, desc = "Mouse Hover" },
+
+            -- Folds keys
+
+            { "zR", function() require("ufo").openAllFolds() end, desc = "Open all folds" },
+            { "zM", function() require("ufo").closeAllFolds() end, desc = "Close all folds" },
         }
     },
 }

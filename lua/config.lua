@@ -44,10 +44,6 @@ vim.cmd.set("pumwidth=50")
 
 vim.cmd.set("ic");
 
--- Folding
-
-vim.cmd("set foldmethod=manual")
-
 -- Enable title
 
 vim.opt.title = true
