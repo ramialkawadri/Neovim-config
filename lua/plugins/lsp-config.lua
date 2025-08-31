@@ -38,7 +38,6 @@ return {
                 "jdtls",
                 "ltex",
                 "lua_ls",
-                "rust_analyzer",
                 "texlab",
                 "ts_ls",
                 "vimls",

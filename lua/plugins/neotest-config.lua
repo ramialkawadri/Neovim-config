@@ -12,8 +12,8 @@ return {
             "nvim-neotest/neotest-python",
             "nvim-neotest/neotest-jest",
             "rcasia/neotest-java",
-            "rouge8/neotest-rust",
             "marilari88/neotest-vitest",
+            "mrcjkb/rustaceanvim",
         },
         config = function()
             require("neotest").setup({
@@ -21,9 +21,7 @@ return {
                     require("neotest-jest"),
                     require("neotest-python"),
                     require("neotest-vstest"),
-                    require("neotest-rust") {
-                        dap_adapter = "rust-gdb",
-                    },
+                    require("rustaceanvim.neotest"),
                     require("neotest-vitest"),
                 }
             })

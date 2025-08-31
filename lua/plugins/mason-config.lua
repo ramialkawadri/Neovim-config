@@ -29,7 +29,6 @@ return {
                 "ltex",                             -- Spell Checking
                 "lua_ls",                           -- Lua
                 "pylsp",                            -- Python
-                "rust_analyzer",                    -- Rust
                 "texlab",                           -- Latex
                 "ts_ls",                            -- Typescript
                 "vimls",                            -- Vim
