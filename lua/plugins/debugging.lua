@@ -22,7 +22,7 @@ return {
         dap.configurations.cs = {
             {
                 type = "coreclr",
-                name = "launch - netcoredbg",
+                name = "Launch - netcoredbg",
                 request = "launch",
                 program = function()
                     vim.cmd [[!dotnet build]]

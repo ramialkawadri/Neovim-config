@@ -46,14 +46,12 @@ return {
                 kinds = {
                     overseer_template = {
                         use_cwd = true,
-                        prompt = "Task template",
-                        name_include_prompt = true,
                     },
                 }, 
                 prompts = {
                     ["Configuration: "] = {
                         use_cwd = true,
-                    }
+                    },
                 }
             }
         })
