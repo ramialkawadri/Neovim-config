@@ -17,7 +17,6 @@ return {
             local packages = {
                 "bashls",                           -- Bash
                 "clangd",                           -- C/CPP
-                "codelldb",                         -- Debuging
                 "cssls",                            -- CSS
                 "docker_compose_language_service",  -- Docker compose
                 "dockerls",                         -- Docker
@@ -75,6 +74,7 @@ return {
         config = function()
             local packages = {
                 "bibtex-tidy",
+                "codelldb",
                 "debugpy",
                 "firefox-debug-adapter",
                 "js-debug-adapter",
