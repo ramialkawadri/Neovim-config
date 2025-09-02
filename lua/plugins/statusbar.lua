@@ -7,6 +7,7 @@ return {
                 "NvimTree",
                 "startify",
                 "OverseerList",
+                "neotest-summary",
                 ""
             },
             section_separators = { right = "", left = ""},
