@@ -57,7 +57,12 @@ require("lazy").setup({
             },
         },
         { "moll/vim-bbye" },
-        { "tpope/vim-surround" },
+        {
+            "tpope/vim-surround",
+            dependencies = {
+                "nvim-treesitter/nvim-treesitter-textobjects"
+            },
+        },
         { "numToStr/Comment.nvim",  opts = {} },
         { "stevearc/overseer.nvim", opts = {} },
         {
