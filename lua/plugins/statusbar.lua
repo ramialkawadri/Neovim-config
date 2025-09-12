@@ -8,6 +8,7 @@ return {
                 "startify",
                 "OverseerList",
                 "neotest-summary",
+                "Outline",
                 ""
             },
             section_separators = { right = "", left = ""},
