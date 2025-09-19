@@ -10,7 +10,6 @@ return {
         },
         lazy = false,
         config = function()
-            local lspconfig = require("lspconfig")
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
             -- Folding
@@ -50,20 +49,22 @@ return {
             end
 
             for _, lsp in ipairs(lsps) do
-                lspconfig[lsp].setup {
+                vim.lsp.config(lsp, {
                     capabilities = capabilities,
-                }
+                })
+                vim.lsp.enable(lsp)
             end
 
-            lspconfig["sqlls"].setup {
+            vim.lsp.config("sqlls", {
                 capabilities = capabilities,
                 filetypes = { "sql" },
                 root_dir = function(_)
                     return vim.loop.cwd()
                 end,
-            }
+            })
+            vim.lsp.enable("sqlls")
 
-            lspconfig.pylsp.setup {
+            vim.lsp.config("pylsp", {
 				capabilities = capabilities,
                 settings = {
                     pylsp = {
@@ -74,9 +75,10 @@ return {
                         },
                     },
                 },
-            }
+            })
+            vim.lsp.enable("pylsp")
 
-            lspconfig.jsonls.setup {
+            vim.lsp.config("jsonls", {
                 capabilities = capabilities,
                 settings = {
                     json = {
@@ -84,17 +86,8 @@ return {
                         validate = { enable = true },
                     },
                 },
-            }
-
-            for _, method in ipairs({ "textDocument/diagnostic", "workspace/diagnostic" }) do
-                local default_diagnostic_handler = vim.lsp.handlers[method]
-                vim.lsp.handlers[method] = function(err, result, context, config)
-                    if err ~= nil and err.code == -32802 then
-                        return
-                    end
-                    return default_diagnostic_handler(err, result, context, config)
-                end
-            end
+            })
+            vim.lsp.enable("jsonls")
 
             require("ufo").setup()
         end,
