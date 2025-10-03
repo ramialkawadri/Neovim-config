@@ -16,6 +16,7 @@ return {
         config = function()
             local packages = {
                 "bashls",                           -- Bash
+                "bicep",                            -- Bicep
                 "clangd",                           -- C/CPP
                 "cssls",                            -- CSS
                 "docker_compose_language_service",  -- Docker compose

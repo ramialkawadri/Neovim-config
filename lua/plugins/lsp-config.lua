@@ -65,7 +65,7 @@ return {
             vim.lsp.enable("sqlls")
 
             vim.lsp.config("pylsp", {
-				capabilities = capabilities,
+                capabilities = capabilities,
                 settings = {
                     pylsp = {
                         plugins = {
@@ -89,20 +89,28 @@ return {
             })
             vim.lsp.enable("jsonls")
 
+            vim.lsp.config("bicep", {
+                capabilities = capabilities,
+                cmd = { require("custom-functions").is_nixos() and
+                    "Bicep.LangServer" or
+                    vim.fn.expand("$MASON/packages/bicep-lsp/bicep-lsp.cmd"), },
+            })
+            vim.lsp.enable("bicep")
+
             require("ufo").setup()
         end,
         keys = {
             -- LSP keys
 
-            { "gd", require("custom-functions").goToDefinition, desc = "Go To Definition" },
-            { "gi", vim.lsp.buf.implementation, desc = "Go To Implementation" },
-            { "gD", vim.lsp.buf.declaration, desc = "Go To Declaration" },
-            { "<C-h>", require("custom-functions").hover, desc = "Mouse Hover" },
+            { "gd",    require("custom-functions").goToDefinition,    desc = "Go To Definition" },
+            { "gi",    vim.lsp.buf.implementation,                    desc = "Go To Implementation" },
+            { "gD",    vim.lsp.buf.declaration,                       desc = "Go To Declaration" },
+            { "<C-h>", require("custom-functions").hover,             desc = "Mouse Hover" },
 
             -- Folds keys
 
-            { "zR", function() require("ufo").openAllFolds() end, desc = "Open all folds" },
-            { "zM", function() require("ufo").closeAllFolds() end, desc = "Close all folds" },
+            { "zR",    function() require("ufo").openAllFolds() end,  desc = "Open all folds" },
+            { "zM",    function() require("ufo").closeAllFolds() end, desc = "Close all folds" },
         }
     },
 }
