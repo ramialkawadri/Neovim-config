@@ -119,6 +119,7 @@ return {
 
 
         -- Rust
+
         dap.adapters["rust-gdb"] = {
             type = "executable",
             command = "rust-gdb",

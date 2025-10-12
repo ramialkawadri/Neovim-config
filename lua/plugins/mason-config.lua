@@ -28,6 +28,7 @@ return {
                 "jsonls",                           -- JSON
                 "ltex",                             -- Spell Checking
                 "lua_ls",                           -- Lua
+                "protols",                          -- Protocol buffer
                 "pylsp",                            -- Python
                 "texlab",                           -- Latex
                 "ts_ls",                            -- Typescript
