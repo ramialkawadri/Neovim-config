@@ -8,6 +8,7 @@ return {
                 "startify",
                 "OverseerList",
                 "neotest-summary",
+                "DiffviewFiles",
                 ""
             },
             section_separators = { right = "", left = ""},
