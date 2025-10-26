@@ -61,6 +61,7 @@
   "rustaceanvim": { "branch": "master", "commit": "12504405821c05874d2d1f6b5ec919f9808e2c99" },
   "schemastore.nvim": { "branch": "main", "commit": "4341619da06779ae310ee9c3d6d70edfefed7152" },
   "snacks.nvim": { "branch": "main", "commit": "f33aa2017a2671fb4a0e71316f385c8010c8b81b" },
+  "spelunker.vim": { "branch": "master", "commit": "a0bc530f62798bbe053905555a4aa9ed713485eb" },
   "sqlite.lua": { "branch": "master", "commit": "50092d60feb242602d7578398c6eb53b4a8ffe7b" },
   "telescope-all-recent.nvim": { "branch": "main", "commit": "e437f60ea468268e49ffdc0c9ed7c5ba384e63cf" },
   "telescope-ui-select.nvim": { "branch": "master", "commit": "6e51d7da30bd139a6950adf2a47fda6df9fa06d2" },
