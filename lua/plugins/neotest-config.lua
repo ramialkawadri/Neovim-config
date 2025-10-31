@@ -3,7 +3,6 @@ local custom_functions = require("custom-functions")
 return {
     {
         "nvim-neotest/neotest",
-        tag = "v5.9.0",
         dependencies = {
             "nvim-neotest/nvim-nio",
             "nvim-lua/plenary.nvim",
