@@ -2,6 +2,23 @@ spellgood
 spellundo
 kamykn
 autocmd
+netcompany
+eudamed
+varchars
+fsca
+uniqueidentifier
+imdrf
+pmcf
+pmpf
+gtin
+bigint
+datetime
+datetime
+reportability
+newid
+device_implantion_period_years
+implantion
+inhouse
 upsert
 upserted
 csproj
@@ -26,7 +43,6 @@ tauri
 tsconfig
 dirname
 cloze
-unregister
 unregister
 selection
 whitespace
@@ -56,3 +72,4 @@ yyyy
 npgsql
 nuget
 middlewares
+neotest
