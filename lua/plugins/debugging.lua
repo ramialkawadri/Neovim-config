@@ -2,8 +2,7 @@ return {
     "mfussenegger/nvim-dap",
     dependencies = {
         "nvim-neotest/nvim-nio",
-        -- TODO: uncomment when fixed
-        -- "mfussenegger/nvim-dap-python",
+        "mfussenegger/nvim-dap-python",
         "mason-org/mason.nvim",
     },
     config = function()
@@ -75,13 +74,12 @@ return {
 
         -- Python
 
-        -- TODO: uncomment when fixed
-        -- if require("custom-functions").is_nixos() then
-        --     require("dap-python").setup("debugpy")
-        -- else
-        --     local debugpy = vim.fn.expand("$MASON/packages/debugpy/venv/Scripts/python.exe")
-        --     require("dap-python").setup(debugpy)
-        -- end
+        if require("custom-functions").is_nixos() then
+            require("dap-python").setup("debugpy")
+        else
+            local debugpy = vim.fn.expand("$MASON/packages/debugpy/venv/Scripts/python.exe")
+            require("dap-python").setup(debugpy)
+        end
 
         -- C/C++
 

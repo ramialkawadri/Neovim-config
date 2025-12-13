@@ -73,3 +73,7 @@ npgsql
 nuget
 middlewares
 neotest
+testid
+vsnip
+on
+vitest
