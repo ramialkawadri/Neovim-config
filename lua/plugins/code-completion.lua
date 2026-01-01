@@ -70,8 +70,12 @@ return {
                 { name = "vsnip",                  keyword_length = 2 },
             },
             window = {
-                completion = cmp.config.window.bordered(),
-                documentation = cmp.config.window.bordered(),
+                completion = cmp.config.window.bordered({
+                    border = "rounded"
+                }),
+                documentation = cmp.config.window.bordered({
+                    border = "rounded"
+                }),
             },
             snippet = {
                 expand = function(args)
