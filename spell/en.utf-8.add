@@ -77,3 +77,8 @@ testid
 vsnip
 on
 vitest
+reqwest
+deserialize
+cref
+pragma
+fsrs
