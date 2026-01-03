@@ -15,8 +15,8 @@ return {
     },
 
     keys = {
-        { "<C-g>", function() require('snacks').lazygit.open() end, desc = "LazyGit" },
-        { "go", function() require('snacks').gitbrowse.open() end, desc = "Open Git in browser" },
-        { "<leader>h", function() require('snacks').notifier.show_history() end, desc = "Show notification history" },
+        { "<C-g>", function() require("snacks").lazygit.open() end, desc = "LazyGit" },
+        { "go", function() require("snacks").gitbrowse.open() end, desc = "Open Git in browser" },
+        { "<leader>h", function() require("snacks").notifier.show_history() end, desc = "Show notification history" },
     },
 }

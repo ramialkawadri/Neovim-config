@@ -7,10 +7,10 @@ return {
     {
         "<leader>g",
         function()
-            if next(require('diffview.lib').views) == nil then
-                vim.cmd('DiffviewOpen')
+            if next(require("diffview.lib").views) == nil then
+                vim.cmd("DiffviewOpen")
             else
-                vim.cmd('DiffviewClose')
+                vim.cmd("DiffviewClose")
             end
         end, desc = "LazyGit" },
     },

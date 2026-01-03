@@ -33,7 +33,7 @@ require("lazy").setup({
         },
         {
             "seblyng/roslyn.nvim",
-            ---@module 'roslyn.config'
+            ---@module "roslyn.config"
             ---@type RoslynNvimConfig
             opts = {},
         },

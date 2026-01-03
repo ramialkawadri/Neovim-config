@@ -60,7 +60,7 @@ vim.cmd.colorscheme("hybrid")
 vim.cmd.hi("MatchParen gui=underline guibg=None guifg=None guisp=white")
 vim.cmd.hi("LineNr guifg=#686868")
 vim.cmd.hi("TelescopePromptCounter guifg=white")
-vim.o.winborder = 'rounded'
+vim.o.winborder = "rounded"
 
 -- Required for the LuaLine: https://github.com/neovim/neovim/pull/17266
 vim.opt.laststatus = 3
