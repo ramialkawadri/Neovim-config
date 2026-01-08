@@ -12,9 +12,9 @@ return {
                 },
             },
             windows = {
-                height = 0.20,
+                size = 0.20,
                 terminal = {
-                    width = 0.4,
+                    size = 0.4,
                     position = "right",
                 }
             },
