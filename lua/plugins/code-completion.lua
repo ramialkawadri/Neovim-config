@@ -35,8 +35,6 @@ return {
     config = function()
         local cmp = require("cmp")
 
-        local auto_completion_width = 42
-
         cmp.setup({
             mapping = {
                 -- Shift+TAB to go to the Previous Suggested item
@@ -84,23 +82,29 @@ return {
             },
             formatting = {
                 expandable_indicator = true,
-                fields = { "kind", "abbr", "menu" },
+                fields = { "abbr", "icon",  "kind" },
                 format = function(entry, vim_item)
+                    local abbr_width = 42
+
                     -- Formatting.
 
-                    local kind = require("lspkind")
-                        .cmp_format({ mode = "symbol_text", maxwidth = auto_completion_width })(entry, vim_item)
-                    local strings = vim.split(kind.kind, "%s", { trimempty = true })
-                    kind.kind = " " .. (strings[1] or "") .. " "
-                    -- Removing everything from the right column.
-                    kind.menu = ""
+                    local kind = require("lspkind").cmp_format({
+                        maxwidth = {
+                            abbr = abbr_width,
+                        },
+
+                        ellipsis_char = "…",
+                        show_labelDetails = true,
+                    })(entry, vim_item)
+
+                    kind.icon = " " .. kind.icon .. " ";
 
                     -- Maximising the width.
 
-                    vim_item.abbr = string.format("%-" .. tostring(auto_completion_width) .. "s", vim_item.abbr)
-                    if string.len(vim_item.abbr) > auto_completion_width then
-                        vim_item.abbr = string.sub(vim_item.abbr, 0, auto_completion_width - 3) .. "..."
+                    if string.len(vim_item.abbr) < abbr_width then
+                        vim_item.abbr = string.format("%-" .. tostring(abbr_width) .. "s", vim_item.abbr)
                     end
+
                     return kind
                 end,
             },

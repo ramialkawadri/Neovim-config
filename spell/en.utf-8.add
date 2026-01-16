@@ -83,3 +83,8 @@ cref
 pragma
 fsrs
 uuid
+dirs
+mousemove
+mouseup
+textarea
+curr
