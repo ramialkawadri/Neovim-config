@@ -32,7 +32,7 @@ return {
                 "pylsp",                            -- Python
                 "texlab",                           -- Latex
                 "ts_ls",                            -- Typescript
-                "vimls",                            -- Vim
+                "powershell_es",                    -- PowerShell
                 "vimls",                            -- Vim
             }
             if require("custom-functions").is_nixos() then
