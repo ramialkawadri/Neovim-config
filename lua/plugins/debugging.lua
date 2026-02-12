@@ -162,36 +162,6 @@ return {
             },
         }
 
-        -- PowerShell
-
-        dap.configurations.ps1 = {
-            {
-                name = "PowerShell: Launch Current File",
-                type = "ps1",
-                request = "launch",
-                script = "${file}",
-            },
-            {
-                name = "PowerShell: Launch Script",
-                type = "ps1",
-                request = "launch",
-                script = function()
-                    return coroutine.create(function(co)
-                        vim.ui.input({
-                            prompt = 'Enter path or command to execute, for example: "${workspaceFolder}/src/foo.ps1" or "Invoke-Pester"',
-                            completion = "file",
-                        }, function(selected) coroutine.resume(co, selected) end)
-                    end)
-                end,
-            },
-            {
-                name = "PowerShell: Attach to PowerShell Host Process",
-                type = "ps1",
-                request = "attach",
-                processId = "${command:pickProcess}",
-            },
-        }
-
         vim.fn.sign_define("DapBreakpoint", { text = "🟥", texthl = "", linehl = "", numhl = "" })
         vim.fn.sign_define("DapStopped", { text = "▶️", texthl = "", linehl = "", numhl = "" })
     end,
