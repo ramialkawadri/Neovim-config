@@ -115,3 +115,7 @@ pkgs
 nvidia
 xserver
 modesetting
+ndims
+_pageno
+pageno
+polyfill
