@@ -7,11 +7,10 @@ return {
         "nvim-tree/nvim-web-devicons",
     },
     lazy = false,
-    ---@module 'neo-tree'
+    ---@module "neo-tree"
     ---@type neotree.Config
     opts = {
         auto_clean_after_session_restore = true,
-        hijack_netrw_behavior = "open_current",
         popup_border_style = "",
 
         filesystem = {
