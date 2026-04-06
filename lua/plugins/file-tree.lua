@@ -1,37 +1,43 @@
--- Disable netrw at the very start of your init.lua (strongly advised)
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
 return {
-    "nvim-tree/nvim-tree.lua",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+        "MunifTanjim/nui.nvim",
+        "nvim-tree/nvim-web-devicons",
+    },
     lazy = false,
+    ---@module 'neo-tree'
+    ---@type neotree.Config
     opts = {
-        renderer = {
-            indent_markers = {
-                enable = true
+        auto_clean_after_session_restore = true,
+        hijack_netrw_behavior = "open_current",
+        popup_border_style = "",
+
+        filesystem = {
+            filtered_items = {
+                visible = true,
+                hide_dotfiles = false,
+                hide_gitignored = false,
+            },
+            filtered_items_filter_on = "directories_and_files",
+        },
+
+        window = {
+            width = 40,
+            mappings = {
+                ["E"] = "expand_all_subnodes",
             }
         },
-        filters = {
-            dotfiles = false,
-            git_ignored = false,
-        },
-        live_filter = {
-            always_show_folders = false,
-        },
-        actions = {
-            open_file = {
-                resize_window = false,
+
+        default_component_configs = {
+            file_size = {
+                enabled = false,
             },
         },
-        view = {
-            -- Automatically resize.
-            width = {},
-        },
-
     },
     keys = {
-        { "<F3>", function() require("nvim-tree.api").tree.open() end,  desc = "Open File Tree" },
-        { "<F4>", function() require("nvim-tree.api").tree.close() end, desc = "Close File Tree" },
+        { "<F3>", function() require("neo-tree.command").execute({ action = "focus" }) end, desc = "Open File Tree" },
+        { "<F4>", function() require("neo-tree.command").execute({ action = "close" }) end, desc = "Close File Tree" },
     },
 }

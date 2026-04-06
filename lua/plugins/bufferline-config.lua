@@ -32,7 +32,7 @@ return {
                 max_name_length = max_name_length,
                 offsets = {
                     {
-                        filetype = "NvimTree",
+                        filetype = "neo-tree",
                         text = "File Explorer",
                         highlight = "Directory",
                         separator = true,

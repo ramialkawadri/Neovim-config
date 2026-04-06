@@ -4,7 +4,7 @@ return {
     opts = {
         options = {
             disabled_filetypes = {
-                "NvimTree",
+                "neo-tree",
                 "startify",
                 "OverseerList",
                 "neotest-summary",

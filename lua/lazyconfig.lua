@@ -22,10 +22,10 @@ require("lazy").setup({
     },
 
     spec = {
-        { "mfussenegger/nvim-jdtls",                  lazy = true, },
-        { "onsails/lspkind.nvim",                     lazy = true, },
+        { "mfussenegger/nvim-jdtls",            lazy = true, },
+        { "onsails/lspkind.nvim",               lazy = true, },
         { "tpope/vim-repeat" },
-        { "brenoprata10/nvim-highlight-colors",       opts = {} },
+        { "brenoprata10/nvim-highlight-colors", opts = {} },
         { "HiPhish/rainbow-delimiters.nvim" },
         {
             "windwp/nvim-ts-autotag",
@@ -53,7 +53,8 @@ require("lazy").setup({
             end
         },
         {
-            "tzachar/local-highlight.nvim", opts = {
+            "tzachar/local-highlight.nvim",
+            opts = {
                 hlgroup = "PmenuThumb",
                 animate = {
                     enabled = false,
@@ -111,6 +112,10 @@ require("lazy").setup({
         },
         {
             "antosha417/nvim-lsp-file-operations",
+            dependencies = {
+                "nvim-lua/plenary.nvim",
+                "nvim-neo-tree/neo-tree.nvim",
+            },
             opts = {},
         },
         {

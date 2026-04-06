@@ -71,7 +71,7 @@ end
 
 function M.get_buffer_relative_path()
     local file_path = vim.api.nvim_buf_get_name(0)
-    if string.find(file_path, "NvimTree") then
+    if string.find(file_path, "neo-tree") then
         return "File Tree"
     else
         local path = string.sub(file_path, string.len(vim.fn.getcwd()) + 2)
