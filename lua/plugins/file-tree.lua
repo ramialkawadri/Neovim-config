@@ -36,7 +36,8 @@ return {
         },
     },
     keys = {
-        { "<F3>", function() require("neo-tree.command").execute({ action = "focus" }) end, desc = "Open File Tree" },
-        { "<F4>", function() require("neo-tree.command").execute({ action = "close" }) end, desc = "Close File Tree" },
+        { "<F3>",      function() require("neo-tree.command").execute({ action = "focus" }) end,                desc = "Open File Tree" },
+        { "<F4>",      function() require("neo-tree.command").execute({ action = "close" }) end,                desc = "Close File Tree" },
+        { "<leader>e", function() require("neo-tree.command").execute({ action = "focus", reveal = true }) end, desc = "Reveal current file in file tree" },
     },
 }
