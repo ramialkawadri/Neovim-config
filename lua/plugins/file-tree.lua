@@ -20,10 +20,6 @@ return {
                 hide_gitignored = false,
             },
             filtered_items_filter_on = "directories_and_files",
-            follow_current_file = {
-                enabled = true,
-                leave_dirs_open = false,
-            },
         },
 
         window = {
