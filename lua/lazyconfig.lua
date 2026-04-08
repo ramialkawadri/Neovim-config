@@ -53,6 +53,10 @@ require("lazy").setup({
             end
         },
         {
+            "nmac427/guess-indent.nvim",
+            opts = {},
+        },
+        {
             "tzachar/local-highlight.nvim",
             opts = {
                 hlgroup = "PmenuThumb",

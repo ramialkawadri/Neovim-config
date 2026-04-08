@@ -21,13 +21,6 @@ vim.opt.swapfile = false
 
 vim.opt.scrolloff = 5
 
--- Tab size
-
-local TAB_WIDTH = 4
-vim.opt.tabstop = TAB_WIDTH
-vim.opt.shiftwidth = TAB_WIDTH
-vim.opt.expandtab = true
-
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "ui",
 	callback = function()
