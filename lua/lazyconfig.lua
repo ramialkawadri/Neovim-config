@@ -54,7 +54,11 @@ require("lazy").setup({
         },
         {
             "nmac427/guess-indent.nvim",
-            opts = {},
+            opts = {
+                on_space_options = {
+                    ["tabstop"] = 4,
+                },
+            },
         },
         {
             "tzachar/local-highlight.nvim",
