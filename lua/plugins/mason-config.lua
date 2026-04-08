@@ -52,19 +52,13 @@ return {
                 automatic_installation = false,
             })
 
-            vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-                vim.lsp.diagnostic.on_publish_diagnostics, {
-
-                    virtual_text = {
-                        severity = vim.diagnostic.severity.ERROR,
-                    },
-
-                    signs = false,
-
-                    -- delay update diagnostics
-                    update_in_insert = false,
-                }
-            )
+            vim.diagnostic.config({
+                virtual_text = {
+                    severity = vim.diagnostic.severity.ERROR,
+                },
+                signs = false,
+                update_in_insert = false,
+            })
         end
     },
     {
