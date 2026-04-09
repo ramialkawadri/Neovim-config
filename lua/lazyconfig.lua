@@ -52,14 +52,26 @@ require("lazy").setup({
                 vim.g.startify_change_to_dir = 0
             end
         },
-        {
-            "nmac427/guess-indent.nvim",
-            opts = {
-                on_space_options = {
-                    ["tabstop"] = 4,
-                },
-            },
-        },
+		{
+			"nmac427/guess-indent.nvim",
+			lazy = false,
+			config = function()
+                -- Default config
+                vim.opt.tabstop = 4
+                vim.opt.softtabstop = 4
+                vim.opt.shiftwidth = 4
+                vim.opt.expandtab = true
+
+				require("guess-indent").setup {
+					on_tab_options = {
+						["expandtab"] = true,
+					},
+					on_space_options = {
+						["tabstop"] = 4,
+					},
+				}
+			end,
+		},
         {
             "tzachar/local-highlight.nvim",
             opts = {
