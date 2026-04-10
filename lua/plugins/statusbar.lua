@@ -4,12 +4,13 @@ return {
     opts = {
         options = {
             disabled_filetypes = {
-                "neo-tree",
-                "startify",
-                "OverseerList",
-                "neotest-summary",
+                "",
                 "DiffviewFiles",
-                ""
+                "Outline",
+                "OverseerList",
+                "neo-tree",
+                "neotest-summary",
+                "startify",
             },
             section_separators = { right = "", left = ""},
         },
