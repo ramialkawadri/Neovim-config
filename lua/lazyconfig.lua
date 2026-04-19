@@ -35,7 +35,9 @@ require("lazy").setup({
             "seblyng/roslyn.nvim",
             ---@module "roslyn.config"
             ---@type RoslynNvimConfig
-            opts = {},
+            opts = {
+                filewatching = "roslyn"
+            },
         },
         {
             "DestopLine/boilersharp.nvim",
