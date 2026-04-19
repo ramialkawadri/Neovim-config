@@ -27,6 +27,9 @@ return {
                     },
                 }
             )
+            vim.lsp.config('*', {
+                capabilities = capabilities,
+            })
 
             -- Folding
 
@@ -62,14 +65,10 @@ return {
             end
 
             for _, lsp in ipairs(lsps) do
-                vim.lsp.config(lsp, {
-                    capabilities = capabilities,
-                })
                 vim.lsp.enable(lsp)
             end
 
             vim.lsp.config("sqlls", {
-                capabilities = capabilities,
                 filetypes = { "sql" },
                 root_dir = function(_)
                     return vim.loop.cwd()
@@ -78,7 +77,6 @@ return {
             vim.lsp.enable("sqlls")
 
             vim.lsp.config("pylsp", {
-                capabilities = capabilities,
                 settings = {
                     pylsp = {
                         plugins = {
@@ -92,7 +90,6 @@ return {
             vim.lsp.enable("pylsp")
 
             vim.lsp.config("jsonls", {
-                capabilities = capabilities,
                 settings = {
                     json = {
                         schemas = require("schemastore").json.schemas(),
@@ -103,10 +100,9 @@ return {
             vim.lsp.enable("jsonls")
 
             vim.lsp.config("bicep", {
-                capabilities = capabilities,
                 cmd = { require("custom-functions").is_nixos() and
-                    "Bicep.LangServer" or
-                    vim.fn.expand("$MASON/packages/bicep-lsp/bicep-lsp.cmd"), },
+                "Bicep.LangServer" or
+                vim.fn.expand("$MASON/packages/bicep-lsp/bicep-lsp.cmd"), },
             })
             vim.lsp.enable("bicep")
 
