@@ -106,6 +106,19 @@ return {
             })
             vim.lsp.enable("bicep")
 
+            vim.api.nvim_create_autocmd("LspAttach", {
+                callback = function(args)
+                    require("custom-functions").add_cs_documentation_comment(args)
+                end,
+            })
+
+            vim.api.nvim_create_autocmd({ "InsertLeave" }, {
+                pattern = "*",
+                callback = function(ctx)
+                    require("custom-functions").update_cs_diagnostics(ctx)
+                end,
+            })
+
             require("ufo").setup()
         end,
         keys = {
