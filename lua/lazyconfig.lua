@@ -62,14 +62,8 @@ require("lazy").setup({
                 vim.opt.shiftwidth = 4
                 vim.opt.expandtab = true
 
-				require("guess-indent").setup {
-					on_tab_options = {
-						["expandtab"] = true,
-					},
-					on_space_options = {
-						["tabstop"] = 4,
-					},
-				}
+                -- Configuring auto-indent
+				require("guess-indent").setup {}
 			end,
 		},
         {
