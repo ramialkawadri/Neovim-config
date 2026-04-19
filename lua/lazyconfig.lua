@@ -39,7 +39,10 @@ require("lazy").setup({
         },
         {
             "DestopLine/boilersharp.nvim",
-            opts = {},
+            ---@type boilersharp.Config
+            opts = {
+                auto_install_xml_parser = false,
+            },
         },
         {
             "ray-x/lsp_signature.nvim",
