@@ -11,7 +11,12 @@ return {
             timeout = 4000,
         },
         image = { enabled = true },
-        lazygit = { enabled = true },
+        lazygit = {
+            enabled = true,
+            theme = {
+                selectedLineBgColor = { bg = "CursorLine" }
+            }
+        },
     },
 
     keys = {

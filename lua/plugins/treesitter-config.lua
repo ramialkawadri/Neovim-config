@@ -1,7 +1,7 @@
 return {
     {
         "nvim-treesitter/nvim-treesitter",
-        branch = 'main',
+        branch = "main",
         build = ":TSUpdate",
         lazy = false,
         config = function(_, opts)
@@ -79,13 +79,13 @@ return {
                 "zig",
             }
 
-            local alreadyInstalled = require('nvim-treesitter.config').get_installed()
+            local alreadyInstalled = require("nvim-treesitter.config").get_installed()
             local parsersToInstall = vim.iter(ensureInstalled)
                 :filter(function(parser)
                     return not vim.tbl_contains(alreadyInstalled, parser)
                 end)
                 :totable()
-            require('nvim-treesitter').install(parsersToInstall)
+            require("nvim-treesitter").install(parsersToInstall)
 
             require("nvim-treesitter").install()
 
@@ -100,7 +100,7 @@ return {
     {
         -- Used by surround plugin
         "nvim-treesitter/nvim-treesitter-textobjects",
-        branch = 'main',
+        branch = "main",
         dependencies = "nvim-treesitter/nvim-treesitter",
     }
 }

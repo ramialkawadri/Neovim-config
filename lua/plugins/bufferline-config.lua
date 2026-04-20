@@ -43,11 +43,6 @@ return {
                     icon = "┃",
                 },
             },
-            highlights = {
-                fill = {
-                    bg = string.format("#%06x", vim.api.nvim_get_hl_by_name("Folded", true).foreground),
-                },
-            }
         }
     end,
     keys = {

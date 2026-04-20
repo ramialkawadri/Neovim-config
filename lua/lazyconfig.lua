@@ -40,6 +40,13 @@ require("lazy").setup({
             },
         },
         {
+            "sainnhe/gruvbox-material",
+            config = function ()
+                vim.g.gruvbox_material_background = "hard"
+                vim.cmd.colorscheme("gruvbox-material")
+            end
+        },
+        {
             "DestopLine/boilersharp.nvim",
             ---@type boilersharp.Config
             opts = {
@@ -73,12 +80,13 @@ require("lazy").setup({
 		},
         {
             "tzachar/local-highlight.nvim",
-            opts = {
-                hlgroup = "PmenuThumb",
-                animate = {
-                    enabled = false,
-                },
-            },
+            config = function ()
+                require("local-highlight").setup({
+                    animate = {
+                        enabled = false,
+                    },
+                })
+            end
         },
         { "moll/vim-bbye" },
         {
