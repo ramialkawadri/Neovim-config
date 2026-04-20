@@ -58,11 +58,9 @@ return {
             window = {
                 completion = cmp.config.window.bordered({
                     border = "rounded",
-                    winhighlight = "Normal:NormalFloat",
                 }),
                 documentation = cmp.config.window.bordered({
                     border = "rounded",
-                    winhighlight = "Normal:NormalFloat",
                 }),
             },
             snippet = {
