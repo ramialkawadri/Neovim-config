@@ -50,6 +50,7 @@ vim.cmd.command("Format lua vim.lsp.buf.format()")
 -- Styling
 
 vim.o.winborder = "rounded"
+vim.api.nvim_set_hl(0, "FloatBorder", { link = "Normal" })
 
 -- Required for the LuaLine: https://github.com/neovim/neovim/pull/17266
 vim.opt.laststatus = 3

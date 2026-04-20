@@ -36,7 +36,12 @@ require("lazy").setup({
             ---@module "roslyn.config"
             ---@type RoslynNvimConfig
             opts = {
-                filewatching = "roslyn"
+                filewatching = "roslyn",
+                extensions = {
+                    razor = {
+                        enabled = false,
+                    }
+                }
             },
         },
         {
@@ -173,7 +178,6 @@ require("lazy").setup({
         },
         { import = "plugins", },
     },
-    install = { colorscheme = { "hybrid" }, },
     checker = { enabled = false, },
     change_detection = { notify = false, },
 })
