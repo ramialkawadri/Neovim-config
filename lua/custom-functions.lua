@@ -162,7 +162,7 @@ function M.add_cs_documentation_comment(args)
     end
 end
 
-function M.update_cs_diagnostics(ctx)
+function M.update_cs_diagnostics()
     local clients = vim.lsp.get_clients({ name = "roslyn" })
     if not clients or #clients == 0 then
         return

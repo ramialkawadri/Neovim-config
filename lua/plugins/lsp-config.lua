@@ -114,8 +114,8 @@ return {
 
             vim.api.nvim_create_autocmd({ "InsertLeave" }, {
                 pattern = "*",
-                callback = function(ctx)
-                    require("custom-functions").update_cs_diagnostics(ctx)
+                callback = function()
+                    require("custom-functions").update_cs_diagnostics()
                 end,
             })
 
