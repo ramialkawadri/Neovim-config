@@ -94,7 +94,10 @@ end
 
 function M.hover()
     if require("dap").session() == nil then
-        vim.lsp.buf.hover()
+        vim.lsp.buf.hover({
+            max_width = 80,
+            max_height = 20,
+        })
     else
         require("dap.ui.widgets").hover()
     end
