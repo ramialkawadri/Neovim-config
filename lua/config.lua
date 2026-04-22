@@ -47,6 +47,12 @@ vim.opt.titlestring = "nvim %{expand('%:p')}"
 
 vim.cmd.command("Format lua vim.lsp.buf.format()")
 
+-- Mouse
+vim.cmd([[
+  aunmenu PopUp.How-to\ disable\ mouse
+  aunmenu PopUp.-2-
+]])
+
 -- Styling
 
 vim.o.winborder = "rounded"
