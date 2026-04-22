@@ -10,6 +10,7 @@ return {
                 "OverseerList",
                 "neo-tree",
                 "neotest-summary",
+                "snacks_terminal",
                 "startify",
             },
             section_separators = { right = "", left = ""},
