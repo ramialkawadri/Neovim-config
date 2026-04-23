@@ -1,18 +1,18 @@
 local max_path_length = 45
 local M = {}
 
-function M.goToDefinition()
+function M.go_to_definition()
     vim.lsp.buf.definition()
 end
 
-function M.debugTest()
+function M.debug_test()
     require("neotest").run.run({
         strategy = "dap",
         suite = false,
     })
 end
 
-function M.runAllTests()
+function M.run_all_tests()
     require("neotest").run.run(vim.fn.getcwd())
 end
 
@@ -103,7 +103,7 @@ function M.hover()
     end
 end
 
-function M.condtitional_breakpoint()
+function M.conditional_breakpoint()
     vim.ui.input({ prompt = "Condition" }, function(condition)
         if condition ~= nil and string.len(condition) > 0 then
             require("dap").set_breakpoint(condition)

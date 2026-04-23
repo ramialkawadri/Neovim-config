@@ -1,9 +1,6 @@
--- Required in multiple plugins
-
-vim.o.termguicolors = true
 vim.opt.termguicolors = true
 
--- Lines configs
+-- Lines
 
 vim.wo.number = true
 vim.wo.relativenumber = true
@@ -11,7 +8,7 @@ vim.wo.cursorline = true
 
 -- Vertical line
 
-vim.cmd.set("colorcolumn=80")
+vim.opt.colorcolumn = "80"
 
 -- Swap files
 
@@ -22,20 +19,20 @@ vim.opt.swapfile = false
 vim.opt.scrolloff = 5
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = "ui",
-	callback = function()
-		vim.opt_local.shiftwidth = 2
-		vim.opt_local.tabstop = 2
-	end
+    pattern = "ui",
+    callback = function()
+        vim.opt_local.shiftwidth = 2
+        vim.opt_local.tabstop = 2
+    end,
 })
 
 -- Autocomplete size
 
-vim.cmd.set("pumwidth=50")
+vim.opt.pumwidth = 50
 
--- Ignorecases by default
+-- Ignore case by default
 
-vim.cmd.set("ic");
+vim.opt.ignorecase = true
 
 -- Enable title
 
@@ -43,11 +40,12 @@ vim.opt.title = true
 vim.opt.titlelen = 0 -- do not shorten title
 vim.opt.titlestring = "nvim %{expand('%:p')}"
 
--- Alias
+-- Format alias
 
-vim.cmd.command("Format lua vim.lsp.buf.format()")
+vim.api.nvim_create_user_command("Format", function() vim.lsp.buf.format() end, {})
 
 -- Mouse
+
 vim.cmd([[
   aunmenu PopUp.How-to\ disable\ mouse
   aunmenu PopUp.-2-
@@ -58,6 +56,6 @@ vim.cmd([[
 vim.o.winborder = "rounded"
 vim.api.nvim_set_hl(0, "FloatBorder", { link = "Normal" })
 
--- Required for the LuaLine: https://github.com/neovim/neovim/pull/17266
+-- Required for LuaLine: https://github.com/neovim/neovim/pull/17266
 
 vim.opt.laststatus = 3

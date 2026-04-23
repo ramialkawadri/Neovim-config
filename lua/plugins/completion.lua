@@ -1,13 +1,3 @@
--- completeopt is used to manage code suggestions
--- menuone: show popup even when there is only one suggestion
--- noinsert: Only insert text when selection is confirmed
--- noselect: force us to select one from the suggestions
-vim.opt.completeopt = { "menuone", "noselect", "noinsert", "preview" }
--- shortmess is used to avoid excessive messages
-vim.opt.shortmess = vim.opt.shortmess + { c = true }
-
--- Coloring icons.
-
 return {
     "hrsh7th/nvim-cmp",
     dependencies = {
@@ -21,6 +11,13 @@ return {
         "hrsh7th/vim-vsnip",
     },
     config = function()
+        -- menuone: show popup even when there is only one suggestion
+        -- noinsert: only insert text when selection is confirmed
+        -- noselect: force selecting one from the suggestions
+        vim.opt.completeopt = { "menuone", "noselect", "noinsert", "preview" }
+        -- shortmess is used to avoid excessive messages
+        vim.opt.shortmess:append({ c = true })
+
         local cmp = require("cmp")
 
         cmp.setup({

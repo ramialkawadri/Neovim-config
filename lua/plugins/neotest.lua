@@ -27,8 +27,8 @@ return {
             })
         end,
         keys = {
-            { "<leader>a", custom_functions.runAllTests, desc = "Run All Tests" },
-            { "<leader>l", custom_functions.debugTest, desc = "Debug Test" },
+            { "<leader>a", custom_functions.run_all_tests, desc = "Run All Tests" },
+            { "<leader>l", custom_functions.debug_test,   desc = "Debug Test" },
             { "<leader>o", [[:Neotest output<CR>]], desc = "Show Test Output" },
             { "<leader>t", custom_functions.toggle_test_summary, desc = "Toggle test summary" },
             { "<leader>r", custom_functions.run_marked_tests, desc = "Toggle test summary" },

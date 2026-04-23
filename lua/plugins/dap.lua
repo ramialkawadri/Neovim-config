@@ -168,7 +168,7 @@ return {
     lazy = false,
     keys = {
         { "<F5>",  function() require("dap").continue() end,                desc = "Continue Testing" },
-        { "<F7>",  require("custom-functions").condtitional_breakpoint,     desc = "Conditional breakpoint" },
+        { "<F7>",  require("custom-functions").conditional_breakpoint,      desc = "Conditional breakpoint" },
         { "<F8>",  function() require("dap").terminate() end,               desc = "Terminate" },
         { "<F9>",  function() require("dap").toggle_breakpoint() end,       desc = "Toggle Breakpoint" },
         { "<F10>", function() require("dap").step_over() end,               desc = "Step Over" },
