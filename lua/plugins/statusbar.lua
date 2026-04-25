@@ -12,6 +12,7 @@ return {
                 "neotest-summary",
                 "snacks_terminal",
                 "startify",
+                "grug-far",
             },
             section_separators = { right = "", left = ""},
         },

@@ -53,6 +53,11 @@ return {
         opts = {
             hint = "floating-big-letter",
             show_prompt = false,
+            filter_rules = {
+                bo = {
+                    filetype = { "NvimTree", "neo-tree", "notify", "snacks_notif", "trouble", "grug-far" },
+                }
+            }
         },
     },
 }
